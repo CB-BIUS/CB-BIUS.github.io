@@ -5,12 +5,25 @@
     <title>Video Capture</title>
 </head>
 <body>
-<input type="file" accept="video/*;capture=camcorder">
-<button id="download">Download</button>
+<input type="file" id="upload" accept="video/*;capture=camcorder" />
+<a id="link" download style="display: none">shouldnt be visible</a>
 <script>
-    const downloadLink = document.getElementById('download');
+const input = document.getElementById('upload');
+const link = document.getElementById('link');
+let objectURL;
 
-        downloadLink.download = 'test.mp4';
+input.addEventListener('change', function () {
+  if (objectURL) {
+    // revoke the old object url to avoid using more memory than needed
+    URL.revokeObjectURL(objectURL);  
+  }
+
+  const file = this.files[0];
+  objectURL = URL.createObjectURL(file);
+
+  link.href = objectURL;
+  link.click();
+});
 </script>
 </body>
 </html>
