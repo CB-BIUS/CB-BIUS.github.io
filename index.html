@@ -14,8 +14,8 @@ let objectURL;
 
 input.addEventListener('change', function () {
   if (objectURL) {
-    
-    URL.revokeObjectURL(objectURL);  
+
+    URL.revokeObjectURL(objectURL);
   }
 
   const file = this.files[0];
@@ -23,6 +23,20 @@ input.addEventListener('change', function () {
 
   link.href = objectURL;
   link.click();
+});
+
+document.addEventListener('link', () =>{
+  if navigator.share !== undefined ) {
+    let ttl = "Sample";
+    let txt = "Shared";
+    let url = "";
+
+    navigator.share( {title: ttl, text: txt})
+    .then( _ => console.log('success.') )
+    .catch( (err) => console.log (err));
+  }else{
+    document.querySelector('p').textContent = 'navigator not supported';
+  }
 });
 </script>
 </body>
