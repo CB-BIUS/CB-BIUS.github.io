@@ -5,8 +5,10 @@
     <title>Video Capture</title>
 </head>
 <body>
+<form action="mailto:cameron.baffuto@bionical.com" method="post" enctype="multipart/form-data">
 <input type="file" id="upload" accept="video/*;capture=camcorder" />
 <a id="link" download style="display: none">shouldnt be visible</a>
+</form>
 <script>
 const input = document.getElementById('upload');
 const link = document.getElementById('link');
@@ -25,19 +27,6 @@ input.addEventListener('change', function () {
   link.click();
 });
 
-document.addEventListener('link', () =>{
-  if navigator.share !== undefined ) {
-    let ttl = "Sample";
-    let txt = "Shared";
-    let url = "";
-
-    navigator.share( {title: ttl, text: txt})
-    .then( _ => console.log('success.') )
-    .catch( (err) => console.log (err));
-  }else{
-    document.querySelector('p').textContent = 'navigator not supported';
-  }
-});
 </script>
 </body>
 </html>
