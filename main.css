@@ -2,8 +2,6 @@ body {
     color: #fff;
     background: #282828;
     font: 100% system-ui;
-    margin-left: 10%;
-    margin-top: 5%;
 }
 a {
     color: #ff2e88;
@@ -13,9 +11,23 @@ a {
     body {
         color: #eee;
         background: #282828;
+        display:flex; flex-direction:column; justify-content:center;
+
     }
 }
 
 h1 {
     color: #fe8019;
+    text-align: center;
+}
+
+ul li {
+  display: inline-block;
+  text-align: center;
+  list-style-position: inside;
+}
+
+h3 {
+  color: #689d6a;
+  text-align: center;
 }
