@@ -3,12 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>Web Share</title>
+    <link rel="stylesheet" type="text/css" href="../main.css">
 </head>
 <body>
-<h1>Web Share</h1>
+<h1>Web Share API</h1>
+
 <ul>
 <li><a href="../index.html">Home</a></li>
 <li><a href="../VideoCapture/videoFile.html">Video Capture</a></li>
 </ul>
+
+<br>
+<div>
+    <input type="text" placeholder="Enter title" id="title" />
+    <input type="text" placeholder="Enter the text" id="text" />
+    <input type="text" placeholder="Enter the URL" id="url" />
+    <button id="share">Share</button>
+</div>
 </body>
+<script>
+    const share = document.getElementById('share');
+    const title = document.getElementById('title');
+    const text = document.getElementById('text');
+    const url = document.getElementById('url');
+
+    if ( navigator.share ) {
+
+        share.addEventListener('click', () => {
+            navigator.share({
+                title: title.value,
+                text: text.value,
+                url: url.value,
+            })
+                .catch((error) => {
+                    console.log('Error sharing', error)
+                });
+        })
+    }
+</script>
+
 </html>
