@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Capture</title>
+</head>
+<body>
+<ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../webShare/shareFile.html">Web Share</a></li>
+</ul>
+<br/>
+<form action="mailto:cameron.baffuto@bionical.com" method="post" enctype="multipart/form-data">
+    <input type="file" id="upload" accept="video/*;capture=camcorder" />
+    <a id="link" download style="display: none">shouldnt be visible</a>
+</form>
+<script>
+    const input = document.getElementById('upload');
+    const link = document.getElementById('link');
+    let objectURL;
+
+    input.addEventListener('change', function () {
+        if (objectURL) {
+
+            URL.revokeObjectURL(objectURL);
+        }
+
+        const file = this.files[0];
+        objectURL = URL.createObjectURL(file);
+
+        link.href = objectURL;
+        link.click();
+    });
+
+</script>
+</body>
+</html>
