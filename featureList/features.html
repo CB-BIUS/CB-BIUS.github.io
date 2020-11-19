@@ -5,11 +5,30 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <title>Features List</title>
+
+    <style media="screen">
+      body{
+        background-color: white;
+        color: black;
+      }
+    .dark-mode {
+      background: #282828;
+      color: white;
+    }
+
+    button {
+      position: absolute;
+      float: right;
+      margin-left: 110%;
+    }
+    </style>
+
   </head>
   <body>
     <div class="container">
     <div class="row">
         <div class="col-md-10 my-4 mx-auto">
+            <button type="button" class="btn btn-warning"  onclick="myFunction()">Dark mode</button> 
             <h1 class="text-center">Bionical Feature Table</h1>
             <br>
             <div class="row">
@@ -44,22 +63,28 @@
                           <td class="">Custom</td>
                         </tr>
                         <tr>
-                          <td class="option"><span data-toggle="tooltip" title="this is a tooltip" data-placement="left">Modules</span></td>
+                          <td class="option"><span data-toggle="tooltip" title="this is a tooltip" data-placement="left">Module Options</span></td>
                           <td class="">Up to 4</td>
                           <td class="">Up to 9</td>
                           <td class="">Custom</td>
                         </tr>
                         <tr>
                           <td class="option"><span data-toggle="tooltip" title="this is a tooltip" data-placement="left">Variable Module Sizing</span></td>
-                          <td>-</td>
-                          <td><i class="fa fa-check"></i></td>
-                          <td><i class="fa fa-check"></i></td>
+                          <td>0</td>
+                          <td>1</td>
+                          <td>Custom</i></td>
                         </tr>
                         <tr>
                           <td class="option"><span data-toggle="tooltip" title="this is a tooltip" data-placement="left">Module Zoom</span></td>
                           <td><i class="fa fa-check"></i></td>
                           <td><i class="fa fa-check"></i></td>
                           <td><i class="fa fa-check"></i></td>
+                        </tr>
+                        <tr>
+                          <td class="option"><span data-toggle="tooltip" title="this is a tooltip" data-placement="left">Drop Zones</span></td>
+                          <td>TBD</td>
+                          <td>TBD</td>
+                          <td>TBD</td>
                         </tr>
                         <tr>
                           <td class="option"><span data-toggle="tooltip" title="this is a tooltip" data-placement="left">Quick Orders</span></td>
@@ -81,8 +106,8 @@
                         </tr>
                         <tr>
                           <td class="option"><span data-toggle="tooltip" title="this is a tooltip" data-placement="left">Languages</span></td>
-                          <td class="">English</td>
-                          <td class="">English & Spanish</td>
+                          <td class="">1</td>
+                          <td class="">2</td>
                           <td class="">Custom</td>
                         </tr>
                         <tr>
@@ -129,9 +154,9 @@
                         </tr>
                         <tr>
                           <td class="option"><span data-toggle="tooltip" title="this is a tooltip" data-placement="left">Help Desk</span></td>
-                          <td class="">Email</td>
-                          <td class="">Email</td>
-                          <td class="">Email + Phone</td>
+                          <td><i class="fa fa-check"></i></td>
+                          <td><i class="fa fa-check"></i></td>
+                          <td><i class="fa fa-check"></i></td>
                         </tr>
                         <tr>
                           <td class="option"><span data-toggle="tooltip" title="this is a tooltip" data-placement="left">Training Manual</span></td>
@@ -167,6 +192,11 @@
     $(function () {
         $('[data-toggle="tooltip"]').tooltip();
     });
+
+    function myFunction() {
+      var element = document.body;
+      element.classList.toggle("dark-mode");
+    }
     </script>
   </body>
 </html>
