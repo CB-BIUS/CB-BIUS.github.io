@@ -11,10 +11,7 @@
     <title>Dinner Menu</title>
 
     <style media="screen">
-        body{
-            color: #ffffff;
-            color: black;
-        }
+
         .dark-mode {
             background: #282828;
             color: #ff2e88;
@@ -35,7 +32,7 @@
         }
 
         .table td {
-            text-align: center;
+            text-align: left;
         }
 
     </style>
@@ -49,92 +46,49 @@
     <br>
     <ul class="nav nav-tabs">
         <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#menu1">11/29 - 12/5</a>
+            <a class="nav-link" data-toggle="tab" href="#menu1">11/29 - 12/5</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#menu2">12/6 - 12/12</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#menu3">12/13 - 12/19</a>
+        </li>
     </ul>
 
     <div class="tab-content">
-        <div id="menu1" class="container tab-pane active"><br>
+        <div id="menu1" class="container tab-pane"><br>
             <h3>Week 1 Menu 11/29 - 12/5</h3>
             <div class="table-responsve-md">
-                <table class="table table-striped table-hover .w-auto">
-                    <thead class="thead-inverse">
-                    <tr>
-                        <th class="">Sunday</th>
-                    </tr>
-                    </thead>
+                <table class="table table-striped table-hover">
                     <tbody>
                     <tr>
-                        <td class="">Manicotti, Roasted Veggies, Salad</td>
+                        <th scope="row">Sunday</th>
+                        <td>Manicotti, Roasted Veggies, Salad</td>
                     </tr>
-                    </tbody>
-
-                    <thead class="thead-inverse">
                     <tr>
-                        <th class="">Monday</th>
+                        <th scope="row">Monday</th>
+                        <td>Sausage, Peppers, Onions, Roasted Potatoes</td>
                     </tr>
-                    </thead>
-                    <tbody>
                     <tr>
-                        <td class="">Sausage, Peppers, Onions, Roasted Potatoes</td>
+                        <th scope="row">Tuesday</th>
+                        <td>Avancini di Pepe, Marinara Chickpeas, Roasted Zucchini, Salad</td>
                     </tr>
-                    </tbody>
-
-                    <thead class="thead-inverse">
                     <tr>
-                        <th class="">Tuesday</th>
+                        <th scope="row">Wednesday</th>
+                        <td>Stuffed Peppers, Corn and Greenbean Salad, Salad</td>
                     </tr>
-                    </thead>
-                    <tbody>
                     <tr>
-                        <td class="">Avancini di Pepe, Marinara Chickpeas, Roasted Zucchini, Salad</td>
+                        <th scope="row">Thursday</th>
+                        <td>Hotdogs, Baked Beans, Coleslaw, Potato Salad</td>
                     </tr>
-                    </tbody>
-
-                    <thead class="thead-inverse">
                     <tr>
-                        <th class="">Wednesday</th>
+                        <th scope="row">Friday</th>
+                        <td>Macaroni and Cheese, Roasted Califlower</td>
                     </tr>
-                    </thead>
-                    <tbody>
                     <tr>
-                        <td class="">Stuffed Peppers, Corn and Greenbean Salad, Salad</td>
-                    </tr>
-                    </tbody>
-
-                    <thead class="thead-inverse">
-                    <tr>
-                        <th class="">Thursday</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td class="">Hotdogs, Baked Beans, Coleslaw, Potato Salad</td>
-                    </tr>
-                    </tbody>
-
-                    <thead class="thead-inverse">
-                    <tr>
-                        <th class="">Friday</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td class="">Macaroni and Cheese, Roasted Califlower</td>
-                    </tr>
-                    </tbody>
-
-                    <thead class="thead-inverse">
-                    <tr>
-                        <th class="">Saturday</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td class="">PIZZA!</td>
+                        <th scope="row">Saturday</th>
+                        <td>PIZZA!</td>
                     </tr>
                     </tbody>
                 </table>
@@ -145,80 +99,71 @@
             <h3>Week 2 Menu 12/6 - 12/12</h3>
             <div class="table-responsve-md">
                 <table class="table table-striped table-hover .w-auto">
-                    <thead class="thead-inverse">
-                    <tr>
-                        <th class="">Sunday</th>
-                    </tr>
-                    </thead>
                     <tbody>
                     <tr>
-                        <td class="">Butternut Squash Baked Ziti, Salad</td>
+                        <th scope="row">Sunday</th>
+                        <td>Butternut Squash Baked Ziti, Salad</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Monday</th>
+                        <td>Chicken, Roasted Baby Potatoes, Greenbean Casserole</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Tuesday</th>
+                        <td>Chicken Tacos, Cucumber Mango Blackbean Salad</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Wednesday</th>
+                        <td>Pierogies, Sausage, Sweet Red Cabbage</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Thursday</th>
+                        <td>Bow Ties, Mushrooms, Spinach, Ricotta</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Friday</th>
+                        <td>Sloppy Joes, Onion Rings, Tomato Cucumber Salad</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Saturday</th>
+                        <td>Chinese, Pizza, or some other takeout</td>
                     </tr>
                     </tbody>
-
-                    <thead class="thead-inverse">
-                    <tr>
-                        <th class="">Monday</th>
-                    </tr>
-                    </thead>
+                </table>
+            </div>
+        </div>
+        <div id="menu3" class="container tab-pane active"><br>
+            <h3>Week 3 Menu 12/13 - 12/19</h3>
+            <div class="table-responsve-md">
+                <table class="table table-striped table-hover .w-auto">
                     <tbody>
                     <tr>
-                        <td class="">Chicken, Roasted Baby Potatoes, Greenbean Casserole</td>
+                        <th scope="row">Sunday</th>
+                        <td>Potato Cabbage Stew with Sausage, Bread</td>
                     </tr>
-                    </tbody>
-
-                    <thead class="thead-inverse">
                     <tr>
-                        <th class="">Tuesday</th>
+                        <th scope="row">Monday</th>
+                        <td>Tortellini with Roasted Butternut Squash, Craisens, Sage, and Maple Butter Sauce, Salad</td>
                     </tr>
-                    </thead>
-                    <tbody>
                     <tr>
-                        <td class="">Chicken Tacos, Cucumber Mango Blackbean Salad</td>
+                        <th scope="row">Tuesday</th>
+                        <td>Cheesy Enchilada, Rice, Chicken Breast, Salad</td>
                     </tr>
-                    </tbody>
-
-                    <thead class="thead-inverse">
                     <tr>
-                        <th class="">Wednesday</th>
+                        <th scope="row">Wednesday</th>
+                        <td>Bow Ties, Vodka Sauce, Peas, Salad</td>
                     </tr>
-                    </thead>
-                    <tbody>
                     <tr>
-                        <td class="">Pierogies, Sausage, Sweet Red Cabbage</td>
+                        <th scope="row">Thursday</th>
+                        <td>Pork Tenderloin, Honey Carrots, Mashed Potatoes</td>
                     </tr>
-                    </tbody>
-
-                    <thead class="thead-inverse">
                     <tr>
-                        <th class="">Thursday</th>
+                        <th scope="row">Friday</th>
+                        <td>Lentils and Macaroni, Salad, Bread</td>
                     </tr>
-                    </thead>
-                    <tbody>
                     <tr>
-                        <td class="">Bow Ties, Mushrooms, Spinach, Ricotta</td>
-                    </tr>
-                    </tbody>
-
-                    <thead class="thead-inverse">
-                    <tr>
-                        <th class="">Friday</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td class="">Sloppy Joes, Onion Rings, Tomato Cucumber Salad</td>
-                    </tr>
-                    </tbody>
-
-                    <thead class="thead-inverse">
-                    <tr>
-                        <th class="">Saturday</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td class="">Chinese, Pizza, or some other takeout</td>
+                        <th scope="row">Saturday</th>
+                        <td>Takeout</td>
                     </tr>
                     </tbody>
                 </table>
@@ -228,7 +173,7 @@
 </div>
 <script>
     function myFunction() {
-        var element = document.body;
+        let element = document.body;
         element.classList.toggle("dark-mode");
     }
 </script>
