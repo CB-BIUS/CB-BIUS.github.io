@@ -1,0 +1,22 @@
+.dark-mode {
+    background: #282828;
+    color: #ff2e88;
+}
+
+button {
+    margin-top: 2%;
+    margin-left: 70%;
+}
+
+table,
+thead,
+tr,
+tbody,
+th,
+td {
+    text-align: center;
+}
+
+.table td {
+    text-align: left;
+}
