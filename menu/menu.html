@@ -5,41 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="main.js"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <title>Dinner Menu</title>
-
-    <style media="screen">
-
-        .dark-mode {
-            background: #282828;
-            color: #ff2e88;
-        }
-
-        button {
-            margin-top: 2%;
-            margin-left: 70%;
-        }
-
-        table,
-        thead,
-        tr,
-        tbody,
-        th,
-        td {
-            text-align: center;
-        }
-
-        .table td {
-            text-align: left;
-        }
-
-    </style>
-
 
 </head>
 <body>
@@ -214,11 +189,19 @@
         </div>
     </div>
 </div>
-<script>
-    function myFunction() {
-        let element = document.body;
-        element.classList.toggle("dark-mode");
-    }
-</script>
+<div class="w-50 mx-auto">
+    <form onsubmit="return submitForm(this);">
+        <h4>Got a suggestion? 🧐</h4>
+        <div class="form-group" id="form">
+            <label for="usr">Name 🕵️‍</label>
+            <input type="text" class="form-control" id="usr" name="name" placeholder="Name">
+        </div>
+        <div class="form-group">
+            <label for="comment">Suggestion 🍽</label>
+            <textarea class="form-control" rows="3" placeholder="Dinner suggestion..." id="comment" name="comment"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" id="contact">Submit</button>
+    </form>
+</div>
 </body>
 </html>
