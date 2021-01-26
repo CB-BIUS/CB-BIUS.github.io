@@ -6,6 +6,7 @@ qrType = document.getElementById('typeInput');
 const qrCode = new QRCodeStyling({
   width: 300,
   height: 300,
+  margin: 10,
   data: "http://www.bionicalsolutionsgroup.com/",
   image: "",
   dotsOptions: {
