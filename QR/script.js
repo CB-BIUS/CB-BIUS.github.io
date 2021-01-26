@@ -6,7 +6,7 @@ qrType = document.getElementById('typeInput');
 const qrCode = new QRCodeStyling({
   width: 300,
   height: 300,
-  data: "https://github.com/F2BEAR",
+  data: "http://www.bionicalsolutionsgroup.com/",
   image: "",
   dotsOptions: {
     color: "#000",
@@ -47,6 +47,6 @@ const updateQrType = () => {
   });
 };
 
-const download = () => qrCode.download("jpeg");
+const download = () => qrCode.download("png");
 
 qrCode.append(document.getElementById('canvas'));
