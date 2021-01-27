@@ -8,7 +8,7 @@ const qrCode = new QRCodeStyling({
   height: 300,
   margin: 10,
   data: "http://www.bionicalsolutionsgroup.com/",
-  image: "",
+  image: "bionicalLogo.png",
   dotsOptions: {
     color: "#000",
     type: "square"
