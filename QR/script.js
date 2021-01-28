@@ -51,3 +51,4 @@ const updateQrType = () => {
 const download = () => qrCode.download("png");
 
 qrCode.append(document.getElementById('canvas'));
+
