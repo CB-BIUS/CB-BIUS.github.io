@@ -3,17 +3,28 @@ qrImage = document.getElementById('imageInput');
 qrColor = document.getElementById('colorInput');
 qrType = document.getElementById('typeInput');
 
+var img;
+
 const qrCode = new QRCodeStyling({
   width: 300,
   height: 300,
   margin: 10,
   data: "http://www.bionicalsolutionsgroup.com/",
-  image: "bionicalLogo.png",
+  image: "",
   dotsOptions: {
     color: "#000",
     type: "square"
   },
 });
+
+function validate() {
+  var imgCheck = document.getElementById("imageCheck");
+  if (imgCheck.checked) {
+    qrCode.update({
+      image: "bionicalLogo.png"
+    });
+  } 
+  }
 
 const updateQrData = () => {
   newQrData = qrData.value;
