@@ -2,6 +2,11 @@
   background-color: #2b9bf7;
   color: white;
 }
+
+.dropdown-toggle:hover {
+  background-color: #2b9bf7;
+  color: white;
+}
   
   footer {
     padding-top: 3rem;
