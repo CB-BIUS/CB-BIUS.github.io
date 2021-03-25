@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .filter-button:hover {
   background-color: #2b9bf7;
   color: white;
