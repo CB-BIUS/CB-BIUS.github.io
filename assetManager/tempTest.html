@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <title>Filter Template</title>
+
+    <style>
+        #wrapper {
+            overflow-x: hidden;
+        }
+
+        #sidebar-wrapper {
+            min-height: 100vh;
+            margin-left: -15rem;
+            -webkit-transition: margin .25s ease-out;
+            -moz-transition: margin .25s ease-out;
+            -o-transition: margin .25s ease-out;
+            transition: margin .25s ease-out;
+        }
+
+        #sidebar-wrapper .sidebar-heading {
+            padding: 0.875rem 1.25rem;
+            font-size: 1.2rem;
+        }
+
+        #sidebar-wrapper .list-group {
+            width: 15rem;
+        }
+
+        #page-content-wrapper {
+            min-width: 100vw;
+        }
+
+        #wrapper.toggled #sidebar-wrapper {
+            margin-left: 0;
+        }
+
+        @media (min-width: 768px) {
+            #sidebar-wrapper {
+                margin-left: 0;
+            }
+
+            #page-content-wrapper {
+                min-width: 0;
+                width: 100%;
+            }
+
+            #wrapper.toggled #sidebar-wrapper {
+                margin-left: -15em;
+            }
+        }
+    </style>
+
+</head>
+<body>
+<div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading">Filter Options</div>
+        <hr>
+        <div class="list-group">
+            <button class="btn btn-secondary m-2" value = "Refresh" onclick="history.go(0)">Reset Filters</button>
+        </div>
+        <ul class="list-group list-group-flush">
+            <p>Section</p>
+            <li class="list-group-item">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="a" checked>
+                    <label class="form-check-label" for="exampleRadios1">All</label>
+                 </div>
+                 <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="b">
+                    <label class="form-check-label" for="exampleRadios2">B</label>
+                 </div>
+                 <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="c">
+                    <label class="form-check-label" for="exampleRadios3">C</label>
+                 </div>
+                 <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="d">
+                    <label class="form-check-label" for="exampleRadios4">D</label>
+                 </div>
+            </li>
+            <hr>
+            <p>Section</p>
+            <li class="list-group-item">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios5" value="a" checked>
+                    <label class="form-check-label" for="exampleRadios5">All</label>
+                 </div>
+                 <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios6" value="b">
+                    <label class="form-check-label" for="exampleRadios6">B</label>
+                 </div>
+                 <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios7" value="c">
+                    <label class="form-check-label" for="exampleRadios7">C</label>
+                 </div>
+                 <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios8" value="d">
+                    <label class="form-check-label" for="exampleRadios8">D</label>
+                 </div>
+            </li>
+            <hr>
+            <p>Section</p>
+            <li class="list-group-item">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios9" value="a" checked>
+                    <label class="form-check-label" for="exampleRadios9">All</label>
+                 </div>
+                 <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios10" value="b">
+                    <label class="form-check-label" for="exampleRadios10">B</label>
+                 </div>
+                 <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios11" value="c">
+                    <label class="form-check-label" for="exampleRadios11">C</label>
+                 </div>
+                 <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios12" value="d">
+                    <label class="form-check-label" for="exampleRadios12">D</label>
+                 </div>
+            </li>
+          </ul>
+
+        <!-- <p class="ml-2">One</p>
+        <div class="btn-group btn-group-sm ml-2">
+            <button class="btn btn-outline-secondary">Dashboard</button>
+            <button class="btn btn-outline-secondary">Shortcuts</button>
+            <button class="btn btn-outline-secondary">Overview</button>
+            <button class="btn btn-outline-secondary">Events</button>
+        </div>
+        <hr>
+        <p class="ml-2">Two</p>
+        <div class="btn-group btn-group-sm ml-2">
+            <button class="btn btn-outline-secondary">Dashboard</button>
+            <button class="btn btn-outline-secondary">Shortcuts</button>
+            <button class="btn btn-outline-secondary">Overview</button>
+            <button class="btn btn-outline-secondary">Events</button>
+            <button class="btn btn-outline-secondary">Profile</button>
+        </div> -->
+
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <button class="btn btn-secondary" id="menu-toggle">Filter <i class="fas fa-filter"></i></button>
+        </nav>
+
+        <div class="container-fluid">
+
+            <div class="jumbotron jumbotron-fluid">
+                <h1 class="display-4 text-center">Bionical US</h1>
+                <p class="lead text-center">Search Through Past Programs</p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6 my-2">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">Item One</a>
+                            </h4>
+                            <h5>$24.99</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="btn-group-sm" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-secondary">Left</button>
+                                <button type="button" class="btn btn-secondary">Right</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 my-2">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">Item Two</a>
+                            </h4>
+                            <h5>$24.99</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="btn-group-sm" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-secondary">Left</button>
+                                <button type="button" class="btn btn-secondary">Right</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 my-2">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">Item Three</a>
+                            </h4>
+                            <h5>$24.99</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="btn-group-sm" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-secondary">Left</button>
+                                <button type="button" class="btn btn-secondary">Right</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 my-2">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">Item Four</a>
+                            </h4>
+                            <h5>$24.99</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="btn-group-sm" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-secondary">Left</button>
+                                <button type="button" class="btn btn-secondary">Right</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 my-2">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">Item Five</a>
+                            </h4>
+                            <h5>$24.99</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="btn-group-sm" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-secondary">Left</button>
+                                <button type="button" class="btn btn-secondary">Right</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 my-2">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">Item Six</a>
+                            </h4>
+                            <h5>$24.99</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="btn-group-sm" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-secondary">Left</button>
+                                <button type="button" class="btn btn-secondary">Right</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
+
+
+</body>
+</html>
