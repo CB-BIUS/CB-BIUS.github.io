@@ -39,6 +39,15 @@
             margin-left: 0;
         }
 
+        footer {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+  
+        footer p {
+            margin-bottom: .25rem;
+        }
+
         @media (min-width: 768px) {
             #sidebar-wrapper {
                 margin-left: 0;
@@ -162,15 +171,33 @@
                 <h1 class="display-4 text-center">Bionical US</h1>
                 <p class="lead text-center">Search Through Past Programs</p>
             </div>
-
-            <div class="row">
-
-                <div class="col-lg-4 col-md-6 my-2">
-                    <div class="card h-100">
+        <div class="row grid">
+            
+                <div class="grid-item col-lg-4 col-md-6 my-2">
+                    <div class="card grid-item-content h-100">
                         <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
                                 <a href="#">Item One</a>
+                            </h4>
+                            <h5>$24.99</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Amet numquam aspernatur!</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="btn-group-sm" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-secondary">Left</button>
+                                <button type="button" class="btn btn-secondary">Right</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item col-lg-4 col-md-6 my-2">
+                    <div class="card grid-item-content h-100">
+                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">Item Two</a>
                             </h4>
                             <h5>$24.99</h5>
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
@@ -184,27 +211,8 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 my-2">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#">Item Two</a>
-                            </h4>
-                            <h5>$24.99</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
-                        </div>
-                        <div class="card-footer">
-                            <div class="btn-group-sm" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-secondary">Left</button>
-                                <button type="button" class="btn btn-secondary">Right</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 my-2">
-                    <div class="card h-100">
+                <div class="grid-item col-lg-4 col-md-6 my-2">
+                    <div class="card grid-item-content h-100">
                         <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
@@ -222,8 +230,8 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 my-2">
-                    <div class="card h-100">
+                <div class="col-lg-4 col-md-6 grid-item my-2">
+                    <div class="card grid-item-content h-100">
                         <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
@@ -241,15 +249,15 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 my-2">
-                    <div class="card h-100">
+                <div class="col-lg-4 col-md-6 grid-item my-2">
+                    <div class="card grid-item-content h-100">
                         <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
                                 <a href="#">Item Five</a>
                             </h4>
                             <h5>$24.99</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
                         </div>
                         <div class="card-footer">
                             <div class="btn-group-sm" role="group" aria-label="Basic example">
@@ -260,8 +268,8 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 my-2">
-                    <div class="card h-100">
+                <div class="col-lg-4 col-md-6 grid-item my-2">
+                    <div class="card grid-item-content h-100">
                         <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
@@ -279,18 +287,30 @@
                     </div>
                 </div>
 
-            </div>
-
+            
         </div>
+        </div>
+        <br>
+        <br>
+        <footer class="text-light bg-dark">
+            <div class="container">
+              <p class="float-right">
+                <a href="#" class="btn btn-sm btn-primary">Back to top</a>
+              </p>
+              <p><img src=../images/bionical-logo.png height="30vh"> Bionical Solutions US</p>
+            </div>
+          </footer>
+    
     </div>
 
 
 </div>
 
-
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 
 <script>
     $("#menu-toggle").click(function(e) {
@@ -299,6 +319,50 @@
     });
 </script>
 
+<script>
+
+    var $grid = $('.grid').isotope({
+        itemSelector: '.grid-item',
+        percentPosition: true,
+    });
+
+    // store filter for each group
+    var filters = {};
+
+    $('.filters').on( 'click', '.input', function( event ) {
+        var $button = $( event.currentTarget );
+        // get group key
+        var $buttonGroup = $button.parents('.button-group');
+        var filterGroup = $buttonGroup.attr('data-filter-group');
+        // set filter for group
+        filters[ filterGroup ] = $button.attr('data-filter');
+        // combine filters
+        var filterValue = concatValues( filters );
+        // set filter for Isotope
+        $grid.isotope({ filter: filterValue });
+    });
+
+    // change is-checked class on buttons
+    $('.button-group').each( function( i, buttonGroup ) {
+        var $buttonGroup = $( buttonGroup );
+        $buttonGroup.on( 'click', 'button', function( event ) {
+            $buttonGroup.find('.is-checked').removeClass('is-checked');
+            var $button = $( event.currentTarget );
+            $button.addClass('is-checked');
+        });
+    });
+
+    // flatten object by concatting values
+    function concatValues( obj ) {
+        var value = '';
+        for ( var prop in obj ) {
+            value += obj[ prop ];
+        }
+        return value;
+    }
+
+
+</script>
 
 </body>
 </html>
