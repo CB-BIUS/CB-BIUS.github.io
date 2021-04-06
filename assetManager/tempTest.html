@@ -8,7 +8,7 @@
 
     <title>Filter Template</title>
 
-    <style>
+        <style>
         #wrapper {
             overflow-x: hidden;
         }
@@ -27,7 +27,7 @@
             font-size: 1.2rem;
         }
 
-        #sidebar-wrapper .list-group {
+        #sidebar-wrapper .ui-group {
             width: 15rem;
         }
 
@@ -46,6 +46,11 @@
   
         footer p {
             margin-bottom: .25rem;
+        }
+
+        .is-checked {
+            background-color:#868e96;
+            color: white;
         }
 
         @media (min-width: 768px) {
@@ -69,97 +74,98 @@
 <div class="d-flex" id="wrapper">
 
     <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
+    <div class="filters bg-light border-right" id="sidebar-wrapper">
         <div class="sidebar-heading">Filter Options</div>
         <hr>
-        <div class="list-group">
-            <button class="btn btn-secondary m-2" value = "Refresh" onclick="history.go(0)">Reset Filters</button>
-        </div>
-        <ul class="list-group list-group-flush">
-            <p class="ml-3 mt-4">Section</p>
-            <li class="list-group-item">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="a" checked>
-                    <label class="form-check-label" for="exampleRadios1">All</label>
-                 </div>
-                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="b">
-                    <label class="form-check-label" for="exampleRadios2">B</label>
-                 </div>
-                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="c">
-                    <label class="form-check-label" for="exampleRadios3">C</label>
-                 </div>
-                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="d">
-                    <label class="form-check-label" for="exampleRadios4">D</label>
-                 </div>
-            </li>
-            <hr>
-            <p class="ml-3">Section</p>
-            <li class="list-group-item">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios5" value="a" checked>
-                    <label class="form-check-label" for="exampleRadios5">All</label>
-                 </div>
-                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios6" value="b">
-                    <label class="form-check-label" for="exampleRadios6">B</label>
-                 </div>
-                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios7" value="c">
-                    <label class="form-check-label" for="exampleRadios7">C</label>
-                 </div>
-                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios8" value="d">
-                    <label class="form-check-label" for="exampleRadios8">D</label>
-                 </div>
-            </li>
-            <hr>
-            <p class="ml-3">Section</p>
-            <li class="list-group-item">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios9" value="a" checked>
-                    <label class="form-check-label" for="exampleRadios9">All</label>
-                 </div>
-                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios10" value="b">
-                    <label class="form-check-label" for="exampleRadios10">B</label>
-                 </div>
-                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios11" value="c">
-                    <label class="form-check-label" for="exampleRadios11">C</label>
-                 </div>
-                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios12" value="d">
-                    <label class="form-check-label" for="exampleRadios12">D</label>
-                 </div>
-            </li>
-          </ul>
 
-        <!-- <p class="ml-2">One</p>
-        <div class="btn-group btn-group-sm ml-2">
-            <button class="btn btn-outline-secondary">Dashboard</button>
-            <button class="btn btn-outline-secondary">Shortcuts</button>
-            <button class="btn btn-outline-secondary">Overview</button>
-            <button class="btn btn-outline-secondary">Events</button>
-        </div>
-        <hr>
-        <p class="ml-2">Two</p>
-        <div class="btn-group btn-group-sm ml-2">
-            <button class="btn btn-outline-secondary">Dashboard</button>
-            <button class="btn btn-outline-secondary">Shortcuts</button>
-            <button class="btn btn-outline-secondary">Overview</button>
-            <button class="btn btn-outline-secondary">Events</button>
-            <button class="btn btn-outline-secondary">Profile</button>
-        </div> -->
-
+            <div class="ui-group">
+                <div class="button-group btn-group m-1">
+                    <button class="button btn btn-secondary" value = "Refresh" onclick="history.go(0)">Reset Filters</button>
+                </div>
+            </div>
+            <hr>
+            <div class="ui-group">
+                <p class="ml-3">Resource</p>
+                <div class="button-group btn-group-vertical ml-4" data-filter-group="color">
+                    <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
+                    <button class="button btn btn-outline-secondary" data-filter=".red">red</button>
+                    <button class="button btn btn-outline-secondary" data-filter=".blue">blue</button>
+                    <button class="button btn btn-outline-secondary" data-filter=".yellow">yellow</button> 
+                    <button class="button btn btn-outline-secondary" data-filter=".red">red</button>
+                    <button class="button btn btn-outline-secondary" data-filter=".blue">blue</button>
+                    <button class="button btn btn-outline-secondary" data-filter=".yellow">yellow</button> 
+                </div>
+            </div>
+            <hr>
+            <div class="ui-group">
+                <p class="ml-3">Brand</p>
+                <div class="button-group btn-group-vertical ml-4" data-filter-group="brand">
+                    <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
+                    <button class="button btn btn-outline-secondary" data-filter=".branded">Branded</button>
+                    <button class="button btn btn-outline-secondary" data-filter=".unbranded">Unbranded</button>
+                </div>
+            </div>
+            <hr>
+            <div class="ui-group">
+                <p class="ml-3">Type</p>
+                <div class="button-group btn-group-vertical ml-4" data-filter-group="type">
+                    <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
+                    <button class="button btn btn-outline-secondary" data-filter=".brochure">Brochure</button>
+                    <button class="button btn btn-outline-secondary" data-filter=".wallchart">Wallchart</button>
+                    <button class="button btn btn-outline-secondary" data-filter=".postcard">Postcard</button>
+                </div>
+            </div>
+            <hr>
+            <div class="ui-group">
+                <p class="ml-3">PDF Delivery</p>
+                <div class="button-group btn-group-vertical ml-4" data-filter-group="pdf">
+                    <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
+                    <button class="button btn btn-outline-secondary" data-filter=".pdfyes">Yes</button>
+                    <button class="button btn btn-outline-secondary" data-filter=".pdfno">No</button>
+                </div>
+            </div>
+            <hr>
+            <div class="ui-group">
+                <p class="ml-3">HCP Toggle</p>
+                <div class="button-group btn-group-vertical ml-4" data-filter-group="hcp">
+                    <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
+                    <button class="button btn btn-outline-secondary" data-filter=".hcpyes">Yes</button>
+                    <button class="button btn btn-outline-secondary" data-filter=".hpcno">No</button>
+                </div>
+            </div>
+            <hr>
+            <div class="ui-group">
+                <p class="ml-3">DSE Tabs</p>
+                <div class="button-group btn-group-vertical ml-4" data-filter-group="dse">
+                    <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
+                    <button class="button btn btn-outline-secondary" data-filter=".dseyes">Yes</button>
+                    <button class="button btn btn-outline-secondary" data-filter=".dseno">No</button>
+                </div>
+            </div>
+            <hr>
+            <div class="ui-group">
+            <p class="ml-3">Veeva Approved Email</p>
+                <div class="button-group btn-group-vertical ml-4" data-filter-group="vae">
+                    <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
+                    <button class="button btn btn-outline-secondary" data-filter=".vaeyes">Yes</button>
+                    <button class="button btn btn-outline-secondary" data-filter=".vaeno">No</button>
+                </div>
+            </div>
+            <hr>
+            <div class="ui-group">
+                <p class="ml-3">Email Customization UI</p>
+                <div class="button-group btn-group-vertical ml-4" data-filter-group="emailcustom">
+                    <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
+                    <button class="button btn btn-outline-secondary" data-filter=".emailcustomyes">Yes</button>
+                    <button class="button btn btn-outline-secondary" data-filter=".emailcustomno">No</button>
+                </div>
+            </div>
     </div>
     <!-- /#sidebar-wrapper -->
 
     <!-- Page Content -->
     <div id="page-content-wrapper">
-
+        
         <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
             <button class="btn btn-secondary" id="menu-toggle">Filter <i class="fas fa-filter"></i></button>
         </nav>
@@ -171,9 +177,11 @@
                 <h1 class="display-4 text-center">Bionical US</h1>
                 <p class="lead text-center">Search Through Past Programs</p>
             </div>
+
+        
         <div class="row grid">
-            
-                <div class="grid-item col-lg-4 col-md-6 my-2">
+           
+                <div class="grid-item col-lg-4 col-md-6 my-2 red branded">
                     <div class="card grid-item-content h-100">
                         <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                         <div class="card-body">
@@ -192,7 +200,7 @@
                     </div>
                 </div>
 
-                <div class="grid-item col-lg-4 col-md-6 my-2">
+                <div class="grid-item col-lg-4 col-md-6 my-2 blue">
                     <div class="card grid-item-content h-100">
                         <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                         <div class="card-body">
@@ -211,7 +219,7 @@
                     </div>
                 </div>
 
-                <div class="grid-item col-lg-4 col-md-6 my-2">
+                <div class="grid-item col-lg-4 col-md-6 my-2 yellow">
                     <div class="card grid-item-content h-100">
                         <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                         <div class="card-body">
@@ -219,7 +227,7 @@
                                 <a href="#">Item Three</a>
                             </h4>
                             <h5>$24.99</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
                         </div>
                         <div class="card-footer">
                             <div class="btn-group-sm" role="group" aria-label="Basic example">
@@ -230,7 +238,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 grid-item my-2">
+                <div class="grid-item col-lg-4 col-md-6 my-2">
                     <div class="card grid-item-content h-100">
                         <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                         <div class="card-body">
@@ -249,7 +257,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 grid-item my-2">
+                <div class="grid-item col-lg-4 col-md-6 my-2">
                     <div class="card grid-item-content h-100">
                         <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                         <div class="card-body">
@@ -268,7 +276,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 grid-item my-2">
+                <div class="grid-item col-lg-4 col-md-6 my-2">
                     <div class="card grid-item-content h-100">
                         <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                         <div class="card-body">
@@ -286,13 +294,13 @@
                         </div>
                     </div>
                 </div>
-
+            
             
         </div>
         </div>
         <br>
         <br>
-        <footer class="text-light bg-dark">
+        <!-- <footer class="text-light bg-dark">
             <div class="container">
               <p class="float-right">
                 <a href="#" class="btn btn-sm btn-primary">Back to top</a>
@@ -300,17 +308,17 @@
               <p><img src=../images/bionical-logo.png height="30vh"> Bionical Solutions US</p>
             </div>
           </footer>
-    
+     -->
     </div>
 
 
 </div>
 
-<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 
 <script>
     $("#menu-toggle").click(function(e) {
@@ -321,15 +329,16 @@
 
 <script>
 
-    var $grid = $('.grid').isotope({
+    var $grid = $('.grid').imagesLoaded.isotope({
         itemSelector: '.grid-item',
         percentPosition: true,
     });
 
-    // store filter for each group
+    // .imagesLoaded
+
     var filters = {};
 
-    $('.filters').on( 'click', '.input', function( event ) {
+    $('.filters').on( 'click', '.button', function( event ) {
         var $button = $( event.currentTarget );
         // get group key
         var $buttonGroup = $button.parents('.button-group');
