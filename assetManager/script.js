@@ -1,26 +1,52 @@
-$(document).ready(function(){
 
-    $(".filter-button").click(function(){
-        var value = $(this).attr('data-filter');
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+
+
+
+    var $grid = $('.grid').imagesLoaded( function() {
+    // init Isotope when grid's images have loaded
+        $grid.isotope({
+        itemSelector: '.grid-item',
+        percentPosition: true,
+        layoutMode: 'fitRows'
         
-        if(value == "all")
-        {
-            $('.filter').removeClass('hidden');
-            $('.filter').show('1000');
-        }
-        else
-        {
-                $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-                $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-            $(".filter").not('.'+value).hide('3000');
-            $('.filter').filter('.'+value).show('3000');
-            
-        }
+     });
+});
+
+    var filters = {};
+
+    $('.filters').on( 'click', '.button', function( event ) {
+        var $button = $( event.currentTarget );
+        // get group key
+        var $buttonGroup = $button.parents('.button-group');
+        var filterGroup = $buttonGroup.attr('data-filter-group');
+        // set filter for group
+        filters[ filterGroup ] = $button.attr('data-filter');
+        // combine filters
+        var filterValue = concatValues( filters );
+        // set filter for Isotope
+        $grid.isotope({ filter: filterValue });
     });
-    
-    if ($(".filter-button").removeClass("active")) {
-    $(this).removeClass("active");
+
+    // change is-checked class on buttons
+    $('.button-group').each( function( i, buttonGroup ) {
+        var $buttonGroup = $( buttonGroup );
+        $buttonGroup.on( 'click', 'button', function( event ) {
+            $buttonGroup.find('.is-checked').removeClass('is-checked');
+            var $button = $( event.currentTarget );
+            $button.addClass('is-checked');
+        });
+    });
+
+    // flatten object by concatting values
+    function concatValues( obj ) {
+        var value = '';
+        for ( var prop in obj ) {
+            value += obj[ prop ];
+        }
+        return value;
     }
-    $(this).addClass("active");
-    
-    });
