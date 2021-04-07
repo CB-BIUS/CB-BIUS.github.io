@@ -298,12 +298,67 @@
   </div>
 
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-<script src='http://imagesloaded.desandro.com/imagesloaded.pkgd.js'></script>
-<script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script src='http://imagesloaded.desandro.com/imagesloaded.pkgd.js'></script>
+  
+  <script>
+      $("#menu-toggle").click(function(e) {
+          e.preventDefault();
+          $("#wrapper").toggleClass("toggled");
+      });
+  </script>
+  
+  <script>
+  
+      var $grid = $('.grid').imagesLoaded( function() {
+      // init Isotope when grid's images have loaded
+          $grid.isotope({
+          itemSelector: '.grid-item',
+          percentPosition: true,
+          layoutMode: 'fitRows'
+          
+       });
+  });
+  
+      var filters = {};
+  
+      $('.filters').on( 'click', '.button', function( event ) {
+          var $button = $( event.currentTarget );
+          // get group key
+          var $buttonGroup = $button.parents('.button-group');
+          var filterGroup = $buttonGroup.attr('data-filter-group');
+          // set filter for group
+          filters[ filterGroup ] = $button.attr('data-filter');
+          // combine filters
+          var filterValue = concatValues( filters );
+          // set filter for Isotope
+          $grid.isotope({ filter: filterValue });
+      });
+  
+      // change is-checked class on buttons
+      $('.button-group').each( function( i, buttonGroup ) {
+          var $buttonGroup = $( buttonGroup );
+          $buttonGroup.on( 'click', 'button', function( event ) {
+              $buttonGroup.find('.is-checked').removeClass('is-checked');
+              var $button = $( event.currentTarget );
+              $button.addClass('is-checked');
+          });
+      });
+  
+      // flatten object by concatting values
+      function concatValues( obj ) {
+          var value = '';
+          for ( var prop in obj ) {
+              value += obj[ prop ];
+          }
+          return value;
+      }
+  
+  
+  </script>
 
 </body>
 </html>
