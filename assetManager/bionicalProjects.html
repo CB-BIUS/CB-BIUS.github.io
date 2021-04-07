@@ -382,15 +382,12 @@
   
   <script>
   
-      var $grid = $('.grid').imagesLoaded( function() {
-      // init Isotope when grid's images have loaded
-          $grid.isotope({
+      var $grid = $('.grid').isotope({
           itemSelector: '.grid-item',
           percentPosition: true,
           layoutMode: 'fitRows'
-          
        });
-  });
+ 
   
       var filters = {};
   
