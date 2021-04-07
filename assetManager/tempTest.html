@@ -35,9 +35,9 @@
             min-width: 100vw;
         }
 
-        .grid-item {  
-            padding: 2%;
-        }
+         .grid-item {  
+            padding: 1.5%;
+        } 
 
         #wrapper.toggled #sidebar-wrapper {
             margin-left: 0;
@@ -193,7 +193,7 @@
                                 <a href="#">Item One</a>
                             </h4>
                             <h5>$24.99</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Amet numquam aspernatur!</p>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
                         </div>
                         <div class="card-footer">
                             <div class="btn-group-sm" role="group" aria-label="Basic example">
@@ -231,7 +231,7 @@
                                 <a href="#">Item Three</a>
                             </h4>
                             <h5>$24.99</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
                         </div>
                         <div class="card-footer">
                             <div class="btn-group-sm" role="group" aria-label="Basic example">
@@ -280,7 +280,7 @@
                     </div>
                 </div>
 
-                <div class="grid-item col-lg-4 col-md-6 my-2">
+                <div class="grid-item col-lg-4 col-md-6 my-2 red">
                     <div class="card grid-item-content h-100">
                         <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                         <div class="card-body">
@@ -339,13 +339,15 @@
         $grid.isotope({
         itemSelector: '.grid-item',
         percentPosition: true,
+        layoutMode: 'fitRows'
+        
      });
 });
 
-    // var $grid = $('.grid').isotope({
-    //     itemSelector: '.grid-item',
-    //     percentPosition: true,
-    // });
+    //  var $grid = $('.grid').isotope({
+    //      itemSelector: '.grid-item',
+    //      percentPosition: true,
+    //  });
 
 
     // .imagesLoaded
