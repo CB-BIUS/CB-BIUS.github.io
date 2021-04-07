@@ -77,7 +77,7 @@
           }
       }
 
-      @media (max-width: 600px) {
+      @media (min-width: 414px) {
           #sidebar-wrapper {
               margin-left: 0;
               overflow-y: auto; 
@@ -93,6 +93,26 @@
               margin-left: -15em;
           }
       }
+
+      @media only screen 
+        and (device-width: 390px) 
+        and (device-height: 844px) 
+        and (-webkit-device-pixel-ratio: 3) { 
+            #sidebar-wrapper {
+              margin-left: 0;
+              overflow-y: auto; 
+              overflow-x: auto;
+          }
+
+          #page-content-wrapper {
+              min-width: 0;
+              width: 100%;
+          }
+
+          #wrapper.toggled #sidebar-wrapper {
+              margin-left: -15em;
+          }
+        }
   </style>
 
     <title>Bionical Asset Manager</title>
