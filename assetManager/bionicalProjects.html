@@ -99,11 +99,14 @@
         and (device-height: 844px) 
         and (-webkit-device-pixel-ratio: 3) { 
             #sidebar-wrapper {
-              height: 100vh;
-              width: 50vh;  
+              height: 100%;  
               margin-left: 0;
             
           }
+
+          #sidebar-wrapper .ui-group {
+          width: 50%;
+      }
 
           #page-content-wrapper {
               min-width: 0;
@@ -111,7 +114,7 @@
           }
 
           #wrapper.toggled #sidebar-wrapper {
-              margin-left: -15em;
+              margin-left: -50%;
           }
         }
   </style>
