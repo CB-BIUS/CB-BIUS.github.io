@@ -133,11 +133,11 @@
                   <p class="ml-3">Resource</p>
                   <div class="button-group btn-group-vertical ml-4" data-filter-group="resource">
                       <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".medselect">MED Select</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".kolselect">KOL Select</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".webselect">WEB Select</button> 
-                      <button class="button btn btn-outline-secondary" data-filter=".patientprofiler">Paient Profiler</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".npp">NPP</button> 
+                      <button class="button btn btn-outline-secondary" data-filter=".medselect">MED Select <span class="badge badge-primary" id="MedCount"></span></button>
+                      <button class="button btn btn-outline-secondary" data-filter=".kolselect">KOL Select <span class="badge badge-primary" id="KolCount"></span></button>
+                      <button class="button btn btn-outline-secondary" data-filter=".webselect">WEB Select <span class="badge badge-primary" id="WebCount"></span></button> 
+                      <button class="button btn btn-outline-secondary" data-filter=".patientprofiler">Paient Profiler <span class="badge badge-primary" id="PatientCount"></span></button>
+                      <button class="button btn btn-outline-secondary" data-filter=".npp">NPP <span class="badge badge-primary" id="NppCount"></span></button> 
                   </div>
               </div>
               <hr>
@@ -145,8 +145,8 @@
                   <p class="ml-3">Brand</p>
                   <div class="button-group btn-group-vertical ml-4" data-filter-group="brand">
                       <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".branded">Branded</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".unbranded">Unbranded</button>
+                      <button class="button btn btn-outline-secondary" data-filter=".branded">Branded <span class="badge badge-primary" id="Branded"></span></button>
+                      <button class="button btn btn-outline-secondary" data-filter=".unbranded">Unbranded <span class="badge badge-primary" id="Unbranded"></span></button>
                   </div>
               </div>
               <hr>
@@ -154,9 +154,9 @@
                   <p class="ml-3">Type</p>
                   <div class="button-group btn-group-vertical ml-4" data-filter-group="type">
                       <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".brochure">Brochure</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".wallchart">Wallchart</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".postcard">Postcard</button>
+                      <button class="button btn btn-outline-secondary" data-filter=".brochure">Brochure <span class="badge badge-primary" id="brochureCount"></span></button>
+                      <button class="button btn btn-outline-secondary" data-filter=".wallchart">Wallchart <span class="badge badge-primary" id="wallchartCount"></span></button>
+                      <button class="button btn btn-outline-secondary" data-filter=".postcard">Postcard <span class="badge badge-primary" id="postcardCount"></span></button>
                   </div>
               </div>
               <hr>
@@ -164,8 +164,8 @@
                   <p class="ml-3">PDF Delivery</p>
                   <div class="button-group btn-group-vertical ml-4" data-filter-group="pdf">
                       <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".pdfyes">Yes</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".pdfno">No</button>
+                      <button class="button btn btn-outline-secondary" data-filter=".pdfyes">Yes <span class="badge badge-primary" id="pdfyesCount"></span></button>
+                      <button class="button btn btn-outline-secondary" data-filter=".pdfno">No <span class="badge badge-primary" id="pdfnoCount"></span></button>
                   </div>
               </div>
               <hr>
@@ -173,8 +173,8 @@
                   <p class="ml-3">HCP Toggle</p>
                   <div class="button-group btn-group-vertical ml-4" data-filter-group="hcp">
                       <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".hcpyes">Yes</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".hpcno">No</button>
+                      <button class="button btn btn-outline-secondary" data-filter=".hcpyes">Yes <span class="badge badge-primary" id="hcpyesCount"></span></button>
+                      <button class="button btn btn-outline-secondary" data-filter=".hcpno">No <span class="badge badge-primary" id="HcpnoCount"></span></button>
                   </div>
               </div>
               <hr>
@@ -182,8 +182,8 @@
                   <p class="ml-3">DSE Tabs</p>
                   <div class="button-group btn-group-vertical ml-4" data-filter-group="dse">
                       <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".dseyes">Yes</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".dseno">No</button>
+                      <button class="button btn btn-outline-secondary" data-filter=".dseyes">Yes <span class="badge badge-primary" id="dseyesCount"></span></button>
+                      <button class="button btn btn-outline-secondary" data-filter=".dseno">No <span class="badge badge-primary" id="dsenoCount"></span></button>
                   </div>
               </div>
               <hr>
@@ -191,8 +191,8 @@
               <p class="ml-3">Veeva Approved Email</p>
                   <div class="button-group btn-group-vertical ml-4" data-filter-group="vae">
                       <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".vaeyes">Yes</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".vaeno">No</button>
+                      <button class="button btn btn-outline-secondary" data-filter=".vaeyes">Yes <span class="badge badge-primary" id="vaeyesCount"></span></button>
+                      <button class="button btn btn-outline-secondary" data-filter=".vaeno">No <span class="badge badge-primary" id="vaenoCount"></span></button>
                   </div>
               </div>
               <hr>
@@ -200,8 +200,8 @@
                   <p class="ml-3">Email Customization UI</p>
                   <div class="button-group btn-group-vertical ml-4" data-filter-group="emailcustom">
                       <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".emailcustomyes">Yes</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".emailcustomno">No</button>
+                      <button class="button btn btn-outline-secondary" data-filter=".emailcustomyes">Yes <span class="badge badge-primary" id="emailcustomyesCount"></span></button>
+                      <button class="button btn btn-outline-secondary" data-filter=".emailcustomno">No <span class="badge badge-primary" id="emailcustomnoCount"></span></button>
                   </div>
               </div>
           
@@ -226,14 +226,14 @@
           
           <div class="row grid">
              
-                  <div class="grid-item col-lg-4 col-md-6 my-2 medselect branded brochure hcpyes">
+                  <div class="grid-item col-lg-4 col-md-6 my-2 medselect branded postcard hcpyes pdfno dseno vaeno emailcustomno">
                   <div class="card grid-item-content mb-5 h-100">
-                          <img src="../images/placeholder.png" class="card-img-top" data-toggle="modal" data-target="#cardOne" alt="Card image cap">
+                          <img src="images/90147PfizerBMSAFibPostcard/afib-thumb.PNG" class="card-img-top" data-toggle="modal" data-target="#cardOne" alt="Card image cap">
                       <div class="card-body">
-                          <h4 class="card-title">
-                              <a href="#">Item One</a>
-                          </h4>
-                          <p class="card-text">medselect branded brochure hcpyes</p>
+                          <h5 class="card-title">
+                              90147 Pfizer BMS AFib Postcard
+                          </h5>
+                          <p class="card-text">Medselect branded brochure hcpyes</p>
                           <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                               <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#cardOne">Preview</button>
@@ -251,7 +251,7 @@
                                       <div id="cardOneControls" class="carousel slide" data-ride="carousel">
                                         <div class="carousel-inner">
                                           <div class="carousel-item active">
-                                            <img class="d-block w-100" src="../images/placeholder.png" alt="First slide">
+                                            <img class="d-block w-100" src="images/90147PfizerBMSAFibPostcard/afib-thumb.PNG" alt="First slide">
                                             <p class="text-center m-2">One</p>
                                           </div>
                                           <div class="carousel-item">
@@ -287,14 +287,14 @@
                       </div>
                   </div>
   
-                  <div class="grid-item col-lg-4 col-md-6 my-2 kolselect unbranded hpcno dseyes vaeno">
+                  <div class="grid-item col-lg-4 col-md-6 my-2 kolselect unbranded hcpno dseyes vaeno">
                       <div class="card grid-item-content mb-5 h-100">
                           <a href="#"><img class="card-img-top" src="../images/placeholder.png" alt=""></a>
                           <div class="card-body">
                               <h4 class="card-title">
                                   <a href="#">Item Two</a>
                               </h4>
-                              <p class="card-text">kolselect unbranded hpcno dseyes vaeno</p>
+                              <p class="card-text">kolselect unbranded hcpno dseyes vaeno</p>
                               <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#cardTwo">Preview</button>
@@ -538,7 +538,70 @@
           }
           return value;
       }
+
   
+  </script>
+
+  <script>
+    var medCount = $('.medselect').length; 
+    document.getElementById("MedCount").innerHTML = medCount;
+    
+    var kolCount = $('.kolselect').length; 
+    document.getElementById("KolCount").innerHTML = kolCount;
+
+    var webCount = $('.webselect').length; 
+    document.getElementById("WebCount").innerHTML = webCount;
+
+    var patientCount = $('.patientprofiler').length; 
+    document.getElementById("PatientCount").innerHTML = patientCount;
+
+    var nppCount = $('.npp').length; 
+    document.getElementById("NppCount").innerHTML = nppCount;
+
+    var brandedCount = $('.branded').length; 
+    document.getElementById("Branded").innerHTML = brandedCount;
+
+    var unbrandedCount = $('.unbranded').length; 
+    document.getElementById("Unbranded").innerHTML = unbrandedCount;
+
+    var brochureCount = $('.brochure').length; 
+    document.getElementById("brochureCount").innerHTML = brochureCount;
+
+    var wallchartCount = $('.wallchart').length; 
+    document.getElementById("wallchartCount").innerHTML = wallchartCount;
+
+    var postcardCount = $('.postcard').length; 
+    document.getElementById("postcardCount").innerHTML = postcardCount;
+
+    var pdfyesCount = $('.pdfyes').length; 
+    document.getElementById("pdfyesCount").innerHTML = pdfyesCount;
+
+    var pdfnoCount = $('.pdfno').length; 
+    document.getElementById("pdfnoCount").innerHTML = pdfnoCount;
+
+    var hcpyesCount = $('.hcpyes').length; 
+    document.getElementById("hcpyesCount").innerHTML = hcpyesCount;
+
+    var hcpnoCount = $('.hcpno').length; 
+    document.getElementById("HcpnoCount").innerHTML = hcpnoCount;
+
+    var dseyesCount = $('.dseyes').length; 
+    document.getElementById("dseyesCount").innerHTML = dseyesCount;
+
+    var dsenoCount = $('.dseno').length; 
+    document.getElementById("dsenoCount").innerHTML = dsenoCount;
+
+    var vaeyesCount = $('.vaeyes').length; 
+    document.getElementById("vaeyesCount").innerHTML = vaeyesCount;
+
+    var vaenoCount = $('.vaeno').length; 
+    document.getElementById("vaenoCount").innerHTML = vaenoCount;
+
+    var emailcustomyesCount = $('.emailcustomyes').length; 
+    document.getElementById("emailcustomyesCount").innerHTML = emailcustomyesCount;
+
+    var emailcustomnoCount = $('.emailcustomno').length; 
+    document.getElementById("emailcustomnoCount").innerHTML = emailcustomnoCount;
   
   </script>
 
