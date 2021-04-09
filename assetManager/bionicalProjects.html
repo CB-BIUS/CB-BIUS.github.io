@@ -122,7 +122,7 @@
       <div class="filters bg-light border-right pb-5" id="sidebar-wrapper">
           <div class="sidebar-heading">Filter Options</div>
           <hr>
-          
+          <p class="ml-4 mt-3">Total Programs <span class="badge badge-primary" id="total-count"></span></p>
               <div class="ui-group">
                   <div class="button-group btn-group m-1 ml-4">
                       <button class="button btn btn-secondary" onClick="window.location.reload();">Reset Filters</button>
@@ -132,67 +132,67 @@
               <div class="ui-group">
                   <p class="ml-3">Resource</p>
                   <div class="button-group btn-group-vertical ml-4" data-filter-group="resource">
-                      <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".medselect">MED Select <span class="badge badge-primary" id="MedCount"></span></button>
-                      <button class="button btn btn-outline-secondary" data-filter=".kolselect">KOL Select <span class="badge badge-primary" id="KolCount"></span></button>
-                      <button class="button btn btn-outline-secondary" data-filter=".webselect">WEB Select <span class="badge badge-primary" id="WebCount"></span></button> 
-                      <button class="button btn btn-outline-secondary" data-filter=".patientprofiler">Paient Profiler <span class="badge badge-primary" id="PatientCount"></span></button>
-                      <button class="button btn btn-outline-secondary" data-filter=".npp">NPP <span class="badge badge-primary" id="NppCount"></span></button> 
+                      <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
+                      <button class="button btn btn-outline-secondary" data-filter=".medselect">MED Select <span class="filter-count"></span></button>
+                      <button class="button btn btn-outline-secondary" data-filter=".kolselect">KOL Select <span class="filter-count"></span></button>
+                      <button class="button btn btn-outline-secondary" data-filter=".webselect">WEB Select <span class="filter-count"></span></button> 
+                      <button class="button btn btn-outline-secondary" data-filter=".patientprofiler">Paient Profiler <span class="filter-count"></span></button>
+                      <button class="button btn btn-outline-secondary" data-filter=".npp">NPP <span class="filter-count"></span></button> 
                   </div>
               </div>
               <hr>
               <div class="ui-group">
                   <p class="ml-3">Brand</p>
                   <div class="button-group btn-group-vertical ml-4" data-filter-group="brand">
-                      <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".branded">Branded <span class="badge badge-primary" id="Branded"></span></button>
-                      <button class="button btn btn-outline-secondary" data-filter=".unbranded">Unbranded <span class="badge badge-primary" id="Unbranded"></span></button>
+                      <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
+                      <button class="button btn btn-outline-secondary" data-filter=".branded">Branded <span class="filter-count"></span></button>
+                      <button class="button btn btn-outline-secondary" data-filter=".unbranded">Unbranded <span class="filter-count"></span></button>
                   </div>
               </div>
               <hr>
               <div class="ui-group">
                   <p class="ml-3">Type</p>
                   <div class="button-group btn-group-vertical ml-4" data-filter-group="type">
-                      <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".brochure">Brochure <span class="badge badge-primary" id="brochureCount"></span></button>
-                      <button class="button btn btn-outline-secondary" data-filter=".wallchart">Wallchart <span class="badge badge-primary" id="wallchartCount"></span></button>
-                      <button class="button btn btn-outline-secondary" data-filter=".postcard">Postcard <span class="badge badge-primary" id="postcardCount"></span></button>
+                      <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
+                      <button class="button btn btn-outline-secondary" data-filter=".brochure">Brochure <span class="filter-count"></span></button>
+                      <button class="button btn btn-outline-secondary" data-filter=".wallchart">Wallchart <span class="filter-count"></span></button>
+                      <button class="button btn btn-outline-secondary" data-filter=".postcard">Postcard <span class="filter-count"></span></button>
                   </div>
               </div>
               <hr>
               <div class="ui-group">
                   <p class="ml-3">PDF Delivery</p>
                   <div class="button-group btn-group-vertical ml-4" data-filter-group="pdf">
-                      <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".pdfyes">Yes <span class="badge badge-primary" id="pdfyesCount"></span></button>
-                      <button class="button btn btn-outline-secondary" data-filter=".pdfno">No <span class="badge badge-primary" id="pdfnoCount"></span></button>
+                      <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
+                      <button class="button btn btn-outline-secondary" data-filter=".pdfyes">Yes <span class="filter-count"></span></button>
+                      <button class="button btn btn-outline-secondary" data-filter=".pdfno">No <span class="filter-count"></span></button>
                   </div>
               </div>
               <hr>
               <div class="ui-group">
                   <p class="ml-3">HCP Toggle</p>
                   <div class="button-group btn-group-vertical ml-4" data-filter-group="hcp">
-                      <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".hcpyes">Yes <span class="badge badge-primary" id="hcpyesCount"></span></button>
-                      <button class="button btn btn-outline-secondary" data-filter=".hcpno">No <span class="badge badge-primary" id="HcpnoCount"></span></button>
+                      <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
+                      <button class="button btn btn-outline-secondary" data-filter=".hcpyes">Yes <span class="filter-count"></span></button>
+                      <button class="button btn btn-outline-secondary" data-filter=".hcpno">No <span class="filter-count"></span></button>
                   </div>
               </div>
               <hr>
               <div class="ui-group">
                   <p class="ml-3">DSE Tabs</p>
                   <div class="button-group btn-group-vertical ml-4" data-filter-group="dse">
-                      <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".dseyes">Yes <span class="badge badge-primary" id="dseyesCount"></span></button>
-                      <button class="button btn btn-outline-secondary" data-filter=".dseno">No <span class="badge badge-primary" id="dsenoCount"></span></button>
+                      <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
+                      <button class="button btn btn-outline-secondary" data-filter=".dseyes">Yes <span class="filter-count"></span></button>
+                      <button class="button btn btn-outline-secondary" data-filter=".dseno">No <span class="filter-count"></span></button>
                   </div>
               </div>
               <hr>
               <div class="ui-group">
               <p class="ml-3">Veeva Approved Email</p>
                   <div class="button-group btn-group-vertical ml-4" data-filter-group="vae">
-                      <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".vaeyes">Yes <span class="badge badge-primary" id="vaeyesCount"></span></button>
-                      <button class="button btn btn-outline-secondary" data-filter=".vaeno">No <span class="badge badge-primary" id="vaenoCount"></span></button>
+                      <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
+                      <button class="button btn btn-outline-secondary" data-filter=".vaeyes">Yes <span class="filter-count"></span></button>
+                      <button class="button btn btn-outline-secondary" data-filter=".vaeno">No <span class="filter-count"></span></button>
                   </div>
               </div>
               <hr>
@@ -200,8 +200,8 @@
                   <p class="ml-3">Email Customization UI</p>
                   <div class="button-group btn-group-vertical ml-4" data-filter-group="emailcustom">
                       <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".emailcustomyes">Yes <span class="badge badge-primary" id="emailcustomyesCount"></span></button>
-                      <button class="button btn btn-outline-secondary" data-filter=".emailcustomno">No <span class="badge badge-primary" id="emailcustomnoCount"></span></button>
+                      <button class="button btn btn-outline-secondary" data-filter=".emailcustomyes">Yes <span class="filter-count"></span></button>
+                      <button class="button btn btn-outline-secondary" data-filter=".emailcustomno">No <span class="filter-count"></span></button>
                   </div>
               </div>
           
@@ -505,103 +505,134 @@
        });
  
   
-      var filters = {};
-  
-      $('.filters').on( 'click', '.button', function( event ) {
-          var $button = $( event.currentTarget );
-          // get group key
-          var $buttonGroup = $button.parents('.button-group');
-          var filterGroup = $buttonGroup.attr('data-filter-group');
-          // set filter for group
-          filters[ filterGroup ] = $button.attr('data-filter');
-          // combine filters
-          var filterValue = concatValues( filters );
-          // set filter for Isotope
-          $grid.isotope({ filter: filterValue });
-      });
-  
-      // change is-checked class on buttons
-      $('.button-group').each( function( i, buttonGroup ) {
-          var $buttonGroup = $( buttonGroup );
-          $buttonGroup.on( 'click', 'button', function( event ) {
-              $buttonGroup.find('.is-checked').removeClass('is-checked');
-              var $button = $( event.currentTarget );
-              $button.addClass('is-checked');
-          });
-      });
-  
-      // flatten object by concatting values
-      function concatValues( obj ) {
-          var value = '';
-          for ( var prop in obj ) {
-              value += obj[ prop ];
-          }
-          return value;
-      }
+       var $filterUI = $('.filters .button');
 
+updateFilterCounts();
+
+// store filter for each group
+var filters = {};
+
+$('.filters').on( 'click', '.button', function() {
+  var $this = $(this);
+  // get group key
+  var $buttonGroup = $this.parents('.button-group');
+  var filterGroup = $buttonGroup.attr('data-filter-group');
+  // set filter for group
+  filters[ filterGroup ] = $this.attr('data-filter');
+  // combine filters
+  var filterValue = concatValues( filters );
+  // set filter for Isotope
+  $grid.isotope({ filter: filterValue });
+  updateFilterCounts();
+});
+
+// change is-checked class on buttons
+$('.button-group').each( function( i, buttonGroup ) {
+  var $buttonGroup = $( buttonGroup );
+  $buttonGroup.on( 'click', 'button', function() {
+    $buttonGroup.find('.is-checked').removeClass('is-checked');
+    $( this ).addClass('is-checked');
+  });
+});
   
+// flatten object by concatting values
+function concatValues( obj ) {
+  var value = '';
+  for ( var prop in obj ) {
+    value += obj[ prop ];
+  }
+  return value;
+}
+
+function updateFilterCounts()  {
+  // get filtered item elements
+  var itemElems = $grid.isotope('getFilteredItemElements');
+  var $itemElems = $( itemElems );
+  $filterUI.each( function( i, elem ) {
+    
+    var $elem = $( elem );
+    var filterValue = $elem.attr('data-filter');
+    if ( !filterValue ) {
+      // do not update 'any' buttons
+      return;
+    }
+    
+    var count = $itemElems.filter( filterValue ).length;
+    var countText = '(' + count +')';
+    if ( $elem.is('option') ) {
+      countText = $elem.attr('data-name') + ' ' + countText;
+      $elem.text( countText );
+    } else {
+      $elem.find('.filter-count').text( countText );
+    }
+  });
+}
+
   </script>
 
   <script>
-    var medCount = $('.medselect').length; 
-    document.getElementById("MedCount").innerHTML = medCount;
+    var totalCount = $('.grid-item').length;
+    document.getElementById("total-count").innerHTML = totalCount;
+
+    // var medCount = $('.medselect').length; 
+    // document.getElementById("MedCount").innerHTML = medCount;
     
-    var kolCount = $('.kolselect').length; 
-    document.getElementById("KolCount").innerHTML = kolCount;
+    // var kolCount = $('.kolselect').length; 
+    // document.getElementById("KolCount").innerHTML = kolCount;
 
-    var webCount = $('.webselect').length; 
-    document.getElementById("WebCount").innerHTML = webCount;
+    // var webCount = $('.webselect').length; 
+    // document.getElementById("WebCount").innerHTML = webCount;
 
-    var patientCount = $('.patientprofiler').length; 
-    document.getElementById("PatientCount").innerHTML = patientCount;
+    // var patientCount = $('.patientprofiler').length; 
+    // document.getElementById("PatientCount").innerHTML = patientCount;
 
-    var nppCount = $('.npp').length; 
-    document.getElementById("NppCount").innerHTML = nppCount;
+    // var nppCount = $('.npp').length; 
+    // document.getElementById("NppCount").innerHTML = nppCount;
 
-    var brandedCount = $('.branded').length; 
-    document.getElementById("Branded").innerHTML = brandedCount;
+    // var brandedCount = $('.branded').length; 
+    // document.getElementById("Branded").innerHTML = brandedCount;
 
-    var unbrandedCount = $('.unbranded').length; 
-    document.getElementById("Unbranded").innerHTML = unbrandedCount;
+    // var unbrandedCount = $('.unbranded').length; 
+    // document.getElementById("Unbranded").innerHTML = unbrandedCount;
 
-    var brochureCount = $('.brochure').length; 
-    document.getElementById("brochureCount").innerHTML = brochureCount;
+    // var brochureCount = $('.brochure').length; 
+    // document.getElementById("brochureCount").innerHTML = brochureCount;
 
-    var wallchartCount = $('.wallchart').length; 
-    document.getElementById("wallchartCount").innerHTML = wallchartCount;
+    // var wallchartCount = $('.wallchart').length; 
+    // document.getElementById("wallchartCount").innerHTML = wallchartCount;
 
-    var postcardCount = $('.postcard').length; 
-    document.getElementById("postcardCount").innerHTML = postcardCount;
+    // var postcardCount = $('.postcard').length; 
+    // document.getElementById("postcardCount").innerHTML = postcardCount;
 
-    var pdfyesCount = $('.pdfyes').length; 
-    document.getElementById("pdfyesCount").innerHTML = pdfyesCount;
+    // var pdfyesCount = $('.pdfyes').length; 
+    // document.getElementById("pdfyesCount").innerHTML = pdfyesCount;
 
-    var pdfnoCount = $('.pdfno').length; 
-    document.getElementById("pdfnoCount").innerHTML = pdfnoCount;
+    // var pdfnoCount = $('.pdfno').length; 
+    // document.getElementById("pdfnoCount").innerHTML = pdfnoCount;
 
-    var hcpyesCount = $('.hcpyes').length; 
-    document.getElementById("hcpyesCount").innerHTML = hcpyesCount;
+    // var hcpyesCount = $('.hcpyes').length; 
+    // document.getElementById("hcpyesCount").innerHTML = hcpyesCount;
 
-    var hcpnoCount = $('.hcpno').length; 
-    document.getElementById("HcpnoCount").innerHTML = hcpnoCount;
+    // var hcpnoCount = $('.hcpno').length; 
+    // document.getElementById("HcpnoCount").innerHTML = hcpnoCount;
 
-    var dseyesCount = $('.dseyes').length; 
-    document.getElementById("dseyesCount").innerHTML = dseyesCount;
+    // var dseyesCount = $('.dseyes').length; 
+    // document.getElementById("dseyesCount").innerHTML = dseyesCount;
 
-    var dsenoCount = $('.dseno').length; 
-    document.getElementById("dsenoCount").innerHTML = dsenoCount;
+    // var dsenoCount = $('.dseno').length; 
+    // document.getElementById("dsenoCount").innerHTML = dsenoCount;
 
-    var vaeyesCount = $('.vaeyes').length; 
-    document.getElementById("vaeyesCount").innerHTML = vaeyesCount;
+    // var vaeyesCount = $('.vaeyes').length; 
+    // document.getElementById("vaeyesCount").innerHTML = vaeyesCount;
 
-    var vaenoCount = $('.vaeno').length; 
-    document.getElementById("vaenoCount").innerHTML = vaenoCount;
+    // var vaenoCount = $('.vaeno').length; 
+    // document.getElementById("vaenoCount").innerHTML = vaenoCount;
 
-    var emailcustomyesCount = $('.emailcustomyes').length; 
-    document.getElementById("emailcustomyesCount").innerHTML = emailcustomyesCount;
+    // var emailcustomyesCount = $('.emailcustomyes').length; 
+    // document.getElementById("emailcustomyesCount").innerHTML = emailcustomyesCount;
 
-    var emailcustomnoCount = $('.emailcustomno').length; 
-    document.getElementById("emailcustomnoCount").innerHTML = emailcustomnoCount;
+    // var emailcustomnoCount = $('.emailcustomno').length; 
+    // document.getElementById("emailcustomnoCount").innerHTML = emailcustomnoCount;
   
   </script>
 
