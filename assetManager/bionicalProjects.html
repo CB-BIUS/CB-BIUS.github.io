@@ -14,732 +14,349 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    
+
     <style>
-      #wrapper {
-          overflow-x: hidden;
-      }
+        #wrapper {
+            overflow-x: hidden;
+        }
 
-      #sidebar-wrapper {
-          height: 100vh;
-          overflow-y: auto; 
-          overflow-x: hidden;
-          margin-left: -15rem;
-          -webkit-transition: margin .25s ease-out;
-          -moz-transition: margin .25s ease-out;
-          -o-transition: margin .25s ease-out;
-          transition: margin .25s ease-out;
-      }
+        #sidebar-wrapper {
+            height: 100vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+            margin-left: -15rem;
+            -webkit-transition: margin .25s ease-out;
+            -moz-transition: margin .25s ease-out;
+            -o-transition: margin .25s ease-out;
+            transition: margin .25s ease-out;
+        }
 
-      #sidebar-wrapper .sidebar-heading {
-          padding: 0.875rem 1.25rem;
-          font-size: 1.2rem;
-      }
+        #sidebar-wrapper .sidebar-heading {
+            padding: 0.875rem 1.25rem;
+            font-size: 1.2rem;
+        }
 
-      #sidebar-wrapper .ui-group {
-          width: 15rem;
-      }
+        #sidebar-wrapper .ui-group {
+            width: 15rem;
+        }
 
-      #page-content-wrapper {
-          min-width: 100vw;
-      }
+        #page-content-wrapper {
+            min-width: 100vw;
+        }
 
-      #wrapper.toggled #sidebar-wrapper {
-          margin-left: 0;
-      }
+        #wrapper.toggled #sidebar-wrapper {
+            margin-left: 0;
+        }
 
-      footer {
-          padding-top: 3rem;
-          padding-bottom: 3rem;
-      }
+        footer {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
 
-      footer p {
-          margin-bottom: .25rem;
-      }
+        footer p {
+            margin-bottom: .25rem;
+        }
 
-      .is-checked {
-          background-color:#868e96;
-          color: white;
-      }
+        .is-checked {
+            background-color:#868e96;
+            color: white;
+        }
 
-      @media (min-width: 768px) {
-          #sidebar-wrapper {
-              margin-left: 0;
-          }
+        @media (min-width: 768px) {
+            #sidebar-wrapper {
+                margin-left: 0;
+            }
 
-          #page-content-wrapper {
-              min-width: 0;
-              width: 100%;
-          }
+            #page-content-wrapper {
+                min-width: 0;
+                width: 100%;
+            }
 
-          #wrapper.toggled #sidebar-wrapper {
-              margin-left: -15rem;
-          }
-      }
+            #wrapper.toggled #sidebar-wrapper {
+                margin-left: -15rem;
+            }
+        }
 
-      @media (min-width: 414px) {
-          #sidebar-wrapper {
-              margin-left: 0;
-              overflow-y: auto; 
-              overflow-x: hidden;
-          }
+        @media (min-width: 414px) {
+            #sidebar-wrapper {
+                margin-left: 0;
+                overflow-y: auto;
+                overflow-x: hidden;
+            }
 
-          #sidebar-wrapper .ui-group .button-group{
-              width: 7rem;
-          }
+            #sidebar-wrapper .ui-group .button-group{
+                width: 7rem;
+            }
 
-          .btn {
-              white-space:normal !important;
-              word-wrap: break-word; 
-          }
+            .btn {
+                white-space:normal !important;
+                word-wrap: break-word;
+            }
 
-          #page-content-wrapper {
-              min-width: 0;
-              width: 100%;
-          }
+            #page-content-wrapper {
+                min-width: 0;
+                width: 100%;
+            }
 
-          #wrapper.toggled #sidebar-wrapper {
-              margin-left: -15rem;
-          }
-      }
+            #wrapper.toggled #sidebar-wrapper {
+                margin-left: -15rem;
+            }
+        }
 
-      @media (max-width: 390px) {
-          #sidebar-wrapper {
-              margin-left: 0;
-              overflow-y: auto; 
-              overflow-x: hidden;
-          }
+        @media (max-width: 390px) {
+            #sidebar-wrapper {
+                margin-left: 0;
+                overflow-y: auto;
+                overflow-x: hidden;
+            }
 
-          #sidebar-wrapper .ui-group .button-group{
-              width: 7rem;
-          }
+            #sidebar-wrapper .ui-group .button-group{
+                width: 7rem;
+            }
 
-          .btn {
-              white-space:normal !important;
-              word-wrap: break-word; 
-          }
+            .btn {
+                white-space:normal !important;
+                word-wrap: break-word;
+            }
 
-          #page-content-wrapper {
-              min-width: 0;
-              width: 100%;
-          }
+            #page-content-wrapper {
+                min-width: 0;
+                width: 100%;
+            }
 
-          #wrapper.toggled #sidebar-wrapper {
-              margin-left: -15rem;
-          }
-      }
-  </style>
+            #wrapper.toggled #sidebar-wrapper {
+                margin-left: -15rem;
+            }
+        }
+    </style>
 
     <title>Bionical Asset Manager</title>
-   
+
 </head>
 <body>
-  <div class="d-flex" id="wrapper">
-  
-      <!-- Sidebar -->
-      <div class="filters bg-light border-right pb-5" id="sidebar-wrapper">
-          <div class="sidebar-heading">Filter Options</div>
-          <hr>
-          <!-- <p class="ml-4 mt-3">Total Programs <span class="badge badge-primary" id="total-count"></span></p> -->
-              <div class="ui-group">
-                  <div class="button-group btn-group m-1 ml-4">
-                      <button class="button btn btn-secondary" onClick="window.location.reload();">Reset Filters</button>
-                  </div>
-              </div>
-              <hr>
-              <div class="ui-group">
-                  <p class="ml-3 text-wrap">Resource</p>
-                  <div class="button-group btn-group-vertical ml-4" data-filter-group="resource">
-                      <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".medselect">MED Select <span class="filter-count"></span></button>
-                      <button class="button btn btn-outline-secondary" data-filter=".kolselect">KOL Select <span class="filter-count"></span></button>
-                      <button class="button btn btn-outline-secondary" data-filter=".webselect">WEB Select <span class="filter-count"></span></button> 
-                      <button class="button btn btn-outline-secondary" data-filter=".patientprofiler">Patient Profiler <span class="filter-count"></span></button>
-                      <button class="button btn btn-outline-secondary" data-filter=".npp">NPP <span class="filter-count"></span></button> 
-                  </div>
-              </div>
-              <hr>
-              <div class="ui-group">
-                  <p class="ml-3 text-wrap">Brand</p>
-                  <div class="button-group btn-group-vertical ml-4" data-filter-group="brand">
-                      <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".branded">Branded <span class="filter-count"></span></button>
-                      <button class="button btn btn-outline-secondary" data-filter=".unbranded">Unbranded <span class="filter-count"></span></button>
-                  </div>
-              </div>
-              <hr>
-              <div class="ui-group">
-                  <p class="ml-3 text-wrap">Type</p>
-                  <div class="button-group btn-group-vertical ml-4" data-filter-group="type">
-                      <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".brochure">Brochure <span class="filter-count"></span></button>
-                      <button class="button btn btn-outline-secondary" data-filter=".wallchart">Wallchart <span class="filter-count"></span></button>
-                      <button class="button btn btn-outline-secondary" data-filter=".postcard">Postcard <span class="filter-count"></span></button>
-                      <button class="button btn btn-outline-secondary" data-filter=".tearpad">Tearpad <span class="filter-count"></span></button>
-                  </div>
-              </div>
-              <hr>
-              <div class="ui-group">
-                  <p class="ml-3 text-wrap">PDF Delivery</p>
-                  <div class="button-group btn-group-vertical ml-4" data-filter-group="pdf">
-                      <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".pdfyes">Yes <span class="filter-count"></span></button>
-                      <button class="button btn btn-outline-secondary" data-filter=".pdfno">No <span class="filter-count"></span></button>
-                  </div>
-              </div>
-              <hr>
-              <div class="ui-group">
-                  <p class="ml-3 text-wrap">HCP Toggle</p>
-                  <div class="button-group btn-group-vertical ml-4" data-filter-group="hcp">
-                      <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".hcpyes">Yes <span class="filter-count"></span></button>
-                      <button class="button btn btn-outline-secondary" data-filter=".hcpno">No <span class="filter-count"></span></button>
-                  </div>
-              </div>
-              <hr>
-              <div class="ui-group">
-                  <p class="ml-3 text-wrap">DSE Tabs</p>
-                  <div class="button-group btn-group-vertical ml-4" data-filter-group="dse">
-                      <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".dseyes">Yes <span class="filter-count"></span></button>
-                      <button class="button btn btn-outline-secondary" data-filter=".dseno">No <span class="filter-count"></span></button>
-                  </div>
-              </div>
-              <hr>
-              <div class="ui-group">
-              <p class="ml-3 text-wrap">Veeva Approved Email</p>
-                  <div class="button-group btn-group-vertical ml-4" data-filter-group="vae">
-                      <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".vaeyes">Yes <span class="filter-count"></span></button>
-                      <button class="button btn btn-outline-secondary" data-filter=".vaeno">No <span class="filter-count"></span></button>
-                  </div>
-              </div>
-              <hr>
-              <div class="ui-group">
-                  <p class="ml-3 text-wrap">Email Customization UI</p>
-                  <div class="button-group btn-group-vertical ml-4" data-filter-group="emailcustom">
-                      <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
-                      <button class="button btn btn-outline-secondary" data-filter=".emailcustomyes">Yes <span class="filter-count"></span></button>
-                      <button class="button btn btn-outline-secondary" data-filter=".emailcustomno">No <span class="filter-count"></span></button>
-                  </div>
-              </div>
-          
-      </div>
-      <!-- /#sidebar-wrapper -->
-  
-      <!-- Page Content -->
-      <div id="page-content-wrapper">
-          
-          <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-              <button class="btn btn-secondary" id="menu-toggle">Filter <i class="fas fa-filter"></i></button>
-          </nav>
-  
-          <div class="container-fluid">
-  
-              <div class="jumbotron jumbotron-fluid">
-                  <img class="mx-auto d-block" src=../images/bionical-logo.png height="50vh">
-                  <h1 class="display-4 text-center">Bionical US</h1>
-                  <p class="lead text-center">Search Through Past Programs</p>
-              </div>
-  
-          
-          <div class="row grid">
-             
-                  <div class="grid-item col-lg-4 col-md-6 my-2 medselect unbranded postcard hcpyes pdfno dseno vaeno emailcustomno">
-                  <div class="card grid-item-content mb-5 h-100">
-                          <img src="images/90147bmsAfibPostcardMedselect/afib-thumb.PNG" class="card-img-top" data-toggle="modal" data-target="#afibCard" alt="Card image cap">
-                      <div class="card-body">
-                          <h5 class="card-title">
-                              90147 Pfizer BMS AFib Postcard
-                          </h5>
-                          <p class="card-text">Medselect &#9679; Unbranded &#9679; Postcard &#9679; HCP toggle</p>
-                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                              <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#afibCard">Preview</button>
-                              
-                              <div class="modal fade" id="afibCard" tabindex="-1" role="dialog" aria-labelledby="afibCardTitle" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="afibCardTitle">AFib Postcard</h5>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                      </button>
-                                    </div>
-                                    <div class="modal-body">
-                                      <div id="afibCardControls" class="carousel slide" data-ride="carousel">
-                                        <div class="carousel-inner">
-                                          <div class="carousel-item active">
-                                            <img class="d-block w-100" src="images/90147bmsAfibPostcardMedselect/afib-thumb.PNG" alt="First slide">
-                                            <p class="text-center m-2">Splash</p>
-                                          </div>
-                                          <div class="carousel-item">
-                                            <img class="d-block w-100" src="images/90147bmsAfibPostcardMedselect/afibTwo.PNG" alt="Second slide">
-                                            <p class="text-center m-2">Select Template</p>
-                                          </div>
-                                          <div class="carousel-item">
-                                            <img class="d-block w-100" src="images/90147bmsAfibPostcardMedselect/afibThree.PNG" alt="Third slide">
-                                            <p class="text-center m-2">Postcard Address</p>
-                                          </div>
-                                          <div class="carousel-item">
-                                            <img class="d-block w-100" src="images/90147bmsAfibPostcardMedselect/afibFour.PNG" alt="Third slide">
-                                            <p class="text-center m-2">Rep HCP toggle</p>
-                                          </div>
-                                        </div>
-                                        <a class="carousel-control-prev" href="#afibCardControls" role="button" data-slide="prev">
-                                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                          <span class="sr-only">Previous</span>
-                                        </a>
-                                        <a class="carousel-control-next" href="#afibCardControls" role="button" data-slide="next">
-                                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                          <span class="sr-only">Next</span>
-                                        </a>
-                                      </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                      <a href="https://bionicalllc.sharefile.com/d-sa3d7d94e3ecd4f429597a89431fa0a24" class="btn btn-info" target="_blank">Open Link</a>
-                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <a href="https://bionicalllc.sharefile.com/d-sa3d7d94e3ecd4f429597a89431fa0a24" class="btn btn-sm btn-outline-secondary" target="_blank">Open Link</a>
-                            </div>
-                        </div>
-                        </div>
-                      </div>
-                  </div>
-  
-                  <div class="grid-item col-lg-4 col-md-6 my-2 patientprofiler branded pdfno hcpno dseno vaeyes emailcustomyes">
-                      <div class="card grid-item-content mb-5 h-100">
-                        <img src="images/90138cyclosetPatientProfiler/cycloset-thumb.PNG" class="card-img-top" data-toggle="modal" data-target="#cyclosetCard" alt="Card image cap">
-                          <div class="card-body">
-                            <h5 class="card-title">
-                              90138 Bausch-Salix Cycloset Patient Profiler
-                            </h5>
-                              <p class="card-text">Patient profiler &#9679; Branded &#9679; Approved Email</p>
-                              <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#cyclosetCard">Preview</button>
-                                    
-                                    <div class="modal fade" id="cyclosetCard" tabindex="-1" role="dialog" aria-labelledby="cyclosetCardTitle" aria-hidden="true">
-                                      <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h5 class="modal-title" id="cyclosetCardTitle">Cycloset Patient Profiler</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">&times;</span>
-                                            </button>
-                                          </div>
-                                          <div class="modal-body">
-                                            <div id="cyclosetCardControls" class="carousel slide" data-ride="carousel">
-                                              <div class="carousel-inner">
-                                                <div class="carousel-item active">
-                                                  <img class="d-block w-100" src="images/90138cyclosetPatientProfiler/cycloset-thumb.PNG" alt="First slide">
-                                                  <p class="text-center m-2">Splash</p>
-                                                </div>
-                                                <div class="carousel-item">
-                                                  <img class="d-block w-100" src="images/90138cyclosetPatientProfiler/cyclosetTwo.PNG" alt="Second slide">
-                                                  <p class="text-center m-2">Select Profile</p>
-                                                </div>
-                                                <div class="carousel-item">
-                                                  <img class="d-block w-100" src="images/90138cyclosetPatientProfiler/cyclosetThree.PNG" alt="Third slide">
-                                                  <p class="text-center m-2">Profile</p>
-                                                </div>
-                                                <div class="carousel-item">
-                                                  <img class="d-block w-100" src="images/90138cyclosetPatientProfiler/cyclosetFour.PNG" alt="Third slide">
-                                                  <p class="text-center m-2">Launch Approved Email page</p>
-                                                </div>
-                                              </div>
-                                              <a class="carousel-control-prev" href="#cyclosetCardControls" role="button" data-slide="prev">
-                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                <span class="sr-only">Previous</span>
-                                              </a>
-                                              <a class="carousel-control-next" href="#cyclosetCardControls" role="button" data-slide="next">
-                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                <span class="sr-only">Next</span>
-                                              </a>
-                                            </div>
-                                          </div>
-                                          <div class="modal-footer">
-                                            <a href="https://bionicalllc.sharefile.com/d-s5c71f9e2213b4dbc991a79013a51fe32" class="btn btn-info" target="_blank">Open Link</a>
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <a href="https://bionicalllc.sharefile.com/d-s5c71f9e2213b4dbc991a79013a51fe32" class="btn btn-sm btn-outline-secondary" target="_blank">Open Link</a>
-                                  </div>
-                            </div>
-                        </div>
-                          
-                      </div>
-                  </div>
-  
-                  <div class="grid-item col-lg-4 col-md-6 my-2 kolselect branded pdfno hcpno dseno vaeyes">
-                      <div class="card grid-item-content mb-5 h-100">
-                        <img src="images/90116tremfyaDermKolselect/tremfya-thumb.PNG" class="card-img-top" data-toggle="modal" data-target="#tremfyaCard" alt="Card image cap">
-                          <div class="card-body">
-                            <h5 class="card-title">
-                              90116 Janssen Tremfya Derm KOL Select
-                            </h5>
-                              <p class="card-text">Kolselect &#9679; Branded &#9679; Approved Email</p>
-                              <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#tremfyaCard">Preview</button>
-                                    
-                                    <div class="modal fade" id="tremfyaCard" tabindex="-1" role="dialog" aria-labelledby="tremfyaCardTitle" aria-hidden="true">
-                                      <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h5 class="modal-title" id="tremfyaCardTitle">Tremfya Derm KOL</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">&times;</span>
-                                            </button>
-                                          </div>
-                                          <div class="modal-body">
-                                            <div id="tremfyaCardControls" class="carousel slide" data-ride="carousel">
-                                              <div class="carousel-inner">
-                                                <div class="carousel-item active">
-                                                  <img class="d-block w-100" src="images/90116tremfyaDermKolselect/tremfya-thumb.PNG" alt="First slide">
-                                                  <p class="text-center m-2">Select Video</p>
-                                                </div>
-                                                <div class="carousel-item">
-                                                  <img class="d-block w-100" src="images/90116tremfyaDermKolselect/tremfyaTwo.PNG" alt="Second slide">
-                                                  <p class="text-center m-2">View KOL video</p>
-                                                </div>
-                                              </div>
-                                              <a class="carousel-control-prev" href="#tremfyaCardControls" role="button" data-slide="prev">
-                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                <span class="sr-only">Previous</span>
-                                              </a>
-                                              <a class="carousel-control-next" href="#tremfyaCardControls" role="button" data-slide="next">
-                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                <span class="sr-only">Next</span>
-                                              </a>
-                                            </div>
-                                          </div>
-                                          <div class="modal-footer">
-                                            <a href="https://bionicalllc.sharefile.com/d-s439cc4ab1f4f4ce5a2d4cfd0069199e4" class="btn btn-info" target="_blank">Open Link</a>
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <a href="https://bionicalllc.sharefile.com/d-s439cc4ab1f4f4ce5a2d4cfd0069199e4" class="btn btn-sm btn-outline-secondary" target="_blank">Open Link</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-  
-                  <div class="grid-item col-lg-4 col-md-6 my-2 medselect branded brochure pdfyes hcpyes dseno vaeno emailcustomno">
-                    <div class="card grid-item-content mb-5 h-100">
-                      <img src="images/90156janssenSpravatoMedselect/spravato-thumb.PNG" class="card-img-top" data-toggle="modal" data-target="#spravatoCard" alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title">
-                            90156 Janssen Spravato MED Select
-                          </h5>
-                            <p class="card-text">MED Select &#9679; Branded &#9679; Brochure &#9679; PDF Delivery &#9679; HCP toggle</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                              <div class="btn-group">
-                                  <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#spravatoCard">Preview</button>
-                                  
-                                  <div class="modal fade" id="spravatoCard" tabindex="-1" role="dialog" aria-labelledby="spravatoCardTitle" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                      <div class="modal-content">
-                                        <div class="modal-header">
-                                          <h5 class="modal-title" id="spravatoCardTitle">Spravato MED Select</h5>
-                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                          </button>
-                                        </div>
-                                        <div class="modal-body">
-                                          <div id="spravatoCardControls" class="carousel slide" data-ride="carousel">
-                                            <div class="carousel-inner">
-                                              <div class="carousel-item active">
-                                                <img class="d-block w-100" src="images/90156janssenSpravatoMedselect/spravato-thumb.PNG" alt="First slide">
-                                                <p class="text-center m-2">Splash Page</p>
-                                              </div>
-                                              <div class="carousel-item">
-                                                <img class="d-block w-100" src="images/90156janssenSpravatoMedselect/spravatoTwo.PNG" alt="Second slide">
-                                                <p class="text-center m-2">Select Modules</p>
-                                              </div>
-                                              <div class="carousel-item">
-                                                <img class="d-block w-100" src="images/90156janssenSpravatoMedselect/spravatoThree.PNG" alt="Third slide">
-                                                <p class="text-center m-2">Personalization</p>
-                                              </div>
-                                              <div class="carousel-item">
-                                                <img class="d-block w-100" src="images/90156janssenSpravatoMedselect/spravatoFour.PNG" alt="Fourth slide">
-                                                <p class="text-center m-2">Rep HCP toggle</p>
-                                              </div>
-                                            </div>
-                                            <a class="carousel-control-prev" href="#spravatoCardControls" role="button" data-slide="prev">
-                                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                              <span class="sr-only">Previous</span>
-                                            </a>
-                                            <a class="carousel-control-next" href="#spravatoCardControls" role="button" data-slide="next">
-                                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                              <span class="sr-only">Next</span>
-                                            </a>
-                                          </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                          <a href="https://bionicalllc.sharefile.com/d-se743463237fd45a59d89665fb7a67483" class="btn btn-info" target="_blank">Open Link</a>
-                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <a href="https://bionicalllc.sharefile.com/d-se743463237fd45a59d89665fb7a67483" class="btn btn-sm btn-outline-secondary" target="_blank">Open Link</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-  
-                <div class="grid-item col-lg-4 col-md-6 my-2 medselect branded tearpad pdfno hcpno dseno vaeno emailcustomno">
-                  <div class="card grid-item-content mb-5 h-100">
-                    <img src="images/90097endoNascobalMedselect/nascobal-thumb.PNG" class="card-img-top" data-toggle="modal" data-target="#nascobalCard" alt="Card image cap">
-                      <div class="card-body">
-                        <h5 class="card-title">
-                          90097 Endo Nascobal MED Select
-                        </h5>
-                          <p class="card-text">MED Select &#9679; Branded &#9679; Tearpad</p>
-                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#nascobalCard">Preview</button>
-                                
-                                <div class="modal fade" id="nascobalCard" tabindex="-1" role="dialog" aria-labelledby="nascobalCardTitle" aria-hidden="true">
-                                  <div class="modal-dialog modal-dialog-centered" role="document">
-                                    <div class="modal-content">
-                                      <div class="modal-header">
-                                        <h5 class="modal-title" id="nascobalCardTitle">Endo Nascobal MED Select</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                        </button>
-                                      </div>
-                                      <div class="modal-body">
-                                        <div id="nascobalCardControls" class="carousel slide" data-ride="carousel">
-                                          <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                              <img class="d-block w-100" src="images/90097endoNascobalMedselect/nascobal-thumb.PNG" alt="First slide">
-                                              <p class="text-center m-2">Splash Page</p>
-                                            </div>
-                                            <div class="carousel-item">
-                                              <img class="d-block w-100" src="images/90097endoNascobalMedselect/nascobalTwo.PNG" alt="Second slide">
-                                              <p class="text-center m-2">Layout</p>
-                                            </div>
-                                            <div class="carousel-item">
-                                              <img class="d-block w-100" src="images/90097endoNascobalMedselect/nascobalThree.PNG" alt="Third slide">
-                                              <p class="text-center m-2">Module Selection</p>
-                                            </div>
-                                            <div class="carousel-item">
-                                              <img class="d-block w-100" src="images/90097endoNascobalMedselect/nascobalFour.PNG" alt="Fourth slide">
-                                              <p class="text-center m-2">Module Selection</p>
-                                            </div>
-                                          </div>
-                                          <a class="carousel-control-prev" href="#nascobalCardControls" role="button" data-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Previous</span>
-                                          </a>
-                                          <a class="carousel-control-next" href="#nascobalCardControls" role="button" data-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Next</span>
-                                          </a>
-                                        </div>
-                                      </div>
-                                      <div class="modal-footer">
-                                        <a href="https://bionicalllc.sharefile.com/d-sa4824fdc3c894b549bb45a2363cb6c0c" class="btn btn-info" target="_blank">Open Link</a>
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <a href="https://bionicalllc.sharefile.com/d-sa4824fdc3c894b549bb45a2363cb6c0c" class="btn btn-sm btn-outline-secondary" target="_blank">Open Link</a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-  
-              <div class="grid-item col-lg-4 col-md-6 my-2 medselect unbranded tearpad wallchart pdfno hcpyes dseno vaeno emailcustomno">
-                <div class="card grid-item-content mb-5 h-100">
-                  <img src="images/90146merckKeytrudaMedSelect/keytruda-thumb.PNG" class="card-img-top" data-toggle="modal" data-target="#keytrudaCard" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title">
-                        90146 Merck Keytruda MED Select
-                      </h5>
-                        <p class="card-text">MED Select &#9679; Unbranded &#9679; Wallchart &#9679; Tearpad &#9679; HCP toggle</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div class="btn-group">
-                              <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#keytrudaCard">Preview</button>
-                              
-                              <div class="modal fade" id="keytrudaCard" tabindex="-1" role="dialog" aria-labelledby="keytrudaCardTitle" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="keytrudaCardTitle">Merck Keytruda MED Select</h5>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                      </button>
-                                    </div>
-                                    <div class="modal-body">
-                                      <div id="keytrudaCardControls" class="carousel slide" data-ride="carousel">
-                                        <div class="carousel-inner">
-                                          <div class="carousel-item active">
-                                            <img class="d-block w-100" src="images/90146merckKeytrudaMedSelect/keytruda-thumb.PNG" alt="First slide">
-                                            <p class="text-center m-2">Splash Page</p>
-                                          </div>
-                                          <div class="carousel-item">
-                                            <img class="d-block w-100" src="images/90146merckKeytrudaMedSelect/keytrudaTwo.PNG" alt="Second slide">
-                                            <p class="text-center m-2">Module Selection</p>
-                                          </div>
-                                          <div class="carousel-item">
-                                            <img class="d-block w-100" src="images/90146merckKeytrudaMedSelect/keytrudaThree.PNG" alt="Third slide">
-                                            <p class="text-center m-2">Personalization</p>
-                                          </div>
-                                          <div class="carousel-item">
-                                            <img class="d-block w-100" src="images/90146merckKeytrudaMedSelect/keytrudaFour.PNG" alt="Fourth slide">
-                                            <p class="text-center m-2">Rep HCP toggle</p>
-                                          </div>
-                                        </div>
-                                        <a class="carousel-control-prev" href="#keytrudaCardControls" role="button" data-slide="prev">
-                                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                          <span class="sr-only">Previous</span>
-                                        </a>
-                                        <a class="carousel-control-next" href="#keytrudaCardControls" role="button" data-slide="next">
-                                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                          <span class="sr-only">Next</span>
-                                        </a>
-                                      </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                      <a href="https://bionicalllc.sharefile.com/d-sda1b24e68b79484a91fd1bc8422e8c59" class="btn btn-info" target="_blank">Open Link</a>
-                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <a href="https://bionicalllc.sharefile.com/d-sda1b24e68b79484a91fd1bc8422e8c59" class="btn btn-sm btn-outline-secondary" target="_blank">Open Link</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="filters bg-light border-right pb-5" id="sidebar-wrapper">
+        <div class="sidebar-heading">Filter Options</div>
+        <hr>
+        <!-- <p class="ml-4 mt-3">Total Programs <span class="badge badge-primary" id="total-count"></span></p> -->
+        <div class="ui-group">
+            <div class="button-group btn-group m-1 ml-4">
+                <button class="button btn btn-secondary" onClick="window.location.reload();">Reset Filters</button>
             </div>
-              
-              
-          </div>
-          </div>
-          
-          <br>
-          <br>
-          <!-- <footer class="text-light bg-dark">
-              <div class="container">
-                <p class="float-right">
-                  <a href="#" class="btn btn-sm btn-primary">Back to top</a>
-                </p>
-                <p><img src=../images/bionical-logo.png height="30vh"> Bionical Solutions US</p>
-              </div>
-            </footer> -->
-      </div>
-  
-  </div>
+        </div>
+        <hr>
+        <div class="ui-group">
+            <p class="ml-3 text-wrap">Resource</p>
+            <div class="button-group btn-group-vertical ml-4" data-filter-group="resource">
+                <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
+                <button class="button btn btn-outline-secondary" data-filter=".medselect">MED Select <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".kolselect">KOL Select <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".webselect">WEB Select <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".patientprofiler">Patient Profiler <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".npp">NPP <span class="filter-count"></span></button>
+            </div>
+        </div>
+        <hr>
+        <div class="ui-group">
+            <p class="ml-3 text-wrap">Brand</p>
+            <div class="button-group btn-group-vertical ml-4" data-filter-group="brand">
+                <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
+                <button class="button btn btn-outline-secondary" data-filter=".branded">Branded <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".unbranded">Unbranded <span class="filter-count"></span></button>
+            </div>
+        </div>
+        <hr>
+        <div class="ui-group">
+            <p class="ml-3 text-wrap">Type</p>
+            <div class="button-group btn-group-vertical ml-4" data-filter-group="type">
+                <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
+                <button class="button btn btn-outline-secondary" data-filter=".brochure">Brochure <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".wallchart">Wallchart <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".postcard">Postcard <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".tearpad">Tearpad <span class="filter-count"></span></button>
+            </div>
+        </div>
+        <hr>
+        <div class="ui-group">
+            <p class="ml-3 text-wrap">PDF Delivery</p>
+            <div class="button-group btn-group-vertical ml-4" data-filter-group="pdf">
+                <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
+                <button class="button btn btn-outline-secondary" data-filter=".pdfyes">Yes <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".pdfno">No <span class="filter-count"></span></button>
+            </div>
+        </div>
+        <hr>
+        <div class="ui-group">
+            <p class="ml-3 text-wrap">HCP Toggle</p>
+            <div class="button-group btn-group-vertical ml-4" data-filter-group="hcp">
+                <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
+                <button class="button btn btn-outline-secondary" data-filter=".hcpyes">Yes <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".hcpno">No <span class="filter-count"></span></button>
+            </div>
+        </div>
+        <hr>
+        <div class="ui-group">
+            <p class="ml-3 text-wrap">DSE Tabs</p>
+            <div class="button-group btn-group-vertical ml-4" data-filter-group="dse">
+                <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
+                <button class="button btn btn-outline-secondary" data-filter=".dseyes">Yes <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".dseno">No <span class="filter-count"></span></button>
+            </div>
+        </div>
+        <hr>
+        <div class="ui-group">
+            <p class="ml-3 text-wrap">Veeva Approved Email</p>
+            <div class="button-group btn-group-vertical ml-4" data-filter-group="vae">
+                <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
+                <button class="button btn btn-outline-secondary" data-filter=".vaeyes">Yes <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".vaeno">No <span class="filter-count"></span></button>
+            </div>
+        </div>
+        <hr>
+        <div class="ui-group">
+            <p class="ml-3 text-wrap">Email Customization UI</p>
+            <div class="button-group btn-group-vertical ml-4" data-filter-group="emailcustom">
+                <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
+                <button class="button btn btn-outline-secondary" data-filter=".emailcustomyes">Yes <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".emailcustomno">No <span class="filter-count"></span></button>
+            </div>
+        </div>
+
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <button class="btn btn-secondary" id="menu-toggle">Filter <i class="fas fa-filter"></i></button>
+        </nav>
+
+        <div class="container-fluid">
+
+            <div class="jumbotron jumbotron-fluid">
+                <img class="mx-auto d-block" src=../images/bionical-logo.png height="50vh">
+                <h1 class="display-4 text-center">Bionical US</h1>
+                <p class="lead text-center">Search Through Past Programs</p>
+            </div>
 
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-  <script src='http://imagesloaded.desandro.com/imagesloaded.pkgd.js'></script>
-  
-  <script>
-      $("#menu-toggle").click(function(e) {
-          e.preventDefault();
-          $("#wrapper").toggleClass("toggled");
-      });
-  </script>
-  
-  <script>
-  
-      var $grid = $('.grid').isotope({
-          itemSelector: '.grid-item',
-          percentPosition: true,
-          layoutMode: 'fitRows'
-       });
- 
-  
-       var $filterUI = $('.filters .button');
+            <div class="row grid" id="projects">
 
-updateFilterCounts();
+            </div>
+        </div>
 
-// store filter for each group
-var filters = {};
+        <br>
+        <br>
+        <!-- <footer class="text-light bg-dark">
+            <div class="container">
+              <p class="float-right">
+                <a href="#" class="btn btn-sm btn-primary">Back to top</a>
+              </p>
+              <p><img src=../images/bionical-logo.png height="30vh"> Bionical Solutions US</p>
+            </div>
+          </footer> -->
+    </div>
 
-$('.filters').on( 'click', '.button', function() {
-  var $this = $(this);
-  // get group key
-  var $buttonGroup = $this.parents('.button-group');
-  var filterGroup = $buttonGroup.attr('data-filter-group');
-  // set filter for group
-  filters[ filterGroup ] = $this.attr('data-filter');
-  // combine filters
-  var filterValue = concatValues( filters );
-  // set filter for Isotope
-  $grid.isotope({ filter: filterValue });
-  updateFilterCounts();
-});
+</div>
 
-// change is-checked class on buttons
-$('.button-group').each( function( i, buttonGroup ) {
-  var $buttonGroup = $( buttonGroup );
-  $buttonGroup.on( 'click', 'button', function() {
-    $buttonGroup.find('.is-checked').removeClass('is-checked');
-    $( this ).addClass('is-checked');
-  });
-});
-  
-// flatten object by concatting values
-function concatValues( obj ) {
-  var value = '';
-  for ( var prop in obj ) {
-    value += obj[ prop ];
-  }
-  return value;
-}
 
-function updateFilterCounts()  {
-  // get filtered item elements
-  var itemElems = $grid.isotope('getFilteredItemElements');
-  var $itemElems = $( itemElems );
-  $filterUI.each( function( i, elem ) {
-    
-    var $elem = $( elem );
-    var filterValue = $elem.attr('data-filter');
-    if ( !filterValue ) {
-      // do not update 'any' buttons
-      return;
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src='http://imagesloaded.desandro.com/imagesloaded.pkgd.js'></script>
+
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
+
+<script>
+
+    var $grid = $('.grid').isotope({
+        itemSelector: '.grid-item',
+        percentPosition: true,
+        layoutMode: 'fitRows'
+    });
+
+
+    var $filterUI = $('.filters .button');
+
+    updateFilterCounts();
+
+    // store filter for each group
+    var filters = {};
+
+    $('.filters').on( 'click', '.button', function() {
+        var $this = $(this);
+        // get group key
+        var $buttonGroup = $this.parents('.button-group');
+        var filterGroup = $buttonGroup.attr('data-filter-group');
+        // set filter for group
+        filters[ filterGroup ] = $this.attr('data-filter');
+        // combine filters
+        var filterValue = concatValues( filters );
+        // set filter for Isotope
+        $grid.isotope({ filter: filterValue });
+        updateFilterCounts();
+    });
+
+    // change is-checked class on buttons
+    $('.button-group').each( function( i, buttonGroup ) {
+        var $buttonGroup = $( buttonGroup );
+        $buttonGroup.on( 'click', 'button', function() {
+            $buttonGroup.find('.is-checked').removeClass('is-checked');
+            $( this ).addClass('is-checked');
+        });
+    });
+
+    // flatten object by concatting values
+    function concatValues( obj ) {
+        var value = '';
+        for ( var prop in obj ) {
+            value += obj[ prop ];
+        }
+        return value;
     }
-    
-    var count = $itemElems.filter( filterValue ).length;
-    var countText = '(' + count +')';
-    if ( $elem.is('option') ) {
-      countText = $elem.attr('data-name') + ' ' + countText;
-      $elem.text( countText );
-    } else {
-      $elem.find('.filter-count').text( countText );
+
+    function updateFilterCounts()  {
+        // get filtered item elements
+        var itemElems = $grid.isotope('getFilteredItemElements');
+        var $itemElems = $( itemElems );
+        $filterUI.each( function( i, elem ) {
+
+            var $elem = $( elem );
+            var filterValue = $elem.attr('data-filter');
+            if ( !filterValue ) {
+                // do not update 'any' buttons
+                return;
+            }
+
+            var count = $itemElems.filter( filterValue ).length;
+            var countText = '(' + count +')';
+            if ( $elem.is('option') ) {
+                countText = $elem.attr('data-name') + ' ' + countText;
+                $elem.text( countText );
+            } else {
+                $elem.find('.filter-count').text( countText );
+            }
+        });
     }
-  });
-}
 
-  </script>
+</script>
 
-  <script>
+<script>
 
     var totalCount = $('.grid-item').length;
     document.getElementById("total-count").innerHTML = totalCount;
 
-  </script>
+</script>
 
 </body>
 </html>
