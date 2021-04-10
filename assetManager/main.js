@@ -1,7 +1,7 @@
 const projectData = [
     {
         tags: "medselect unbranded postcard hcpyes pdfno dseno vaeno emailcustomno",
-        topImg: "mages/90147bmsAfibPostcardMedselect/afib-thumb.PNG",
+        topImg: "images/90147bmsAfibPostcardMedselect/afib-thumb.PNG",
         cardTitle: "90147 Pfizer BMS AFib Postcard",
         cardText: "Medselect &#9679; Unbranded &#9679; Postcard &#9679; HCP toggle",
         modalid: "afibCard",
