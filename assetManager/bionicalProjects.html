@@ -285,10 +285,7 @@
         layoutMode: 'fitRows'
     });
 
-
-    $grid.imagesLoaded().progress( function() {
-        $grid.isotope('layout');
-    });
+    $(window).on('load', function(){ $grid.isotope('layout') });
     
     var $filterUI = $('.filters .button');
 
