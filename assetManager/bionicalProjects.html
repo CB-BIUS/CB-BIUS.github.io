@@ -286,6 +286,10 @@
     });
 
 
+    $grid.imagesLoaded().progress( function() {
+        $grid.isotope('layout');
+    });
+    
     var $filterUI = $('.filters .button');
 
     updateFilterCounts();
