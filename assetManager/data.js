@@ -27,7 +27,7 @@ const projectData = [
         tags: "kolselect branded pdfno hcpno dseno vaeyes",
         topImg: "images/90116tremfyaDermKolselect/tremfya-thumb.PNG",
         cardTitle: "90116 Janssen Tremfya Derm KOL Select",
-        cardText: "Kolselect &#9679; Branded &#9679; Approved Email",
+        cardText: "KOL Select &#9679; Branded &#9679; Approved Email",
         modalid: "tremfyaCard",
         modalTitle: "Tremfya Derm KOL",
         slideTwo: "images/90116tremfyaDermKolselect/tremfyaTwo.PNG",
