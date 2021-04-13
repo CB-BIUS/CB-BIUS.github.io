@@ -298,6 +298,7 @@
     var $filterUI = $('.filters .button');
 
     updateFilterCounts();
+    checkResults();
     
     function checkResults(){
         var visibleItemsCount = $grid.data('isotope').filteredItems.length;
