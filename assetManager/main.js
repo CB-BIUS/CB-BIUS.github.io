@@ -60,6 +60,6 @@
         `
     }
 
-    document.getElementById("projects").innerHTML = `
+    document.getElementById("catalog").innerHTML = `
         ${projectData.map(cardTemplate).join('')}
     `
