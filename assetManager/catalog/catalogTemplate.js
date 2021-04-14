@@ -1,4 +1,4 @@
- function cardTemplate(prog) {
+ function catalogCardTemplate(prog) {
         return `
             <div class="grid-item col-lg-4 col-md-6 my-2 ${prog.tags}">
                 <div class="card grid-item-content mb-5 h-100">
@@ -60,6 +60,6 @@
         `
     }
 
-    document.getElementById("catalog").innerHTML = `
-        ${projectData.map(cardTemplate).join('')}
-    `
+     document.getElementById("catalog").innerHTML = `
+         ${projectData.map(catalogCardTemplate).join('')}
+     `

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Cameron Baffuto">
+
+    <link rel="apple-touch-icon" sizes="76x76" href="../images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="manifest" href="../images/site.webmanifest">
+    <link rel="mask-icon" href="../images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <style>
+        #wrapper {
+            overflow-x: hidden;
+        }
+
+        #sidebar-wrapper {
+            height: 100vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+            margin-left: -15rem;
+            -webkit-transition: margin .25s ease-out;
+            -moz-transition: margin .25s ease-out;
+            -o-transition: margin .25s ease-out;
+            transition: margin .25s ease-out;
+        }
+
+        #sidebar-wrapper .sidebar-heading {
+            padding: 0.875rem 1.25rem;
+            font-size: 1.2rem;
+        }
+
+        #sidebar-wrapper .ui-group {
+            width: 15rem;
+        }
+
+        #page-content-wrapper {
+            min-width: 100vw;
+        }
+
+        #wrapper.toggled #sidebar-wrapper {
+            margin-left: 0;
+        }
+
+        .is-checked {
+            background-color:#868e96;
+            color: white;
+        }
+
+        .nav-item{
+            text-align: right;
+        }
+
+        @media (min-width: 768px) {
+            #sidebar-wrapper {
+                margin-left: 0;
+            }
+
+            #page-content-wrapper {
+                min-width: 0;
+                width: 100%;
+            }
+
+            #wrapper.toggled #sidebar-wrapper {
+                margin-left: -15rem;
+            }
+        }
+
+        @media (min-width: 414px) {
+            #sidebar-wrapper {
+                margin-left: 0;
+                overflow-y: auto;
+                overflow-x: hidden;
+            }
+
+            #sidebar-wrapper .ui-group .button-group{
+                width: 7rem;
+            }
+
+            .btn {
+                white-space:normal !important;
+                word-wrap: break-word;
+            }
+
+            #page-content-wrapper {
+                min-width: 0;
+                width: 100%;
+            }
+
+            #wrapper.toggled #sidebar-wrapper {
+                margin-left: -15rem;
+            }
+        }
+
+        @media (max-width: 390px) {
+            #sidebar-wrapper {
+                margin-left: 0;
+                overflow-y: auto;
+                overflow-x: hidden;
+            }
+
+            #sidebar-wrapper .ui-group .button-group{
+                width: 7rem;
+            }
+
+            .btn {
+                white-space:normal !important;
+                word-wrap: break-word;
+            }
+
+            #page-content-wrapper {
+                min-width: 0;
+                width: 100%;
+            }
+
+            #wrapper.toggled #sidebar-wrapper {
+                margin-left: -15rem;
+            }
+        }
+    </style>
+
+    <title>Bionical Asset Manager</title>
+
+</head>
+<body>
+<div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="filters bg-light border-right pb-5" id="sidebar-wrapper">
+        <div class="sidebar-heading">Filter Options</div>
+        <hr>
+        <div class="ui-group">
+            <div class="button-group btn-group m-1 ml-4">
+                <button class="button btn btn-danger" onClick="window.location.reload();">Reset Filters</button>
+            </div>
+        </div>
+        <hr>
+        <div class="ui-group">
+            <p class="ml-3 text-wrap">Resource</p>
+            <div class="button-group btn-group-vertical ml-4" data-filter-group="resource">
+                <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
+                <button class="button btn btn-outline-secondary" data-filter=".medselect">MED Select <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".kolselect">KOL Select <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".webselect">WEB Select <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".patientprofiler">Patient Profiler <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".npp">NPP <span class="filter-count"></span></button>
+            </div>
+        </div>
+        <hr>
+        <div class="ui-group">
+            <p class="ml-3 text-wrap">Brand</p>
+            <div class="button-group btn-group-vertical ml-4" data-filter-group="brand">
+                <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
+                <button class="button btn btn-outline-secondary" data-filter=".branded">Branded <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".unbranded">Unbranded <span class="filter-count"></span></button>
+            </div>
+        </div>
+        <hr>
+        <div class="ui-group">
+            <p class="ml-3 text-wrap">Type</p>
+            <div class="button-group btn-group-vertical ml-4" data-filter-group="type">
+                <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
+                <button class="button btn btn-outline-secondary" data-filter=".brochure">Brochure <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".wallchart">Wallchart <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".postcard">Postcard <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".tearpad">Tearpad <span class="filter-count"></span></button>
+            </div>
+        </div>
+        <hr>
+        <div class="ui-group">
+            <p class="ml-3 text-wrap">PDF Delivery</p>
+            <div class="button-group btn-group-vertical ml-4" data-filter-group="pdf">
+                <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
+                <button class="button btn btn-outline-secondary" data-filter=".pdfyes">Yes <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".pdfno">No <span class="filter-count"></span></button>
+            </div>
+        </div>
+        <hr>
+        <div class="ui-group">
+            <p class="ml-3 text-wrap">HCP Toggle</p>
+            <div class="button-group btn-group-vertical ml-4" data-filter-group="hcp">
+                <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
+                <button class="button btn btn-outline-secondary" data-filter=".hcpyes">Yes <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".hcpno">No <span class="filter-count"></span></button>
+            </div>
+        </div>
+        <hr>
+        <div class="ui-group">
+            <p class="ml-3 text-wrap">DSE Tabs</p>
+            <div class="button-group btn-group-vertical ml-4" data-filter-group="dse">
+                <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
+                <button class="button btn btn-outline-secondary" data-filter=".dseyes">Yes <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".dseno">No <span class="filter-count"></span></button>
+            </div>
+        </div>
+        <hr>
+        <div class="ui-group">
+            <p class="ml-3 text-wrap">Veeva Approved Email</p>
+            <div class="button-group btn-group-vertical ml-4" data-filter-group="vae">
+                <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
+                <button class="button btn btn-outline-secondary" data-filter=".vaeyes">Yes <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".vaeno">No <span class="filter-count"></span></button>
+            </div>
+        </div>
+        <hr>
+        <div class="ui-group">
+            <p class="ml-3 text-wrap">Email Customization UI</p>
+            <div class="button-group btn-group-vertical ml-4" data-filter-group="emailcustom">
+                <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
+                <button class="button btn btn-outline-secondary" data-filter=".emailcustomyes">Yes <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".emailcustomno">No <span class="filter-count"></span></button>
+            </div>
+        </div>
+
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <button class="btn btn-secondary" id="menu-toggle">Filter <i class="fas fa-filter"></i></button>
+    
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../catalog/projectCatalog.html">Project Catalog</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="salesMaterials.html">Sales Materials</a>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+
+        <div class="container-fluid">
+
+            <div class="jumbotron jumbotron-fluid" style="background-color: #428EC9; color: #ffffff;">
+                <img class="mx-auto d-block mb-3" src="../images/logos/bionical-logo-white.png" height="50vh">
+                <h1 class="text-center">Sales Materials</h1>
+            </div>
+
+
+            <div class="row grid" id="sales">
+
+            </div>
+            <div class="no-results alert alert-danger text-center" role="alert">
+                <h4 class="alert-heading">No Results...</h4>
+                <p>Please edit filter selections or</p>
+                <button class="button btn btn-danger btn-lg" onClick="window.location.reload();">Reset Filters</button>
+            </div>
+        </div>
+
+        <br>
+        <br>
+    </div>
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="salesData.js"></script>
+<script src="salesTemplate.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src='http://imagesloaded.desandro.com/imagesloaded.pkgd.js'></script>
+
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
+
+<script>
+
+    var $grid = $('.grid').isotope({
+        itemSelector: '.grid-item',
+        percentPosition: true,
+        layoutMode: 'fitRows'
+    });
+
+    $(window).on('load', function(){ $grid.isotope('layout') });
+    
+    var $filterUI = $('.filters .button');
+
+    updateFilterCounts();
+    checkResults();
+    
+    function checkResults(){
+        var visibleItemsCount = $grid.data('isotope').filteredItems.length;
+        console.log(filters);
+        if( visibleItemsCount > 0 ){
+            $('.no-results').hide();
+        }
+        else{
+            $('.no-results').show();
+        }
+    }
+
+    // store filter for each group
+    var filters = {};
+
+    $('.filters').on( 'click', '.button', function() {
+        var $this = $(this);
+        // get group key
+        var $buttonGroup = $this.parents('.button-group');
+        var filterGroup = $buttonGroup.attr('data-filter-group');
+        // set filter for group
+        filters[ filterGroup ] = $this.attr('data-filter');
+        // combine filters
+        var filterValue = concatValues( filters );
+        // set filter for Isotope
+        $grid.isotope({ filter: filterValue });
+        updateFilterCounts();
+        checkResults();
+    });
+
+    // change is-checked class on buttons
+    $('.button-group').each( function( i, buttonGroup ) {
+        var $buttonGroup = $( buttonGroup );
+        $buttonGroup.on( 'click', 'button', function() {
+            $buttonGroup.find('.is-checked').removeClass('is-checked');
+            $( this ).addClass('is-checked');
+        });
+    });
+
+    // flatten object by concatting values
+    function concatValues( obj ) {
+        var value = '';
+        for ( var prop in obj ) {
+            value += obj[ prop ];
+        }
+        return value;
+    }
+
+    function updateFilterCounts()  {
+        // get filtered item elements
+        var itemElems = $grid.isotope('getFilteredItemElements');
+        var $itemElems = $( itemElems );
+        $filterUI.each( function( i, elem ) {
+
+            var $elem = $( elem );
+            var filterValue = $elem.attr('data-filter');
+            if ( !filterValue ) {
+                // do not update 'any' buttons
+                return;
+            }
+
+            var count = $itemElems.filter( filterValue ).length;
+            var countText = '(' + count +')';
+            if ( $elem.is('option') ) {
+                countText = $elem.attr('data-name') + ' ' + countText;
+                $elem.text( countText );
+            } else {
+                $elem.find('.filter-count').text( countText );
+            }
+        });
+    }
+
+</script>
+
+</body>
+</html>
