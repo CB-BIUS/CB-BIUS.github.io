@@ -25,6 +25,7 @@
             height: 100vh;
             overflow-y: auto;
             overflow-x: hidden;
+            word-wrap: break-word;
             margin-left: -15rem;
             -webkit-transition: margin .25s ease-out;
             -moz-transition: margin .25s ease-out;
@@ -39,6 +40,7 @@
 
         #sidebar-wrapper .ui-group {
             width: 15rem;
+            word-wrap: break-word;
         }
 
         #page-content-wrapper {
@@ -61,6 +63,7 @@
         @media (min-width: 768px) {
             #sidebar-wrapper {
                 margin-left: 0;
+                word-wrap: break-word;
             }
 
             #page-content-wrapper {
@@ -78,6 +81,10 @@
                 margin-left: 0;
                 overflow-y: auto;
                 overflow-x: hidden;
+            }
+
+            #sidebar-wrapper .ui-group .label{
+                width: 7rem;
             }
 
             #sidebar-wrapper .ui-group .button-group{
@@ -104,10 +111,12 @@
                 margin-left: 0;
                 overflow-y: auto;
                 overflow-x: hidden;
+                word-wrap: break-word;
             }
 
             #sidebar-wrapper .ui-group .button-group{
                 width: 7rem;
+                word-wrap: break-word;
             }
 
             .btn {
@@ -143,7 +152,7 @@
         </div>
         <hr>
         <div class="ui-group">
-            <p class="ml-3 text-wrap">Resource</p>
+            <p class="ml-3 label text-wrap">Resource</p>
             <div class="button-group btn-group-vertical ml-4" data-filter-group="resource">
                 <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
                 <button class="button btn btn-outline-secondary" data-filter=".medselect">MED Select <span class="filter-count"></span></button>
@@ -155,7 +164,7 @@
         </div>
         <hr>
         <div class="ui-group">
-            <p class="ml-3 text-wrap">Brand</p>
+            <p class="ml-3 label text-wrap">Brand</p>
             <div class="button-group btn-group-vertical ml-4" data-filter-group="brand">
                 <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
                 <button class="button btn btn-outline-secondary" data-filter=".branded">Branded <span class="filter-count"></span></button>
@@ -164,7 +173,7 @@
         </div>
         <hr>
         <div class="ui-group">
-            <p class="ml-3 text-wrap">Type</p>
+            <p class="ml-3 label text-wrap">Type</p>
             <div class="button-group btn-group-vertical ml-4" data-filter-group="type">
                 <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
                 <button class="button btn btn-outline-secondary" data-filter=".brochure">Brochure <span class="filter-count"></span></button>
@@ -175,7 +184,7 @@
         </div>
         <hr>
         <div class="ui-group">
-            <p class="ml-3 text-wrap">Multiple Sizes</p>
+            <p class="ml-3 label text-wrap">Multiple Sizes</p>
             <div class="button-group btn-group-vertical ml-4" data-filter-group="sizes">
                 <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
                 <button class="button btn btn-outline-secondary" data-filter=".sizesyes">Yes <span class="filter-count"></span></button>
@@ -184,7 +193,7 @@
         </div>
         <hr>
         <div class="ui-group">
-            <p class="ml-3 text-wrap">PDF Delivery</p>
+            <p class="ml-3 label text-wrap">PDF Delivery</p>
             <div class="button-group btn-group-vertical ml-4" data-filter-group="pdf">
                 <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
                 <button class="button btn btn-outline-secondary" data-filter=".pdfyes">Yes <span class="filter-count"></span></button>
@@ -193,7 +202,7 @@
         </div>
         <hr>
         <div class="ui-group">
-            <p class="ml-3 text-wrap">HCP Toggle</p>
+            <p class="ml-3 label text-wrap">HCP Toggle</p>
             <div class="button-group btn-group-vertical ml-4" data-filter-group="hcp">
                 <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
                 <button class="button btn btn-outline-secondary" data-filter=".hcpyes">Yes <span class="filter-count"></span></button>
@@ -202,7 +211,7 @@
         </div>
         <hr>
         <div class="ui-group">
-            <p class="ml-3 text-wrap">DSE Tabs</p>
+            <p class="ml-3 label text-wrap">DSE Tabs</p>
             <div class="button-group btn-group-vertical ml-4" data-filter-group="dse">
                 <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
                 <button class="button btn btn-outline-secondary" data-filter=".dseyes">Yes <span class="filter-count"></span></button>
@@ -211,7 +220,7 @@
         </div>
         <hr>
         <div class="ui-group">
-            <p class="ml-3 text-wrap">Veeva Approved Email</p>
+            <p class="ml-3 label text-wrap">Veeva Approved Email</p>
             <div class="button-group btn-group-vertical ml-4" data-filter-group="vae">
                 <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
                 <button class="button btn btn-outline-secondary" data-filter=".vaeyes">Yes <span class="filter-count"></span></button>
@@ -220,7 +229,7 @@
         </div>
         <hr>
         <div class="ui-group">
-            <p class="ml-3 text-wrap">Email Customization UI</p>
+            <p class="ml-3 label text-wrap">Email Customization UI</p>
             <div class="button-group btn-group-vertical ml-4" data-filter-group="emailcustom">
                 <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
                 <button class="button btn btn-outline-secondary" data-filter=".emailcustomyes">Yes <span class="filter-count"></span></button>
@@ -229,7 +238,7 @@
         </div>
         <hr>
         <div class="ui-group">
-            <p class="ml-3 text-wrap">Dashboard/Analytics</p>
+            <p class="ml-3 label text-wrap">Dashboard/Analytics</p>
             <div class="button-group btn-group-vertical ml-4" data-filter-group="dashboard">
                 <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
                 <button class="button btn btn-outline-secondary" data-filter=".dashboardyes">Yes <span class="filter-count"></span></button>
@@ -238,7 +247,7 @@
         </div>
         <hr>
         <div class="ui-group">
-            <p class="ml-3 text-wrap">ClickStream</p>
+            <p class="ml-3 label text-wrap">ClickStream</p>
             <div class="button-group btn-group-vertical ml-4" data-filter-group="clickstream">
                 <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
                 <button class="button btn btn-outline-secondary" data-filter=".clickstreamyes">Yes <span class="filter-count"></span></button>
@@ -247,7 +256,7 @@
         </div>
         <hr>
         <div class="ui-group">
-            <p class="ml-3 text-wrap">Additional Module Zoom</p>
+            <p class="ml-3 label text-wrap">Additional Module Zoom</p>
             <div class="button-group btn-group-vertical ml-4" data-filter-group="zoom">
                 <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
                 <button class="button btn btn-outline-secondary" data-filter=".zoomyes">Yes <span class="filter-count"></span></button>
@@ -256,7 +265,7 @@
         </div>
         <hr>
         <div class="ui-group">
-            <p class="ml-3 text-wrap">Multiple Languages</p>
+            <p class="ml-3 label text-wrap">Multiple Languages</p>
             <div class="button-group btn-group-vertical ml-4" data-filter-group="language">
                 <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
                 <button class="button btn btn-outline-secondary" data-filter=".languageyes">Yes <span class="filter-count"></span></button>
@@ -265,7 +274,7 @@
         </div>
         <hr>
         <div class="ui-group">
-            <p class="ml-3 text-wrap">Quick Order</p>
+            <p class="ml-3 label text-wrap">Quick Order</p>
             <div class="button-group btn-group-vertical ml-4" data-filter-group="quickorder">
                 <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
                 <button class="button btn btn-outline-secondary" data-filter=".quickorderyes">Yes <span class="filter-count"></span></button>
@@ -274,7 +283,7 @@
         </div>
         <hr>
         <div class="ui-group">
-            <p class="ml-3 text-wrap">HCP Photo</p>
+            <p class="ml-3 label text-wrap">HCP Photo</p>
             <div class="button-group btn-group-vertical ml-4" data-filter-group="hcpphoto">
                 <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
                 <button class="button btn btn-outline-secondary" data-filter=".hcpphotoyes">Yes <span class="filter-count"></span></button>
@@ -283,7 +292,7 @@
         </div>
         <hr>
         <div class="ui-group">
-            <p class="ml-3 text-wrap">Module Topics</p>
+            <p class="ml-3 label text-wrap">Module Topics</p>
             <div class="button-group btn-group-vertical ml-4" data-filter-group="topics">
                 <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
                 <button class="button btn btn-outline-secondary" data-filter=".topicsyes">Yes <span class="filter-count"></span></button>
@@ -292,7 +301,7 @@
         </div>
         <hr>
         <div class="ui-group">
-            <p class="ml-3 text-wrap">Convention Program</p>
+            <p class="ml-3 label text-wrap">Convention Program</p>
             <div class="button-group btn-group-vertical ml-4" data-filter-group="convention">
                 <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
                 <button class="button btn btn-outline-secondary" data-filter=".conventionyes">Yes <span class="filter-count"></span></button>
