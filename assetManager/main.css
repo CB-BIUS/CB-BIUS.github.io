@@ -2,6 +2,16 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
+.blueButton{
+    background-color: #428EC9;
+    color: #ffffff;
+}
+
+.blueButton:hover{
+    background-color: #3676a7;
+    color: #ffffff;
+}
+
 #wrapper {
     overflow-x: hidden;
 }

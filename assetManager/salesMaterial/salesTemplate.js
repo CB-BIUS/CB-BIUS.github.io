@@ -45,7 +45,7 @@ function salesCardTemplate(sales) {
                                         </div>
                                       </div>
                                       <div class="modal-footer">
-                                        <a href="${sales.linkButton}" class="btn btn-info" target="_blank">Open Link</a>
+                                        <a href="${sales.linkButton}" class="btn blueButton" target="_blank">Open Link</a>
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                       </div>
                                     </div>
