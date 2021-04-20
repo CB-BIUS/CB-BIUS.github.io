@@ -78,7 +78,7 @@
         <div class="modal-body">
           
             <div class="card form-holder">
-                <div class="card-body">
+                <div class="card-body" id="form">
                 <div class="text-center"><img src="images/bionical-logo.png" class="img-fluid"></div>
                 <h1>Login</h1>
                   <div class="form-group text-dark">
@@ -89,6 +89,8 @@
                     <label>Password</label>
                     <input type="password" name="" class="form-control" id="password" placeholder="Password"/>
                   </div>
+                  <div class="text-center" id="invalid" style="display:none;">Username or Password Incorrect</div>
+                  <br>
                   <div class="row">
                     <div class="col-4 text-right">
                       <input type="submit" class="btn btn-primary" value="Submit" onclick="login()" />
@@ -119,7 +121,7 @@ let password = "test";
                      window.location = "assetManager/index.html";
                  }
                  else {
-                    alert("Access Denied");
+                    document.getElementById('invalid').style = "display:block; color:red; font-weight: bold;";
                  }
         }
 
