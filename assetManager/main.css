@@ -2,22 +2,26 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
-*::-webkit-scrollbar {
+body::-webkit-scrollbar {
     width: 1rem;
   }
   
-*::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
     background: white;
   }
   
-*::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
     background-color: #428EC9;
     border-radius: 20px;
     border: 3px solid white;
   }
 
-  *::-webkit-scrollbar-thumb:hover {
+body::-webkit-scrollbar-thumb:hover {
     background-color: #3676a7;
+  } 
+  
+#sidebar-wrapper::-webkit-scrollbar {
+    display: none;
   }  
 
 .blueButton{
@@ -75,7 +79,7 @@ body {
     text-align: right;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     #sidebar-wrapper {
         margin-left: 0;
         word-wrap: break-word;
