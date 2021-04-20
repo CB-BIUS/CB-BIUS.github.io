@@ -2,6 +2,24 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
+*::-webkit-scrollbar {
+    width: 1rem;
+  }
+  
+*::-webkit-scrollbar-track {
+    background: white;
+  }
+  
+*::-webkit-scrollbar-thumb {
+    background-color: #428EC9;
+    border-radius: 20px;
+    border: 3px solid white;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #3676a7;
+  }  
+
 .blueButton{
     background-color: #428EC9;
     color: #ffffff;
@@ -26,10 +44,6 @@ body {
     -o-transition: margin .25s ease-out;
     transition: margin .25s ease-out;
 }
-
-/* #sidebar-wrapper::-webkit-scrollbar {
-    display: none;
-  } */
 
 #sidebar-wrapper .sidebar-heading {
     padding: 0.875rem 1.25rem;
@@ -84,10 +98,6 @@ body {
         overflow-x: hidden;
     }
 
-    /* #sidebar-wrapper .ui-group .label{
-        width: 7rem;
-    } */
-
     #sidebar-wrapper .ui-group .button-group{
         width: 7rem;
     }
@@ -114,10 +124,6 @@ body {
         overflow-x: hidden;
         word-wrap: break-word;
     }
-
-    /* #sidebar-wrapper .ui-group .label{
-        width: 7rem;
-    } */
 
     #sidebar-wrapper .ui-group .button-group{
         width: 7rem;
