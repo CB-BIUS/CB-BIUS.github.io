@@ -27,9 +27,17 @@ body {
     transition: margin .25s ease-out;
 }
 
+/* #sidebar-wrapper::-webkit-scrollbar {
+    display: none;
+  } */
+
 #sidebar-wrapper .sidebar-heading {
     padding: 0.875rem 1.25rem;
     font-size: 1.2rem;
+}
+
+#sidebar-wrapper .sidebar-title {
+    width: 10rem;
 }
 
 #sidebar-wrapper .ui-group {
@@ -76,9 +84,9 @@ body {
         overflow-x: hidden;
     }
 
-    #sidebar-wrapper .ui-group .label{
+    /* #sidebar-wrapper .ui-group .label{
         width: 7rem;
-    }
+    } */
 
     #sidebar-wrapper .ui-group .button-group{
         width: 7rem;
@@ -107,9 +115,9 @@ body {
         word-wrap: break-word;
     }
 
-    #sidebar-wrapper .ui-group .label{
+    /* #sidebar-wrapper .ui-group .label{
         width: 7rem;
-    }
+    } */
 
     #sidebar-wrapper .ui-group .button-group{
         width: 7rem;
