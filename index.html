@@ -50,6 +50,11 @@
                     <a class="nav-link" href="assetManager/index.html">Asset Manager</a>
                 </li>
             </ul>
+            <ul class="navbar-nav mr-auto navbar-right">
+                <li class="nav-item">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Login</button>
+                </li>
+            </ul>
         </div>
     </nav>
 
@@ -60,5 +65,64 @@
 <div class="container pt-3">
     <h3>Test Projects and Code Snippits</h3>
 </div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-dark" id="exampleModalLabel">Bionical Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+            <div class="card form-holder">
+                <div class="card-body">
+                <div class="text-center"><img src="images/bionical-logo.png" class="img-fluid"></div>
+                <h1>Login</h1>
+                  <div class="form-group text-dark">
+                    <label>Username</label>
+                    <input type="text" name="" class="form-control" id="user" placeholder="Username"/>
+                  </div>
+                  <div class="form-group text-dark">
+                    <label>Password</label>
+                    <input type="password" name="" class="form-control" id="password" placeholder="Password"/>
+                  </div>
+                  <div class="row">
+                    <div class="col-4 text-right">
+                      <input type="submit" class="btn btn-primary" value="Submit" onclick="login()" />
+                    </div>
+                  </div>
+                  </div>
+                </div>
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+<br></br>
+      
+ 
+<script>
+
+let user = "admin";
+let password = "test";
+
+        function login() {
+            var getuser = document.getElementById('user').value;
+            var getpass = document.getElementById('password').value;
+
+            if (user === getuser.toLocaleLowerCase() && password === getpass.toLocaleLowerCase()) {
+                     window.location = "assetManager/index.html";
+                 }
+                 else {
+                    alert("Access Denied");
+                 }
+        }
+
+</script>  
 </body>
 </html>
