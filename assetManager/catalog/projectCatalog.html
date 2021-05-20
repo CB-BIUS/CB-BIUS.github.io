@@ -260,6 +260,15 @@
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
+
+    $window.on('resize', function() {
+        var win = $(this);
+        if (win.width() > 600) {
+            $('#wrapper').addClass('toggled');
+        } else {
+            $('#wrapper').removeClass('toggled');
+        }
+    });
 </script>
 
 <script type="text/javascript">
