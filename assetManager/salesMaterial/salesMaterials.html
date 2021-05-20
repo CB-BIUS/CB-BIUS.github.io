@@ -178,14 +178,21 @@
         $("#wrapper").toggleClass("toggled");
     });
 
-    $window.on('resize', function() {
-        var win = $(this);
-        if (win.width() > 600) {
-            $('#wrapper').addClass('toggled');
-        } else {
-            $('#wrapper').removeClass('toggled');
-        }
-    });
+    jQuery(document).ready(function($) {
+  var alterClass = function() {
+    var ww = document.body.clientWidth;
+    if (ww < 600) {
+      $('#wrapper').addClass('toggled');
+    } else if (ww >= 601) {
+      $('#wrapper').removeClass('toggled');
+    };
+  };
+  $(window).resize(function(){
+    alterClass();
+  });
+  
+  alterClass();
+});
 </script>
 
 <script type="text/javascript">
