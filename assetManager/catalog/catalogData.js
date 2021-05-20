@@ -9,7 +9,8 @@ const projectData = [
         slideTwo: "../images/90147bmsAfibPostcardMedselect/afibTwo.PNG",
         slideThree: "../images/90147bmsAfibPostcardMedselect/afibThree.PNG",
         slideFour: "../images/90147bmsAfibPostcardMedselect/afibFour.PNG",
-        linkButton: "https://bionicalllc.sharefile.com/d-sa3d7d94e3ecd4f429597a89431fa0a24invalid"
+        linkButton: "https://bionicalllc.sharefile.com/d-sa3d7d94e3ecd4f429597a89431fa0a24invalid",
+        trainingButton: "#"
     },
     {
         tags: "patientprofiler branded pdfno hcpno dseno vaeyes emailcustomyes",
