@@ -7,8 +7,8 @@
                     <h5 class="card-title">${prog.cardTitle}</h5>
                     <p class="card-text">${prog.cardText}</p>
                     <div class="d-flex justify-content-between align-items-center">
-                       <div class="btn-group flex-wrap">
-                         <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#${prog.modalid}">Preview</button>
+                       <div>
+                         <button type="button" class="btn btn-sm blueButton mb-2" data-toggle="modal" data-target="#${prog.modalid}">Preview</button>
                          <div class="modal fade" id="${prog.modalid}" tabindex="-1" role="dialog" aria-labelledby="tremfyaCardTitle" aria-hidden="true">
                                       <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
@@ -51,11 +51,13 @@
                                         </div>
                                       </div>
                                     </div>
-                                    <a href="${prog.linkButton}" class="btn btn-sm btn-outline-secondary" target="_blank">Open Link</a>
-                                    <div class="btn-group flex-wrap">
-                                    <a href="${prog.trainingButton}" class="btn btn-sm btn-outline-secondary" target="_blank">Training Manual</a>
-                                    </div>
+                                    
+                                    
                                   </div>
+                              </div>
+                              <div class="btn-group flex-wrap">
+                                    <a href="${prog.linkButton}" class="btn btn-sm btn-outline-secondary" target="_blank">Open Screens</a>
+                                    <a href="${prog.trainingButton}" class="btn btn-sm btn-outline-secondary" target="_blank">Training Manual</a>
                               </div>
                           </div>
                       </div>
