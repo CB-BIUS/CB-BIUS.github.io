@@ -221,6 +221,9 @@
               </ul>
             </div>
           </nav>
+          <div class="filters" id="search">
+            <input class="form-control m-2 w-50" type="search" placeholder="Search by Name" aria-label="Search">
+        </div>
 
         <div class="container-fluid">
 
@@ -261,7 +264,7 @@
         $("#wrapper").toggleClass("toggled");
     });
 
-    jQuery(document).ready(function($) {
+    $(document).ready(function () {
   var alterClass = function() {
     var ww = document.body.clientWidth;
     if (ww < 600) {
@@ -285,7 +288,10 @@
         var $grid = $('.grid').isotope({
             itemSelector: '.grid-item',
             percentPosition: true,
-            layoutMode: 'fitRows'
+            layoutMode: 'fitRows',
+            filter: function() {
+            return qsRegex ? $(this).text().match( qsRegex ) : true;
+            }
         });
     
         $(window).on('load', function(){ $grid.isotope('layout') });
@@ -323,6 +329,27 @@
             updateFilterCounts();
             checkResults();
         });
+
+        var qsRegex;
+    
+        var $quicksearch = $('.form-control').keyup( debounce( function() {
+        qsRegex = new RegExp( $quicksearch.val(), 'gi' );
+        $grid.isotope();
+        }, 200 ) );
+
+        function debounce( fn, threshold ) {
+        var timeout;
+        threshold = threshold || 100;
+        return function debounced() {
+        clearTimeout( timeout );
+        var args = arguments;
+        var _this = this;
+        function delayed() {
+        fn.apply( _this, args );
+    }
+    timeout = setTimeout( delayed, threshold );
+    };
+    } 
     
         // change is-checked class on buttons
         $('.button-group').each( function( i, buttonGroup ) {
