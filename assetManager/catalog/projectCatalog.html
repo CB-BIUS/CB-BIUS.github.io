@@ -335,6 +335,7 @@
         var $quicksearch = $('.form-control').keyup( debounce( function() {
         qsRegex = new RegExp( $quicksearch.val(), 'gi' );
         $grid.isotope();
+        updateFilterCounts();
         checkResults();
         }, 200 ) );
 
