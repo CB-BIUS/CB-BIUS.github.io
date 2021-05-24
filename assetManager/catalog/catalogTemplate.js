@@ -2,7 +2,7 @@
         return `
             <div class="grid-item col-lg-4 col-md-6 my-2 ${prog.tags}">
                 <div class="card grid-item-content mb-5 h-100">
-                    <img src="${prog.topImg}" class="card-img-top" data-toggle="modal" data-target="#${prog.modalid}" alt="Card image cap">
+                    <img src="${prog.topImg}" class="card-img-top" data-toggle="modal" data-target="#${prog.modalid}" alt="Card image cap" width="500" height="300">
                  <div class="card-body">
                     <h5 class="card-title">${prog.cardTitle}</h5>
                     <p class="card-text">${prog.cardText}</p>

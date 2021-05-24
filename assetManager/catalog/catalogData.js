@@ -49,6 +49,18 @@ const projectData = [
         linkButton: "https://bionicalllc.sharefile.com/d-se743463237fd45a59d89665fb7a67483invalid"
     },
     {
+        tags: "medselect unbranded tearpad wallchart pdfno hcpyes dseno vaeno emailcustomno",
+        topImg: "../images/17014PfizerEnbrelMEDSelect/pfizerEnbrel-thumb.PNG",
+        cardTitle: "17014 Pfizer Enbrel MED Select",
+        cardText: "MED Select &#9679; Unbranded &#9679; Wallchart &#9679; Tearpad &#9679; HCP toggle",
+        modalid: "enbrelcard",
+        modalTitle: "Pfizer Enbrel MED Select",
+        slideTwo: "../images/17014PfizerEnbrelMEDSelect/pfizerEnbrel-two.PNG",
+        slideThree: "../images/17014PfizerEnbrelMEDSelect/pfizerEnbrel-three.PNG",
+        slideFour: "../images/17014PfizerEnbrelMEDSelect/pfizerEnbrel-four.PNG",
+        linkButton: "https://bionicalllc.sharefile.com/d-sda1b24e68b79484a91fd1bc8422e8c59invalid"
+    },
+    {
         tags: "medselect branded tearpad pdfno hcpno dseno vaeno emailcustomno",
         topImg: "../images/90097endoNascobalMedselect/nascobal-thumb.PNG",
         cardTitle: "90097 Endo Nascobal MED Select",

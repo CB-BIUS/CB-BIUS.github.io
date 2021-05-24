@@ -139,7 +139,12 @@
             </div>
           </nav>
         <div class="filters" id="search">
-            <input class="form-control m-2 w-50" type="search" placeholder="Search by Name" onfocus="this.value=''" aria-label="Search">
+            <input class="form-control ml-2 mb-1 mt-2 w-50" type="search" placeholder="Search by Name" onfocus="this.value=''" aria-label="Search">
+
+            <p class="ml-2 mb-2 mt-2">
+                Programs <span class="badge badge-warning amount"></span>
+                <span class="sr-only"></span>
+            </p>
         </div>
 
         <div class="container-fluid">
@@ -293,6 +298,10 @@
             // get filtered item elements
             var itemElems = $grid.isotope('getFilteredItemElements');
             var $itemElems = $( itemElems );
+
+            var amount = $grid.data('isotope').filteredItems.length;
+            $(".amount").text(amount);
+            
             $filterUI.each( function( i, elem ) {
     
                 var $elem = $( elem );
