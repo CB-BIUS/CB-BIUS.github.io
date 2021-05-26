@@ -23,9 +23,9 @@
 </head>
 <body>
 <div class="d-flex" id="wrapper">
-
+    
     <!-- Sidebar -->
-    <div class="filters bg-light border-right pb-5" id="sidebar-wrapper">
+    <div class="filters bg-light border-right pb-5 overflow-scroll" id="sidebar-wrapper">
         <div class="sidebar-heading">Filter Options</div>
         <hr>
         <div class="ui-group">
@@ -35,14 +35,34 @@
         </div>
         <hr>
         <div class="ui-group">
-            <p class="ml-3 text-wrap sidebar-title">Resource</p>
-            <div class="button-group btn-group-vertical ml-4" data-filter-group="resource">
+            <p class="ml-3 text-wrap sidebar-title">System</p>
+            <div class="button-group btn-group-vertical ml-4" data-filter-group="system">
+                <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
+                <button class="button btn btn-outline-secondary" data-filter=".cardiovascular">Cardiovascular <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".digestive">Digestive <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".endocrine">Endocrine <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".excretory">Excretory <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".immune">Immune <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".integumentory">Integumentory <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".musculoskeletal">Musculoskeletal <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".nervous">Nervous <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".oncology">Oncology <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".reproductive">Reproductive <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".respiratory">Respiratory <span class="filter-count"></span></button>
+            </div>
+        </div>
+        <hr>
+        <div class="ui-group">
+            <p class="ml-3 text-wrap sidebar-title">Product</p>
+            <div class="button-group btn-group-vertical ml-4" data-filter-group="product">
                 <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
                 <button class="button btn btn-outline-secondary" data-filter=".medselect">MED Select <span class="filter-count"></span></button>
                 <button class="button btn btn-outline-secondary" data-filter=".kolselect">KOL Select <span class="filter-count"></span></button>
                 <button class="button btn btn-outline-secondary" data-filter=".webselect">WEB Select <span class="filter-count"></span></button>
                 <button class="button btn btn-outline-secondary" data-filter=".patientprofiler">Patient Profiler <span class="filter-count"></span></button>
                 <button class="button btn btn-outline-secondary" data-filter=".npp">NPP <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".medpresenter">MED Presenter <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".speakerselect">Speaker Select <span class="filter-count"></span></button>
             </div>
         </div>
         <hr>
@@ -56,13 +76,24 @@
         </div>
         <hr>
         <div class="ui-group">
-            <p class="ml-3 text-wrap sidebar-title">Type</p>
-            <div class="button-group btn-group-vertical ml-4" data-filter-group="type">
+            <p class="ml-3 text-wrap sidebar-title">Resource</p>
+            <div class="button-group btn-group-vertical ml-4" data-filter-group="resource">
                 <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
                 <button class="button btn btn-outline-secondary" data-filter=".brochure">Brochure <span class="filter-count"></span></button>
                 <button class="button btn btn-outline-secondary" data-filter=".wallchart">Wallchart <span class="filter-count"></span></button>
                 <button class="button btn btn-outline-secondary" data-filter=".postcard">Postcard <span class="filter-count"></span></button>
                 <button class="button btn btn-outline-secondary" data-filter=".tearpad">Tearpad <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".iva">IVA <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".newsletter">News Letter <span class="filter-count"></span></button>
+            </div>
+        </div>
+        <hr>
+        <div class="ui-group">
+            <p class="ml-3 text-wrap sidebar-title">Veeva Approved Email</p>
+            <div class="button-group btn-group-vertical ml-4" data-filter-group="vae">
+                <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
+                <button class="button btn btn-outline-secondary" data-filter=".vaeyes">Yes <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".vaeno">No <span class="filter-count"></span></button>
             </div>
         </div>
         <hr>
@@ -90,24 +121,6 @@
                 <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
                 <button class="button btn btn-outline-secondary" data-filter=".dseyes">Yes <span class="filter-count"></span></button>
                 <button class="button btn btn-outline-secondary" data-filter=".dseno">No <span class="filter-count"></span></button>
-            </div>
-        </div>
-        <hr>
-        <div class="ui-group">
-            <p class="ml-3 text-wrap sidebar-title">Veeva Approved Email</p>
-            <div class="button-group btn-group-vertical ml-4" data-filter-group="vae">
-                <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
-                <button class="button btn btn-outline-secondary" data-filter=".vaeyes">Yes <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".vaeno">No <span class="filter-count"></span></button>
-            </div>
-        </div>
-        <hr>
-        <div class="ui-group">
-            <p class="ml-3 text-wrap sidebar-title">Email Customization UI</p>
-            <div class="button-group btn-group-vertical ml-4" data-filter-group="emailcustom">
-                <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
-                <button class="button btn btn-outline-secondary" data-filter=".emailcustomyes">Yes <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".emailcustomno">No <span class="filter-count"></span></button>
             </div>
         </div>
 
@@ -141,7 +154,7 @@
         <div class="filters" id="search">
             <input class="form-control ml-2 mb-1 mt-2 w-50" type="search" placeholder="Search by Name" onfocus="this.value=''" aria-label="Search">
 
-            <p class="ml-2 mb-2 mt-2">
+            <p class="ml-2 mb-2 mt-2" id="top">
                 Programs <span class="badge badge-warning amount"></span>
                 <span class="sr-only"></span>
             </p>
@@ -167,7 +180,11 @@
 
         <br>
         <br>
-        <a href="#wrapper" class="btn blueButton btn-lg m-5 float-right"> <i class="fas fa-angle-double-up fa-lg"></i></a>
+        <div class="m-5">
+            <a href="#top" class="btn blueButton btn-lg m-5 float-right"> <i class="fas fa-angle-double-up fa-lg"></i></a>
+        </div>
+        <br>
+        <br>
     </div>
 
 </div>
