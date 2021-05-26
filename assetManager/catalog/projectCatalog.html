@@ -280,6 +280,14 @@
   alterClass();
 });
 
+function removeAnchors(){
+ $("a").each(function(){
+  if($(this).attr("href") == "n/a" ) {
+    $(this).remove();
+  }
+ })
+}
+removeAnchors();
 </script>
 
 <script type="text/javascript">
