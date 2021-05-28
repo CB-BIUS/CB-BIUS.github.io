@@ -10,7 +10,8 @@ const projectData = [
         slideThree: "../images/90147bmsAfibPostcardMedselect/afibThree.PNG",
         slideFour: "../images/90147bmsAfibPostcardMedselect/afibFour.PNG",
         linkButton: "",
-        trainingButton: "n/a"
+        trainingButton: "n/a",
+        noCarousel: "n/a"
     },
     {
         tags: "patientprofiler branded pdfno hcpno dseno vaeyes emailcustomyes",
@@ -62,7 +63,8 @@ const projectData = [
         slideThree: "../images/17014PfizerEnbrelMEDSelect/pfizerEnbrel-three.PNG",
         slideFour: "../images/17014PfizerEnbrelMEDSelect/pfizerEnbrel-four.PNG",
         linkButton: "",
-        trainingButton: ""
+        trainingButton: "",
+        noCarousel: "n/a"
     },
     {
         tags: "medselect branded tearpad pdfno hcpno dseno vaeno emailcustomno",

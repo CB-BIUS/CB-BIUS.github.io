@@ -285,14 +285,18 @@
   alterClass();
 });
 
-function removeAnchors(){
+function removeAttributes(){
  $("a").each(function(){
-  if($(this).attr("href") == "n/a" ) {
+  if($(this).attr("href") == "n/a") {
+    $(this).remove();
+  }
+  if($(this).attr("id") == "n/a") {
     $(this).remove();
   }
  })
 }
-removeAnchors();
+removeAttributes();
+
 </script>
 
 <script type="text/javascript">
