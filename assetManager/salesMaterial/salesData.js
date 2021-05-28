@@ -6,10 +6,11 @@ const salesData = [
         cardText: "Medselect &#9679; Unbranded &#9679; Postcard &#9679; HCP toggle",
         modalid: "salesOne",
         modalTitle: "Sales Material 1",
-        slideTwo: "../images/logos/placeholder.png",
-        slideThree: "../images/logos/placeholder.png",
-        slideFour: "../images/logos/placeholder.png",
-        linkButton: "#"
+        slideTwo: "n/a",
+        slideThree: "n/a",
+        slideFour: "n/a",
+        linkButton: "#",
+        noCarousel: "n/a"
     },
     {
         tags: "patientprofiler branded pdfno hcpno dseno vaeyes emailcustomyes",
@@ -54,10 +55,11 @@ const salesData = [
         cardText: "MED Select &#9679; Branded &#9679; Tearpad",
         modalid: "salesFive",
         modalTitle: "Sales Material 5",
-        slideTwo: "../images/logos/placeholder.png",
-        slideThree: "../images/logos/placeholder.png",
-        slideFour: "../images/logos/placeholder.png",
-        linkButton: "#"
+        slideTwo: "n/a",
+        slideThree: "n/a",
+        slideFour: "n/a",
+        linkButton: "#",
+        noCarousel: "n/a"
     },
     {
         tags: "medselect unbranded tearpad wallchart pdfno hcpyes dseno vaeno emailcustomno",

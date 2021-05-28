@@ -22,6 +22,7 @@
 
 </head>
 <body>
+
 <div class="d-flex" id="wrapper">
     
     <!-- Sidebar -->
@@ -63,6 +64,7 @@
                 <button class="button btn btn-outline-secondary" data-filter=".npp">NPP <span class="filter-count"></span></button>
                 <button class="button btn btn-outline-secondary" data-filter=".medpresenter">MED Presenter <span class="filter-count"></span></button>
                 <button class="button btn btn-outline-secondary" data-filter=".speakerselect">Speaker Select <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".resourceportal">Resource Portal <span class="filter-count"></span></button>
             </div>
         </div>
         <hr>
@@ -84,7 +86,7 @@
                 <button class="button btn btn-outline-secondary" data-filter=".postcard">Postcard <span class="filter-count"></span></button>
                 <button class="button btn btn-outline-secondary" data-filter=".tearpad">Tearpad <span class="filter-count"></span></button>
                 <button class="button btn btn-outline-secondary" data-filter=".iva">IVA <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".newsletter">News Letter <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".newsletter">Newsletter <span class="filter-count"></span></button>
             </div>
         </div>
         <hr>
@@ -130,7 +132,7 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom" id="top">
             <button class="btn btn-secondary" id="menu-toggle">Filter <i class="fas fa-filter"></i></button>
     
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -154,7 +156,7 @@
         <div class="filters" id="search">
             <input class="form-control ml-2 mb-1 mt-2 w-50" type="search" placeholder="Search by Name" onfocus="this.value=''" aria-label="Search">
 
-            <p class="ml-2 mb-2 mt-2" id="top">
+            <p class="ml-2 mb-2 mt-2">
                 Programs <span class="badge badge-warning amount"></span>
                 <span class="sr-only"></span>
             </p>
@@ -219,6 +221,15 @@
   
   alterClass();
 });
+
+function removeCarosel(){
+ $("a").each(function(){
+  if($(this).attr("id") == "n/a" ) {
+    $(this).remove();
+  }
+ })
+}
+removeCarosel();
 </script>
 
 <script type="text/javascript">
