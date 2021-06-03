@@ -84,6 +84,7 @@
                 <button class="button btn btn-outline-secondary" data-filter=".brochure">Brochure <span class="filter-count"></span></button>
                 <button class="button btn btn-outline-secondary" data-filter=".wallchart">Wallchart <span class="filter-count"></span></button>
                 <button class="button btn btn-outline-secondary" data-filter=".postcard">Postcard <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".video">Video <span class="filter-count"></span></button>
                 <button class="button btn btn-outline-secondary" data-filter=".tearpad">Tearpad <span class="filter-count"></span></button>
                 <button class="button btn btn-outline-secondary" data-filter=".iva">IVA <span class="filter-count"></span></button>
                 <button class="button btn btn-outline-secondary" data-filter=".newsletter">Newsletter <span class="filter-count"></span></button>
@@ -132,9 +133,16 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
+        <div class="p-2 text-center" style="background-color: #428EC9; color: #ffffff;" height="20px;">
+            <img class="img-fluid" src="../images/logos/bionical-logo-white.png">
+            <h3>Sales Materials</h3>
+        </div>
+
         <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom" id="top">
             <button class="btn btn-secondary" id="menu-toggle">Filter <i class="fas fa-filter"></i></button>
     
+            
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -149,7 +157,10 @@
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="salesMaterials.html">Sales Materials</a>
-                  </li>
+                </li>
+                <li class="nav-item active">
+                    <a class="btn btn-danger" href="#">Logout</a>
+                </li>  
               </ul>
             </div>
           </nav>
@@ -163,11 +174,6 @@
         </div>
 
         <div class="container-fluid">
-
-            <div class="jumbotron jumbotron-fluid text-center" style="background-color: #428EC9; color: #ffffff;">
-                <img class="img-fluid p-3" src="../images/logos/bionical-logo-white.png">
-                <h1>Sales Materials</h1>
-            </div>
 
 
             <div class="row grid" id="sales">
