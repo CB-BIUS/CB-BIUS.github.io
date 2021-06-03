@@ -90,6 +90,10 @@ body {
     margin-left: 0;
 }
 
+#wrapper.toggled #sidebar-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
 .is-checked {
     background-color:#868e96;
     color: white;

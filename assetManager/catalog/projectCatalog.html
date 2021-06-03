@@ -305,9 +305,11 @@ removeAttributes();
         var $grid = $('.grid').isotope({
             itemSelector: '.grid-item',
             percentPosition: true,
-            layoutMode: 'fitRows',
             filter: function() {
             return qsRegex ? $(this).text().match( qsRegex ) : true;
+            },
+            masonry: {
+            columnWidth: '.grid-item',
             }
         });
     
