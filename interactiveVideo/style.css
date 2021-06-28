@@ -66,6 +66,8 @@ section.main p {
 
 .vidchaNav {
   padding: 1rem;
+  position: relative;
+  top: -6.875rem;
 }
 
 .vidchaNav > * {
@@ -74,7 +76,7 @@ section.main p {
   border-radius: 0.25rem;
   font-size: 1rem;
   cursor: pointer;
-  background: rgba(0, 0, 0, 0.05);
+  background: white;
 }
 
 .vidchaNav > *:hover {
@@ -87,9 +89,11 @@ section.main p {
   color: #fff;
 }
 
-@media (max-width: 40em) {
+@media (max-width: 376px) {
   .vidchaNav > * {
-    display: block;
-    margin-bottom: 0.5rem;
+    
+    padding: 1rem;
+    position: relative;
+    top: -6.875rem;
   }
 }
