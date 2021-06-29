@@ -10,30 +10,39 @@
     </head>
     <body>
         <section class="video">
-            <video class="vidchaVideo" poster="poster.png" controls playsinline>
+            <video class="vidchaVideo" id="myid" poster="poster.png" controls playsinline>
               <source src="Euro2021.mp4" type="video/mp4">
             </video>
             <ul class="vidchaNav">
-              <li data-start="0">Intro</li>
-              <li data-start="14.2">Ronaldo Penalty</li>
-              <li data-start="32.5">Benzema Goals</li>
-              <li data-start="57.5">Germany Goals</li>
-              <li data-start="86">End</li>
+              <li data-start="0" onclick="removePause()">Intro</li>
+              <li data-start="14.2" onclick="removePause()">Ronaldo Penalty</li>
+              <li data-start="32.5" onclick="removePause()">Benzema Goals</li>
+              <li data-start="57.5" onclick="removePause()">Goretzka Goal</li>
+              <li data-start="86" onclick="removePause()">End</li>
             </ul>
           </section>
-        
-          <!-- chapter navigation / set start time in seconds -->
-          <!-- <section>
-              <ul class="vidchaNav">
-                <li data-start="0">Intro</li>
-                <li data-start="14.2">Ronaldo Penalty</li>
-                <li data-start="32.5">Benzema Goals</li>
-                <li data-start="57.5">Germany Goals</li>
-                <li data-start="86">End</li>
-              </ul>
-          </section> -->
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
     <script src="vidcha.js"></script>
+    <script>
+
+var pausing_function = function(){
+    if(this.currentTime >= 32.5) {
+        this.currentTime = 14.2;
+
+        // remove the event listener after you paused the playback
+        // this.removeEventListener("timeupdate",pausing_function);
+        
+}
+
+}; 
+
+function removePause() {
+  vid.removeEventListener("timeupdate",pausing_function); 
+} 
+
+vid.addEventListener("timeupdate", pausing_function);
+
+    </script>
     </body>
 </html>
