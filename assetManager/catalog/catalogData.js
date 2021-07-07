@@ -12,9 +12,9 @@ const projectData = [
         linkButton: "",
         trainingButton: "n/a",
         noCarousel: "n/a",
-        dashboardEmail: "n/a",
-        dashboardPassword: "n/a",
-        dashboardSubmit: "hidden"
+        dashboardEmail: "PfizerBMSAfib@bionical.com",
+        dashboardPassword: "PfizerBMSAfib",
+        dashboardSubmit: "submit"
     },
     {
         tags: "patientprofiler branded pdfno hcpno dseno vaeyes emailcustomyes",
@@ -28,9 +28,9 @@ const projectData = [
         slideFour: "../images/90138cyclosetPatientProfiler/cyclosetFour.PNG",
         linkButton: "",
         trainingButton: "",
-        dashboardEmail: "login.test@bionicaltestemail.com",
-        dashboardPassword: "B1on1cal!",
-        dashboardSubmit: "submit"
+        dashboardEmail: "n/a",
+        dashboardPassword: "n/a",
+        dashboardSubmit: "hidden"
     },
     {
         tags: "kolselect branded pdfno hcpno dseno vaeyes",
@@ -60,9 +60,9 @@ const projectData = [
         slideFour: "../images/90156janssenSpravatoMedselect/spravatoFour.PNG",
         linkButton: "",
         trainingButton: "",
-        dashboardEmail: "n/a",
-        dashboardPassword: "n/a",
-        dashboardSubmit: "hidden"
+        dashboardEmail: "JanssenSpravato@bionical.com",
+        dashboardPassword: "JanssenSpravato",
+        dashboardSubmit: "submit"
     },
     {
         tags: "medselect unbranded tearpad wallchart pdfno hcpyes dseno vaeno emailcustomno",
@@ -77,8 +77,8 @@ const projectData = [
         linkButton: "",
         trainingButton: "",
         noCarousel: "n/a",
-        dashboardEmail: "login.test@bionicaltestemail.com",
-        dashboardPassword: "B1on1cal!",
+        dashboardEmail: "PfizerEnbrel@bionical.com",
+        dashboardPassword: "PfizerEnbrel",
         dashboardSubmit: "submit"
     },
     {
@@ -93,9 +93,9 @@ const projectData = [
         slideFour: "../images/90097endoNascobalMedselect/nascobalFour.PNG",
         linkButton: "",
         trainingButton: "n/a",
-        dashboardEmail: "n/a",
-        dashboardPassword: "n/a",
-        dashboardSubmit: "hidden"
+        dashboardEmail: "EndoNascobal@bionical.com",
+        dashboardPassword: "EndoNascobal",
+        dashboardSubmit: "submit"
     },
     {
         tags: "medselect unbranded tearpad wallchart pdfno hcpyes dseno vaeno emailcustomno",
@@ -109,8 +109,8 @@ const projectData = [
         slideFour: "../images/90146merckKeytrudaMedSelect/keytrudaFour.PNG",
         linkButton: "",
         trainingButton: "",
-        dashboardEmail: "n/a",
-        dashboardPassword: "n/a",
-        dashboardSubmit: "hidden"
+        dashboardEmail: "MerckKeytruda@bionical.com",
+        dashboardPassword: "MerckKeytruda",
+        dashboardSubmit: "submit"
     }
     ];
