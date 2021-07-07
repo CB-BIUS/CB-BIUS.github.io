@@ -59,6 +59,13 @@
                                     <a href="${prog.linkButton}" class="btn btn-sm btn-outline-secondary" target="_blank">Open Screens</a>
                                     <a href="${prog.trainingButton}" class="btn btn-sm btn-outline-secondary" target="_blank">Training Manual</a>
                               </div>
+                              <form method="POST" action="https://www.medselect.north51digital.com/api/v0/form-login-dashboard">
+                              <div class="form-group mt-2">
+                                      <input type="hidden" name="email" value="${prog.dashboardEmail}"/>
+                                      <input type="hidden" name="password" value="${prog.dashboardPassword}"/>
+                                      <input type="${prog.dashboardSubmit}" class="btn btn-sm btn-outline-secondary" value="Dashboard" formtarget="_blank">
+                              </div>
+                              </form>
                           </div>
                       </div>
                   </div>

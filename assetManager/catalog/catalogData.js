@@ -11,7 +11,10 @@ const projectData = [
         slideFour: "../images/90147bmsAfibPostcardMedselect/afibFour.PNG",
         linkButton: "",
         trainingButton: "n/a",
-        noCarousel: "n/a"
+        noCarousel: "n/a",
+        dashboardEmail: "n/a",
+        dashboardPassword: "n/a",
+        dashboardSubmit: "hidden"
     },
     {
         tags: "patientprofiler branded pdfno hcpno dseno vaeyes emailcustomyes",
@@ -24,7 +27,10 @@ const projectData = [
         slideThree: "../images/90138cyclosetPatientProfiler/cyclosetThree.PNG",
         slideFour: "../images/90138cyclosetPatientProfiler/cyclosetFour.PNG",
         linkButton: "",
-        trainingButton: ""
+        trainingButton: "",
+        dashboardEmail: "login.test@bionicaltestemail.com",
+        dashboardPassword: "B1on1cal!",
+        dashboardSubmit: "submit"
     },
     {
         tags: "kolselect branded pdfno hcpno dseno vaeyes",
@@ -37,7 +43,10 @@ const projectData = [
         slideThree: "../images/90116tremfyaDermKolselect/tremfya-thumb.PNG",
         slideFour: "../images/90116tremfyaDermKolselect/tremfyaTwo.PNG",
         linkButton: "",
-        trainingButton: "n/a"
+        trainingButton: "n/a",
+        dashboardEmail: "n/a",
+        dashboardPassword: "n/a",
+        dashboardSubmit: "hidden"
     },
     {
         tags: "medselect branded brochure pdfyes hcpyes dseno vaeno emailcustomno",
@@ -50,7 +59,10 @@ const projectData = [
         slideThree: "../images/90156janssenSpravatoMedselect/spravatoThree.PNG",
         slideFour: "../images/90156janssenSpravatoMedselect/spravatoFour.PNG",
         linkButton: "",
-        trainingButton: ""
+        trainingButton: "",
+        dashboardEmail: "n/a",
+        dashboardPassword: "n/a",
+        dashboardSubmit: "hidden"
     },
     {
         tags: "medselect unbranded tearpad wallchart pdfno hcpyes dseno vaeno emailcustomno",
@@ -64,7 +76,10 @@ const projectData = [
         slideFour: "../images/17014PfizerEnbrelMEDSelect/pfizerEnbrel-four.PNG",
         linkButton: "",
         trainingButton: "",
-        noCarousel: "n/a"
+        noCarousel: "n/a",
+        dashboardEmail: "login.test@bionicaltestemail.com",
+        dashboardPassword: "B1on1cal!",
+        dashboardSubmit: "submit"
     },
     {
         tags: "medselect branded tearpad pdfno hcpno dseno vaeno emailcustomno",
@@ -77,7 +92,10 @@ const projectData = [
         slideThree: "../images/90097endoNascobalMedselect/nascobalThree.PNG",
         slideFour: "../images/90097endoNascobalMedselect/nascobalFour.PNG",
         linkButton: "",
-        trainingButton: "n/a"
+        trainingButton: "n/a",
+        dashboardEmail: "n/a",
+        dashboardPassword: "n/a",
+        dashboardSubmit: "hidden"
     },
     {
         tags: "medselect unbranded tearpad wallchart pdfno hcpyes dseno vaeno emailcustomno",
@@ -90,6 +108,9 @@ const projectData = [
         slideThree: "../images/90146merckKeytrudaMedSelect/keytrudaThree.PNG",
         slideFour: "../images/90146merckKeytrudaMedSelect/keytrudaFour.PNG",
         linkButton: "",
-        trainingButton: ""
+        trainingButton: "",
+        dashboardEmail: "n/a",
+        dashboardPassword: "n/a",
+        dashboardSubmit: "hidden"
     }
     ];
