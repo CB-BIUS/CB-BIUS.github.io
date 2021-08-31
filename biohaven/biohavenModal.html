@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+
+  <link rel="stylesheet" href="https://unpkg.com/papercss@1.8.2/dist/paper.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+  <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
+
+  <title>Biohaven Modal</title>
+</head>
+<body>
+  <div class="paper container">
+    <h2>Select Resources</h2>
+
+  <div class="row"> 
+      
+    <div class="sm-5 col">
+        <img src="https://unsplash.it/900" alt="Random Unsplash">
+    </div>
+
+    <div class="col-fill col">
+
+    <div class="row flex-center child-borders">
+        <label class="paper-btn margin" for="english">English</label>
+        <label class="paper-btn margin" for="spanish">Spanish</label>
+        <label class="paper-btn margin" for="russian">Russian</label>
+        <label class="paper-btn margin" for="mandarin">Mandarin</label>
+        <label class="paper-btn margin" for="hindi">Hindi</label>
+        <label class="paper-btn margin" for="korean">Korean</label>
+    </div>
+      
+    <input class="modal-state" id="english" type="checkbox">
+    <div class="modal">
+        <label class="modal-bg" for="english"></label>
+        <div class="modal-body">
+          <label class="btn-close" for="english">X</label>
+          <br>
+        <div class="paper container-lg">
+          <h4 class="modal-title">English</h4>
+
+          <div class="row">
+
+        <div class="col"> 
+          <label for="englishselect1">TearPad</label>
+          <select id="englishselect1">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <button class="btn-small btn-secondary">Preview</button>
+          <br>
+        </div> 
+
+        <div class="col"> 
+          <label for="englishselect2">Wallchart</label>
+          <select id="englishselect2">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <button class="btn-small btn-secondary">Preview</button>
+          <br>
+        </div> 
+
+        </div>
+        <label for="english" class="paper-btn btn-success">Save</label>
+        </div>
+        </div>
+    </div>
+
+    <input class="modal-state" id="spanish" type="checkbox">
+    <div class="modal">
+        <label class="modal-bg" for="spanish"></label>
+        <div class="modal-body">
+          <label class="btn-close" for="spanish">X</label>
+          <br>
+          <div class="paper container-lg">
+            <h4 class="modal-title">Spanish</h4>
+  
+          <div class="row">
+  
+          <div class="col"> 
+            <label for="spanishselect1">TearPad</label>
+            <select id="spanishselect1">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <button class="btn-small btn-secondary">Preview</button>
+            <br>
+          </div> 
+  
+          <div class="col"> 
+            <label for="spanishselect2">Wallchart</label>
+            <select id="spanishselect2">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <button class="btn-small btn-secondary">Preview</button>
+            <br>
+          </div> 
+  
+          </div>
+          <label for="spanish" class="paper-btn btn-success">Save</label>
+          </div>
+        </div>
+    </div>
+    
+    <input class="modal-state" id="russian" type="checkbox">
+    <div class="modal">
+        <label class="modal-bg" for="russian"></label>
+        <div class="modal-body">
+          <label class="btn-close" for="russian">X</label>
+          <br>
+          <div class="paper container-lg">
+            <h4 class="modal-title">Russian</h4>
+  
+          <div class="row">
+  
+          <div class="col"> 
+            <label for="russianselect1">TearPad</label>
+            <select id="russianselect1">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <button class="btn-small btn-secondary">Preview</button>
+            <br>
+          </div> 
+  
+          <div class="col"> 
+            <label for="russianselect2">Wallchart</label>
+            <select id="russianselect2">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <button class="btn-small btn-secondary">Preview</button>
+            <br>
+          </div> 
+  
+          </div>
+          <label for="russian" class="paper-btn btn-success">Save</label>
+          </div>
+
+        </div>
+    </div>
+
+    <input class="modal-state" id="mandarin" type="checkbox">
+    <div class="modal">
+        <label class="modal-bg" for="mandarin"></label>
+        <div class="modal-body">
+          <label class="btn-close" for="mandarin">X</label>
+          <br>
+          <div class="paper container-lg">
+            <h4 class="modal-title">Mandarin</h4>
+  
+          <div class="row">
+  
+          <div class="col"> 
+            <label for="mandarinselect1">TearPad</label>
+            <select id="mandarinselect1">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <button class="btn-small btn-secondary">Preview</button>
+            <br>
+          </div> 
+  
+          <div class="col"> 
+            <label for="mandarinselect2">Wallchart</label>
+            <select id="mandarinselect2">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <button class="btn-small btn-secondary">Preview</button>
+            <br>
+          </div> 
+  
+          </div>
+          <label for="mandarin" class="paper-btn btn-success">Save</label>
+          </div>
+
+        </div>
+    </div>
+
+    <input class="modal-state" id="hindi" type="checkbox">
+    <div class="modal">
+        <label class="modal-bg" for="hindi"></label>
+        <div class="modal-body">
+          <label class="btn-close" for="hindi">X</label>
+          <br>
+          <div class="paper container-lg">
+            <h4 class="modal-title">Hindi</h4>
+  
+          <div class="row">
+  
+          <div class="col"> 
+            <label for="hindiselect1">TearPad</label>
+            <select id="hindiselect1">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <button class="btn-small btn-secondary">Preview</button>
+            <br>
+          </div> 
+  
+          <div class="col"> 
+            <label for="hindiselect2">Wallchart</label>
+            <select id="hindiselect2">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <button class="btn-small btn-secondary">Preview</button>
+            <br>
+          </div> 
+  
+          </div>
+          <label for="hindi" class="paper-btn btn-success">Save</label>
+          </div>
+
+        </div>
+    </div>
+
+    <input class="modal-state" id="korean" type="checkbox">
+    <div class="modal">
+        <label class="modal-bg" for="korean"></label>
+        <div class="modal-body">
+          <label class="btn-close" for="korean">X</label>
+          <br>
+          <div class="paper container-lg">
+            <h4 class="modal-title">Korean</h4>
+  
+          <div class="row">
+  
+          <div class="col"> 
+            <label for="koreanselect1">TearPad</label>
+            <select id="koreanselect1">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <button class="btn-small btn-secondary">Preview</button>
+            <br>
+          </div> 
+  
+          <div class="col"> 
+            <label for="koreanselect2">Wallchart</label>
+            <select id="koreanselect2">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <button class="btn-small btn-secondary">Preview</button>
+            <br>
+          </div> 
+  
+          </div>
+          <label for="korean" class="paper-btn btn-success">Save</label>
+          </div>
+
+        </div>
+    </div>
+
+<div class="form-group">
+  <label for="paperSelects1">Select Language</label>
+    <select data-placeholder="Choose" multiple class="chosen-select" name="test" id="paperSelects1">
+      <option value=""></option>
+      <option>English</option>
+      <option>Spanish</option>
+      <option>Russian</option>
+      <option>Mandarin</option>
+      <option>Hindi</option>
+      <option>Korean</option>
+    </select>
+</div>
+
+      <div class="form-group">
+        <label for="paperInputs2">Delivery Email</label>
+        <input class="input-block" type="text" placeholder="info@bionical.com" id="paperInputs2">
+      </div>
+
+    </div>
+    </div>  
+
+    <div class="row flex-right">
+      <div class="col">
+        <button>Next</button>
+      </div>
+    </div>
+    
+  </div>
+
+
+
+<script>
+  $(".chosen-select").chosen({
+    no_results_text: "Oops, nothing found!"
+  })
+</script>
+ 
+</body>
+</html>
