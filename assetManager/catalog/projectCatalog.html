@@ -217,21 +217,27 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../salesMaterial/salesMaterials.html">Sales Materials</a>
-                  </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../videoCatalog/videoCatalog.html">Video Catalog</a>
+                </li>
               </ul>
             </div>
           </nav>
-          <div class="filters" id="search">
+        <div class="filters" id="search">
             <input class="form-control m-2 w-50" type="search" placeholder="Search by Name" onfocus="this.value=''" aria-label="Search">
         </div>
 
+        <div class="form-check form-check-inline p-2">
+            <input class="form-check-input sort_new timestamp" type="radio" name="sortdate" id="inlineRadio1" value="new">
+            <label class="form-check-label" for="inlineRadio1">New</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input sort_old timestamp" type="radio" name="sortdate" id="inlineRadio2" value="old">
+            <label class="form-check-label" for="inlineRadio2">Old</label>
+          </div>
+
         <div class="container-fluid">
-
-            <div class="jumbotron jumbotron-fluid text-center" style="background-color: #428EC9; color: #ffffff;">
-                <img class="img-fluid p-3" src="../images/logos/bionical-logo-white.png">
-                <h1>Project Catalog</h1>
-            </div>
-
 
             <div class="row grid" id="catalog">
 
@@ -310,7 +316,8 @@ removeAttributes();
             },
             masonry: {
             columnWidth: '.grid-item',
-            }
+            },
+            sortBy : 'random'
         });
     
         $(window).on('load', function(){ $grid.isotope('layout') });
@@ -414,7 +421,22 @@ removeAttributes();
             });
         }
     });
-    </script>
+
+    $('.sort_new').on('click', function () {
+    $('.grid').isotope({
+        sortBy: '.timestamp',
+        sortAscending: true,
+    });
+});
+
+$('.sort_old').on('click', function () {
+    $('.grid').isotope({
+        sortBy: '.timestamp',
+        sortAscending: false,
+    });
+});
+
+</script>
 
 </body>
 </html>

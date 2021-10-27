@@ -16,17 +16,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="../main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 
     <title>Bionical Asset Manager</title>
 
 </head>
 <body>
-
 <div class="d-flex" id="wrapper">
-    
+
     <!-- Sidebar -->
-    <div class="filters bg-light border-right pb-5 overflow-scroll" id="sidebar-wrapper">
+    <div class="filters bg-light border-right pb-5" id="sidebar-wrapper">
         <div class="sidebar-heading">Filter Options</div>
         <hr>
         <div class="ui-group">
@@ -36,113 +36,46 @@
         </div>
         <hr>
         <div class="ui-group">
-            <p class="ml-3 text-wrap sidebar-title">System</p>
-            <div class="button-group btn-group-vertical ml-4" data-filter-group="system">
-                <button class="button btn btn-outline-secondary is-checked" data-filter="">any</button>
-                <button class="button btn btn-outline-secondary" data-filter=".cardiovascular">Cardiovascular <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".digestive">Digestive <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".endocrine">Endocrine <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".excretory">Excretory <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".immune">Immune <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".integumentory">Integumentory <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".musculoskeletal">Musculoskeletal <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".nervous">Nervous <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".oncology">Oncology <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".reproductive">Reproductive <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".respiratory">Respiratory <span class="filter-count"></span></button>
-            </div>
-        </div>
-        <hr>
-        <div class="ui-group">
-            <p class="ml-3 text-wrap sidebar-title">Product</p>
-            <div class="button-group btn-group-vertical ml-4" data-filter-group="product">
-                <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
-                <button class="button btn btn-outline-secondary" data-filter=".medselect">MED Select <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".kolselect">KOL Select <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".webselect">WEB Select <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".patientprofiler">Patient Profiler <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".npp">NPP <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".medpresenter">MED Presenter <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".speakerselect">Speaker Select <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".resourceportal">Resource Portal <span class="filter-count"></span></button>
-            </div>
-        </div>
-        <hr>
-        <div class="ui-group">
-            <p class="ml-3 text-wrap sidebar-title">Brand</p>
-            <div class="button-group btn-group-vertical ml-4" data-filter-group="brand">
-                <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
-                <button class="button btn btn-outline-secondary" data-filter=".branded">Branded <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".unbranded">Unbranded <span class="filter-count"></span></button>
-            </div>
-        </div>
-        <hr>
-        <div class="ui-group">
-            <p class="ml-3 text-wrap sidebar-title">Resource</p>
+            <p class="ml-3 label text-wrap sidebar-title">Name</p>
             <div class="button-group btn-group-vertical ml-4" data-filter-group="resource">
                 <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
-                <button class="button btn btn-outline-secondary" data-filter=".brochure">Brochure <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".wallchart">Wallchart <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".postcard">Postcard <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".video">Video <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".tearpad">Tearpad <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".iva">IVA <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".newsletter">Newsletter <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".seal">Seal <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".turtle">Turtle <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".penguin">Penguin <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".alpaca">Alpaca <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".monkey">Monkey <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".dog">Dog <span class="filter-count"></span></button>
             </div>
         </div>
         <hr>
         <div class="ui-group">
-            <p class="ml-3 text-wrap sidebar-title">Veeva Approved Email</p>
-            <div class="button-group btn-group-vertical ml-4" data-filter-group="vae">
+            <p class="ml-3 label text-wrap sidebar-title">Location</p>
+            <div class="button-group btn-group-vertical ml-4" data-filter-group="brand">
                 <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
-                <button class="button btn btn-outline-secondary" data-filter=".vaeyes">Yes <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".vaeno">No <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".land">Land <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".sea">Sea <span class="filter-count"></span></button>
             </div>
         </div>
         <hr>
         <div class="ui-group">
-            <p class="ml-3 text-wrap sidebar-title">PDF Delivery</p>
-            <div class="button-group btn-group-vertical ml-4" data-filter-group="pdf">
+            <p class="ml-3 label text-wrap sidebar-title">Type</p>
+            <div class="button-group btn-group-vertical ml-4" data-filter-group="type">
                 <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
-                <button class="button btn btn-outline-secondary" data-filter=".pdfyes">Yes <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".pdfno">No <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".mammal">Mammal <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".reptile">Reptiles <span class="filter-count"></span></button>
+                <button class="button btn btn-outline-secondary" data-filter=".bird">Bird <span class="filter-count"></span></button>
             </div>
         </div>
-        <hr>
-        <div class="ui-group">
-            <p class="ml-3 text-wrap sidebar-title">HCP Toggle</p>
-            <div class="button-group btn-group-vertical ml-4" data-filter-group="hcp">
-                <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
-                <button class="button btn btn-outline-secondary" data-filter=".hcpyes">Yes <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".hcpno">No <span class="filter-count"></span></button>
-            </div>
-        </div>
-        <hr>
-        <div class="ui-group">
-            <p class="ml-3 text-wrap sidebar-title">DSE Tabs</p>
-            <div class="button-group btn-group-vertical ml-4" data-filter-group="dse">
-                <button class="button btn btn-outline-secondary is-checked" data-filter="">All</button>
-                <button class="button btn btn-outline-secondary" data-filter=".dseyes">Yes <span class="filter-count"></span></button>
-                <button class="button btn btn-outline-secondary" data-filter=".dseno">No <span class="filter-count"></span></button>
-            </div>
-        </div>
-
+    
     </div>
     <!-- /#sidebar-wrapper -->
 
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-        <div class="p-2 text-center" style="background-color: #428EC9; color: #ffffff;" height="20px;">
-            <img class="img-fluid" src="../images/logos/bionical-logo-white.png">
-            <h3>Sales Materials</h3>
-        </div>
-
         <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom" id="top">
             <button class="btn btn-secondary" id="menu-toggle">Filter <i class="fas fa-filter"></i></button>
     
-            
-
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -155,28 +88,22 @@
                 <li class="nav-item">
                   <a class="nav-link" href="../catalog/projectCatalog.html">Project Catalog</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="salesMaterials.html">Sales Materials</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="../salesMaterial/salesMaterials.html">Sales Materials</a>
                 </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="../videoCatalog/videoCatalog.html">Video Catalog</a>
-                </li> 
+                <li class="nav-item active">
+                    <a class="nav-link" href="videoCatalog.html">Video Catalog</a>
+                </li>
               </ul>
             </div>
           </nav>
         <div class="filters" id="search">
-            <input class="form-control ml-2 mb-1 mt-2 w-50" type="search" placeholder="Search by Name" onfocus="this.value=''" aria-label="Search">
-
-            <p class="ml-2 mb-2 mt-2">
-                Programs <span class="badge badge-warning amount"></span>
-                <span class="sr-only"></span>
-            </p>
+            <input class="form-control m-2 w-50" type="search" placeholder="Search by Name" onfocus="this.value=''" aria-label="Search">
         </div>
 
         <div class="container-fluid">
 
-
-            <div class="row grid" id="sales">
+            <div class="row grid" id="videos">
 
             </div>
             <div class="no-results alert alert-danger text-center" role="alert">
@@ -201,8 +128,8 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="salesData.js"></script>
-<script src="salesTemplate.js"></script>
+<script src="videoData.js"></script>
+<script src="videoTemplate.js"></script>
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 <script src='http://imagesloaded.desandro.com/imagesloaded.pkgd.js'></script>
 
@@ -212,7 +139,7 @@
         $("#wrapper").toggleClass("toggled");
     });
 
-    jQuery(document).ready(function($) {
+    $(document).ready(function () {
   var alterClass = function() {
     var ww = document.body.clientWidth;
     if (ww < 600) {
@@ -228,14 +155,18 @@
   alterClass();
 });
 
-function removeCarosel(){
+function removeAttributes(){
  $("a").each(function(){
-  if($(this).attr("id") == "n/a" ) {
+  if($(this).attr("href") == "n/a") {
+    $(this).remove();
+  }
+  if($(this).attr("id") == "n/a") {
     $(this).remove();
   }
  })
 }
-removeCarosel();
+removeAttributes();
+
 </script>
 
 <script type="text/javascript">
@@ -244,10 +175,13 @@ removeCarosel();
         var $grid = $('.grid').isotope({
             itemSelector: '.grid-item',
             percentPosition: true,
-            layoutMode: 'fitRows',
             filter: function() {
             return qsRegex ? $(this).text().match( qsRegex ) : true;
-            }
+            },
+            masonry: {
+            columnWidth: '.grid-item',
+            },
+            sortBy : 'random'
         });
     
         $(window).on('load', function(){ $grid.isotope('layout') });
@@ -303,14 +237,12 @@ removeCarosel();
         var args = arguments;
         var _this = this;
         function delayed() {
-      fn.apply( _this, args );
+        fn.apply( _this, args );
     }
     timeout = setTimeout( delayed, threshold );
-  };
-}
-
-
-
+    };
+    } 
+    
         // change is-checked class on buttons
         $('.button-group').each( function( i, buttonGroup ) {
             var $buttonGroup = $( buttonGroup );
@@ -333,10 +265,6 @@ removeCarosel();
             // get filtered item elements
             var itemElems = $grid.isotope('getFilteredItemElements');
             var $itemElems = $( itemElems );
-
-            var amount = $grid.data('isotope').filteredItems.length;
-            $(".amount").text(amount);
-            
             $filterUI.each( function( i, elem ) {
     
                 var $elem = $( elem );
@@ -357,7 +285,22 @@ removeCarosel();
             });
         }
     });
-    </script>
+
+    $('.sort_new').on('click', function () {
+    $('.grid').isotope({
+        sortBy: '.timestamp',
+        sortAscending: true,
+    });
+});
+
+$('.sort_old').on('click', function () {
+    $('.grid').isotope({
+        sortBy: '.timestamp',
+        sortAscending: false,
+    });
+});
+
+</script>
 
 </body>
 </html>

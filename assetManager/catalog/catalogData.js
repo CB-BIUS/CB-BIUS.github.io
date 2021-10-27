@@ -3,7 +3,7 @@ const projectData = [
         tags: "medselect unbranded postcard hcpyes pdfno dseno vaeno emailcustomno",
         topImg: "../images/90147bmsAfibPostcardMedselect/afib-thumb.PNG",
         cardTitle: "90147 Pfizer BMS AFib Postcard",
-        cardText: "Medselect &#9679; Unbranded &#9679; Postcard &#9679; HCP toggle",
+        cardText: "1 Medselect &#9679; Unbranded &#9679; Postcard &#9679; HCP toggle",
         modalid: "afibCard",
         modalTitle: "AFib Postcard",
         slideTwo: "../images/90147bmsAfibPostcardMedselect/afibTwo.PNG",
@@ -14,13 +14,16 @@ const projectData = [
         noCarousel: "n/a",
         dashboardEmail: "PfizerBMSAfib@bionical.com",
         dashboardPassword: "PfizerBMSAfib",
-        dashboardSubmit: "submit"
+        dashboardSubmit: "submit",
+        date: "2021-12-31",
+        timestamp: "1640908800",
+        id: 1
     },
     {
         tags: "patientprofiler branded pdfno hcpno dseno vaeyes emailcustomyes",
         topImg: "../images/90138cyclosetPatientProfiler/cycloset-thumb.PNG",
         cardTitle: "90138 Bausch-Salix Cycloset Patient Profiler",
-        cardText: "Patient profiler &#9679; Branded &#9679; Approved Email",
+        cardText: "2 Patient profiler &#9679; Branded &#9679; Approved Email",
         modalid: "cyclosetCard",
         modalTitle: "Cycloset Patient Profiler",
         slideTwo: "../images/90138cyclosetPatientProfiler/cyclosetTwo.PNG",
@@ -30,13 +33,16 @@ const projectData = [
         trainingButton: "",
         dashboardEmail: "n/a",
         dashboardPassword: "n/a",
-        dashboardSubmit: "hidden"
+        dashboardSubmit: "hidden",
+        date: "2020-09-12",
+        timestamp: "1599868800",
+        id: 2
     },
     {
         tags: "kolselect branded pdfno hcpno dseno vaeyes",
         topImg: "../images/90116tremfyaDermKolselect/tremfya-thumb.PNG",
         cardTitle: "90116 Janssen Tremfya Derm KOL Select",
-        cardText: "KOL Select &#9679; Branded &#9679; Approved Email",
+        cardText: "3 KOL Select &#9679; Branded &#9679; Approved Email",
         modalid: "tremfyaCard",
         modalTitle: "Tremfya Derm KOL",
         slideTwo: "../images/90116tremfyaDermKolselect/tremfyaTwo.PNG",
@@ -46,13 +52,16 @@ const projectData = [
         trainingButton: "n/a",
         dashboardEmail: "n/a",
         dashboardPassword: "n/a",
-        dashboardSubmit: "hidden"
+        dashboardSubmit: "hidden",
+        date: "2018-03-23",
+        timestamp: "1521763200",
+        id: 3
     },
     {
         tags: "medselect branded brochure pdfyes hcpyes dseno vaeno emailcustomno",
         topImg: "../images/90156janssenSpravatoMedselect/spravato-thumb.PNG",
         cardTitle: "90156 Janssen Spravato MED Select",
-        cardText: "MED Select &#9679; Branded &#9679; Brochure &#9679; PDF Delivery &#9679; HCP toggle",
+        cardText: "4 MED Select &#9679; Branded &#9679; Brochure &#9679; PDF Delivery &#9679; HCP toggle",
         modalid: "spravatoCard",
         modalTitle: "Spravato MED Select",
         slideTwo: "../images/90156janssenSpravatoMedselect/spravatoTwo.PNG",
@@ -62,13 +71,16 @@ const projectData = [
         trainingButton: "",
         dashboardEmail: "JanssenSpravato@bionical.com",
         dashboardPassword: "JanssenSpravato",
-        dashboardSubmit: "submit"
+        dashboardSubmit: "submit",
+        date: "2019-06-18",
+        timestamp: "1560816000",
+        id: 4
     },
     {
         tags: "medselect unbranded tearpad wallchart pdfno hcpyes dseno vaeno emailcustomno",
         topImg: "../images/17014PfizerEnbrelMEDSelect/pfizerEnbrel-thumb.PNG",
         cardTitle: "17014 Pfizer Enbrel MED Select",
-        cardText: "MED Select &#9679; Unbranded &#9679; Wallchart &#9679; Tearpad &#9679; HCP toggle",
+        cardText: "5 MED Select &#9679; Unbranded &#9679; Wallchart &#9679; Tearpad &#9679; HCP toggle",
         modalid: "enbrelcard",
         modalTitle: "Pfizer Enbrel MED Select",
         slideTwo: "../images/17014PfizerEnbrelMEDSelect/pfizerEnbrel-two.PNG",
@@ -79,13 +91,16 @@ const projectData = [
         noCarousel: "n/a",
         dashboardEmail: "PfizerEnbrel@bionical.com",
         dashboardPassword: "PfizerEnbrel",
-        dashboardSubmit: "submit"
+        dashboardSubmit: "submit",
+        date: "Not Available",
+        timestamp: "978220800",
+        id: 5
     },
     {
         tags: "medselect branded tearpad pdfno hcpno dseno vaeno emailcustomno",
         topImg: "../images/90097endoNascobalMedselect/nascobal-thumb.PNG",
         cardTitle: "90097 Endo Nascobal MED Select",
-        cardText: "MED Select &#9679; Branded &#9679; Tearpad",
+        cardText: "6 MED Select &#9679; Branded &#9679; Tearpad",
         modalid: "nascobalCard",
         modalTitle: "Endo Nascobal MED Select",
         slideTwo: "../images/90097endoNascobalMedselect/nascobalTwo.PNG",
@@ -95,13 +110,16 @@ const projectData = [
         trainingButton: "n/a",
         dashboardEmail: "EndoNascobal@bionical.com",
         dashboardPassword: "EndoNascobal",
-        dashboardSubmit: "submit"
+        dashboardSubmit: "submit",
+        date: "1995-10-18",
+        timestamp: "813974400",
+        id: 6
     },
     {
         tags: "medselect unbranded tearpad wallchart pdfno hcpyes dseno vaeno emailcustomno",
         topImg: "../images/90146merckKeytrudaMedSelect/keytruda-thumb.PNG",
         cardTitle: "90146 Merck Keytruda MED Select",
-        cardText: "MED Select &#9679; Unbranded &#9679; Wallchart &#9679; Tearpad &#9679; HCP toggle",
+        cardText: "7 MED Select &#9679; Unbranded &#9679; Wallchart &#9679; Tearpad &#9679; HCP toggle",
         modalid: "keytrudaCard",
         modalTitle: "Merck Keytruda MED Select",
         slideTwo: "../images/90146merckKeytrudaMedSelect/keytrudaTwo.PNG",
@@ -111,6 +129,9 @@ const projectData = [
         trainingButton: "",
         dashboardEmail: "MerckKeytruda@bionical.com",
         dashboardPassword: "MerckKeytruda",
-        dashboardSubmit: "submit"
+        dashboardSubmit: "submit",
+        date: "Not available",
+        timestamp: "978220800",
+        id: 7
     }
     ];

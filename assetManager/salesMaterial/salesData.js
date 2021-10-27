@@ -14,14 +14,11 @@ const salesData = [
     },
     {
         tags: "patientprofiler branded pdfno hcpno dseno vaeyes emailcustomyes",
-        topImg: "../images/logos/placeholder.png",
+        topImg: "https://picsum.photos/200/",
         cardTitle: "Sales Material 2",
         cardText: "Patient profiler &#9679; Branded &#9679; Approved Email",
         modalid: "salesTwo",
         modalTitle: "Sales Material 2",
-        slideTwo: "../images/logos/placeholder.png",
-        slideThree: "../images/logos/placeholder.png",
-        slideFour: "../images/logos/placeholder.png",
         linkButton: "#"
     },
     {

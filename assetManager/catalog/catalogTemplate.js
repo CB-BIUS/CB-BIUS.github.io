@@ -6,6 +6,8 @@
                  <div class="card-body">
                     <h5 class="card-title">${prog.cardTitle}</h5>
                     <p class="card-text">${prog.cardText}</p>
+                    <p class="card-text">${prog.date}</p>
+                    <p class="card-text">${prog.timestamp}</p>
                     <div class="d-flex justify-content-between align-items-center">
                        <div>
                          <button type="button" class="btn btn-sm blueButton mb-2" data-toggle="modal" data-target="#${prog.modalid}">Preview</button>
