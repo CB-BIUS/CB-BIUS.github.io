@@ -19,11 +19,7 @@ function videoCardTemplate(video) {
                                         </button>
                                       </div>
                                       <div class="modal-body">
-
-                                      <video width="320" height="240" controls poster="${video.poster}">
-                                            <source src="${video.src}}" type="video/mp4">
-                                        </video>
-                                      
+                                      <div style="position: relative; padding-top: 56.25%;"><iframe src="https://iframe.mediadelivery.net/embed/16441/${video.src}?autoplay=false" loading="lazy" style="border: none; position: absolute; top: 0; height: 100%; width: 100%;" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true"></iframe></div>
                                       </div>
                                       <div class="modal-footer">
                                         <a href="${video.linkButton}" class="btn blueButton" target="_blank">Open Link</a>
