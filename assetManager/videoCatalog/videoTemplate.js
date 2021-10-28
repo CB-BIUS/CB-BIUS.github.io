@@ -19,9 +19,11 @@ function videoCardTemplate(video) {
                                         </button>
                                       </div>
                                       <div class="modal-body">
-                                        
-                                      <img class="d-block w-100" src="${video.poster}" alt="...">
-                                          
+
+                                      <video width="320" height="240" controls>
+                                            <source src="${video.src}}" type="video/mp4">
+                                        </video>
+                                      
                                       </div>
                                       <div class="modal-footer">
                                         <a href="${video.linkButton}" class="btn blueButton" target="_blank">Open Link</a>
