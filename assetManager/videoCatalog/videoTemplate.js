@@ -20,7 +20,7 @@ function videoCardTemplate(video) {
                                       </div>
                                       <div class="modal-body">
 
-                                      <video width="320" height="240" controls>
+                                      <video width="320" height="240" controls poster="${video.poster}">
                                             <source src="${video.src}}" type="video/mp4">
                                         </video>
                                       
