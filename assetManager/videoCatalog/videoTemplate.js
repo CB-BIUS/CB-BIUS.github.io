@@ -2,8 +2,13 @@ function videoCardTemplate(video) {
     return `
       <div class="grid-item col-lg-4 col-md-6 my-2 ${video.tags}">
         <div class="card grid-item-content mb-5 h-100">
-          <div style="position: relative; padding-top: 56.25%;"><iframe src="https://iframe.mediadelivery.net/embed/16441/${video.src}?autoplay=false" loading="lazy" style="border: none; position: absolute; top: 0; height: 100%; width: 100%;" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true"></iframe></div>
-                
+          
+          
+        <video width="100%" height="100%" controls>
+         <source src="${video.src}" type="video/mp4">
+         This browser doesn't support video tag.
+        </video>
+
             <div class="card-body">
                 <h5 class="card-title">${video.cardTitle}</h5>
                   <p class="card-text">${video.cardText}</p>

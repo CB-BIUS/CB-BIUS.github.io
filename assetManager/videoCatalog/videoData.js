@@ -6,7 +6,7 @@ const videoData = [
         cardText: "Pinnipeds, commonly known as seals, are a widely distributed and diverse clade of carnivorous, fin-footed, semiaquatic, mostly marine mammals",
         modalid: "seal",
         modalTitle: "Seal",
-        src: "f4a044ed-d967-4f32-9a5e-da0310ea839a",
+        src: "https://github.com/CB-BIUS/bionicalHostedImgs/blob/master/videos/seal.mp4?raw=true",
         linkButton: "https://bionicalllc.sharefile.com/d-s98e61b4db8a24ec1be32bf8c40739516",
     },
     {
@@ -16,7 +16,7 @@ const videoData = [
         cardText: "Turtles are an order of reptiles known as Testudines, characterized by a shell developed mainly from their ribs",
         modalid: "turtle",
         modalTitle: "Turtle",
-        src: "2359a18a-68bc-4086-a442-4cb44d93af30",
+        src: "https://github.com/CB-BIUS/bionicalHostedImgs/blob/master/videos/turtle.mp4?raw=true",
         linkButton: "https://bionicalllc.sharefile.com/d-sf2cbe3f1b54f430b98eee145879c99a3",
     },
     {
@@ -26,7 +26,7 @@ const videoData = [
         cardText: "Penguins (order Sphenisciformes) are a group of aquatic flightless birds. They live almost exclusively in the southern hemisphere",
         modalid: "penguin",
         modalTitle: "Penguin",
-        src: "ce091cfc-8efd-4572-a74c-b7d9262702cd",
+        src: "https://github.com/CB-BIUS/bionicalHostedImgs/blob/master/videos/penguin.mp4?raw=true",
         linkButton: "https://bionicalllc.sharefile.com/d-sb0f9d7f67f664a9891d217e056c4fa2f",
     },
     {
@@ -36,7 +36,7 @@ const videoData = [
         cardText: "The alpaca (Lama pacos) is a species of South American camelid mammal. It is similar to, and often confused with, the llama. However, alpacas are often noticeably smaller than llamas",
         modalid: "alpaca",
         modalTitle: "Alpaca",
-        src: "ce0cdb49-c3a3-4ab8-a06e-527026666046",
+        src: "https://github.com/CB-BIUS/bionicalHostedImgs/blob/master/videos/alpaca.mp4?raw=true",
         linkButton: "https://bionicalllc.sharefile.com/d-s828cae6ab3d848d199e8e520f1b5c497",
     },
     {
@@ -46,7 +46,7 @@ const videoData = [
         cardText: "Monkey is a common name that may refer to most mammals of the infraorder Simiiformes, also known as the simians. Traditionally, all animals in the group now known as simians are counted as monkeys except the apes",
         modalid: "monkey",
         modalTitle: "Monkey",
-        src: "6a69f553-f884-45c6-89d1-4a34c2d71b68",
+        src: "https://github.com/CB-BIUS/bionicalHostedImgs/blob/master/videos/monkey.mp4?raw=true",
         linkButton: "https://bionicalllc.sharefile.com/d-s5735f25b521d4bd385d1c38fca715e37",
     },
     {
@@ -56,7 +56,7 @@ const videoData = [
         cardText: "The dog or domestic dog (Canis familiaris) is a domesticated descendant of the wolf, characterized by an upturning tail. The dog derived from an ancient, extinct wolf, and the modern grey wolf is the dog's nearest living relative",
         modalid: "dog",
         modalTitle: "Dog",
-        src: "8a187269-08cc-43a0-82b9-5c9508755806",
+        src: "https://github.com/CB-BIUS/bionicalHostedImgs/blob/master/videos/dog.mp4?raw=true",
         linkButton: "https://bionicalllc.sharefile.com/d-s0e3116a3d5df48828eb80e23be55efa1",
     }
     ];
