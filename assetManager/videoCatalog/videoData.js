@@ -1,6 +1,6 @@
 const videoData = [
     {
-        tags: "seal sea mammal",
+        tags: "seal &bull; sea &bull; mammal",
         poster: "../images/seal.PNG",
         cardTitle: "Seal",
         cardText: "Pinnipeds, commonly known as seals, are a widely distributed and diverse clade of carnivorous, fin-footed, semiaquatic, mostly marine mammals",
@@ -11,7 +11,7 @@ const videoData = [
         linkButton: "https://bionicalllc.sharefile.com/d-s98e61b4db8a24ec1be32bf8c40739516",
     },
     {
-        tags: "turtle land sea reptile",
+        tags: "turtle &bull; land &bull; sea &bull; reptile",
         poster: "../images/turtle.PNG",
         cardTitle: "Turtle",
         cardText: "Turtles are an order of reptiles known as Testudines, characterized by a shell developed mainly from their ribs",
@@ -22,7 +22,7 @@ const videoData = [
         linkButton: "https://bionicalllc.sharefile.com/d-sf2cbe3f1b54f430b98eee145879c99a3",
     },
     {
-        tags: "penguin land sea bird",
+        tags: "penguin &bull; land &bull; sea &bull; bird",
         poster: "../images/penguin.PNG",
         cardTitle: "Penguin",
         cardText: "Penguins (order Sphenisciformes) are a group of aquatic flightless birds. They live almost exclusively in the southern hemisphere",
@@ -33,7 +33,7 @@ const videoData = [
         linkButton: "https://bionicalllc.sharefile.com/d-sb0f9d7f67f664a9891d217e056c4fa2f",
     },
     {
-        tags: "alpaca land mammal",
+        tags: "alpaca &bull; land &bull; mammal",
         poster: "../images/alpaca.PNG",
         cardTitle: "Alpaca",
         cardText: "The alpaca (Lama pacos) is a species of South American camelid mammal. It is similar to, and often confused with, the llama. However, alpacas are often noticeably smaller than llamas",
@@ -44,7 +44,7 @@ const videoData = [
         linkButton: "https://bionicalllc.sharefile.com/d-s828cae6ab3d848d199e8e520f1b5c497",
     },
     {
-        tags: "monkey land mammal",
+        tags: "monkey &bull; land &bull; mammal",
         poster: "../images/monkey.PNG",
         cardTitle: "Monkey",
         cardText: "Monkey is a common name that may refer to most mammals of the infraorder Simiiformes, also known as the simians. Traditionally, all animals in the group now known as simians are counted as monkeys except the apes",
@@ -55,7 +55,7 @@ const videoData = [
         linkButton: "https://bionicalllc.sharefile.com/d-s5735f25b521d4bd385d1c38fca715e37",
     },
     {
-        tags: "dog mammal",
+        tags: "dog &bull; mammal",
         poster: "../images/dog.PNG",
         cardTitle: "Dog",
         cardText: "The dog or domestic dog (Canis familiaris) is a domesticated descendant of the wolf, characterized by an upturning tail. The dog derived from an ancient, extinct wolf, and the modern grey wolf is the dog's nearest living relative",
