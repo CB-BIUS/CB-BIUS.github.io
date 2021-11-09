@@ -7,6 +7,7 @@ const videoData = [
         modalid: "seal",
         modalTitle: "Seal",
         src: "https://github.com/CB-BIUS/bionicalHostedImgs/blob/master/videos/seal.mp4?raw=true",
+        poster: "https://github.com/CB-BIUS/bionicalHostedImgs/blob/master/videos/seal.PNG?raw=true",
         linkButton: "https://bionicalllc.sharefile.com/d-s98e61b4db8a24ec1be32bf8c40739516",
     },
     {
@@ -17,6 +18,7 @@ const videoData = [
         modalid: "turtle",
         modalTitle: "Turtle",
         src: "https://github.com/CB-BIUS/bionicalHostedImgs/blob/master/videos/turtle.mp4?raw=true",
+        poster: "https://github.com/CB-BIUS/bionicalHostedImgs/blob/master/videos/turtle.PNG?raw=true",
         linkButton: "https://bionicalllc.sharefile.com/d-sf2cbe3f1b54f430b98eee145879c99a3",
     },
     {
@@ -27,6 +29,7 @@ const videoData = [
         modalid: "penguin",
         modalTitle: "Penguin",
         src: "https://github.com/CB-BIUS/bionicalHostedImgs/blob/master/videos/penguin.mp4?raw=true",
+        poster: "https://github.com/CB-BIUS/bionicalHostedImgs/blob/master/videos/penguin.PNG?raw=true",
         linkButton: "https://bionicalllc.sharefile.com/d-sb0f9d7f67f664a9891d217e056c4fa2f",
     },
     {
@@ -37,6 +40,7 @@ const videoData = [
         modalid: "alpaca",
         modalTitle: "Alpaca",
         src: "https://github.com/CB-BIUS/bionicalHostedImgs/blob/master/videos/alpaca.mp4?raw=true",
+        poster: "https://github.com/CB-BIUS/bionicalHostedImgs/blob/master/videos/alpaca.PNG?raw=true",
         linkButton: "https://bionicalllc.sharefile.com/d-s828cae6ab3d848d199e8e520f1b5c497",
     },
     {
@@ -47,6 +51,7 @@ const videoData = [
         modalid: "monkey",
         modalTitle: "Monkey",
         src: "https://github.com/CB-BIUS/bionicalHostedImgs/blob/master/videos/monkey.mp4?raw=true",
+        poster: "https://github.com/CB-BIUS/bionicalHostedImgs/blob/master/videos/monkey.PNG?raw=true",
         linkButton: "https://bionicalllc.sharefile.com/d-s5735f25b521d4bd385d1c38fca715e37",
     },
     {
@@ -57,6 +62,7 @@ const videoData = [
         modalid: "dog",
         modalTitle: "Dog",
         src: "https://github.com/CB-BIUS/bionicalHostedImgs/blob/master/videos/dog.mp4?raw=true",
+        poster: "https://github.com/CB-BIUS/bionicalHostedImgs/blob/master/videos/dog.PNG?raw=true",
         linkButton: "https://bionicalllc.sharefile.com/d-s0e3116a3d5df48828eb80e23be55efa1",
     }
     ];
