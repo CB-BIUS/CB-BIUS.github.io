@@ -229,15 +229,6 @@
             <input class="form-control m-2 w-50" type="search" placeholder="Search by Name" onfocus="this.value=''" aria-label="Search">
         </div>
 
-        <div class="form-check form-check-inline p-2">
-            <input class="form-check-input sort_new timestamp" type="radio" name="sortdate" id="inlineRadio1" value="new">
-            <label class="form-check-label" for="inlineRadio1">New</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input sort_old timestamp" type="radio" name="sortdate" id="inlineRadio2" value="old">
-            <label class="form-check-label" for="inlineRadio2">Old</label>
-          </div>
-
         <div class="container-fluid">
 
             <div class="row grid" id="catalog">
@@ -422,20 +413,6 @@ removeAttributes();
             });
         }
     });
-
-    $('.sort_new').on('click', function () {
-    $('.grid').isotope({
-        sortBy: '.timestamp',
-        sortAscending: true,
-    });
-});
-
-$('.sort_old').on('click', function () {
-    $('.grid').isotope({
-        sortBy: '.timestamp',
-        sortAscending: false,
-    });
-});
 
 </script>
 
